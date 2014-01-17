@@ -22,6 +22,12 @@
 		E770468518891A7700BE6FC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E770466418891A7700BE6FC4 /* UIKit.framework */; };
 		E770468D18891A7700BE6FC4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E770468B18891A7700BE6FC4 /* InfoPlist.strings */; };
 		E770468F18891A7700BE6FC4 /* HSHacksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E770468E18891A7700BE6FC4 /* HSHacksTests.m */; };
+		E783EC1018891C9C00033983 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E783EC0F18891C9C00033983 /* libicucore.dylib */; };
+		E783EC1218891CA500033983 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E783EC1118891CA500033983 /* libc++.dylib */; };
+		E783EC1418891CAA00033983 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E783EC1318891CAA00033983 /* CFNetwork.framework */; };
+		E783EC1618891CB100033983 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E783EC1518891CB100033983 /* Security.framework */; };
+		E783EC1818891CBB00033983 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E783EC1718891CBB00033983 /* SystemConfiguration.framework */; };
+		E783EC1A18891DEF00033983 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E783EC1918891DEF00033983 /* Firebase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +62,12 @@
 		E770468A18891A7700BE6FC4 /* HSHacksTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HSHacksTests-Info.plist"; sourceTree = "<group>"; };
 		E770468C18891A7700BE6FC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E770468E18891A7700BE6FC4 /* HSHacksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSHacksTests.m; sourceTree = "<group>"; };
+		E783EC0F18891C9C00033983 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		E783EC1118891CA500033983 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		E783EC1318891CAA00033983 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E783EC1518891CB100033983 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E783EC1718891CBB00033983 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E783EC1918891DEF00033983 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E783EC1818891CBB00033983 /* SystemConfiguration.framework in Frameworks */,
+				E783EC1618891CB100033983 /* Security.framework in Frameworks */,
+				E783EC1418891CAA00033983 /* CFNetwork.framework in Frameworks */,
+				E783EC1218891CA500033983 /* libc++.dylib in Frameworks */,
+				E783EC1018891C9C00033983 /* libicucore.dylib in Frameworks */,
+				E783EC1A18891DEF00033983 /* Firebase.framework in Frameworks */,
 				E770466318891A7700BE6FC4 /* CoreGraphics.framework in Frameworks */,
 				E770466518891A7700BE6FC4 /* UIKit.framework in Frameworks */,
 				E770466118891A7700BE6FC4 /* Foundation.framework in Frameworks */,
@@ -104,6 +122,12 @@
 		E770465F18891A7700BE6FC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E783EC1918891DEF00033983 /* Firebase.framework */,
+				E783EC1718891CBB00033983 /* SystemConfiguration.framework */,
+				E783EC1518891CB100033983 /* Security.framework */,
+				E783EC1318891CAA00033983 /* CFNetwork.framework */,
+				E783EC1118891CA500033983 /* libc++.dylib */,
+				E783EC0F18891C9C00033983 /* libicucore.dylib */,
 				E770466018891A7700BE6FC4 /* Foundation.framework */,
 				E770466218891A7700BE6FC4 /* CoreGraphics.framework */,
 				E770466418891A7700BE6FC4 /* UIKit.framework */,
@@ -384,9 +408,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/shrav/Downloads,
+					/Users/shrav/HSHacks,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HSHacks/HSHacks-Prefix.pch";
 				INFOPLIST_FILE = "HSHacks/HSHacks-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -397,6 +427,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/shrav/Downloads,
+					/Users/shrav/HSHacks,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HSHacks/HSHacks-Prefix.pch";
 				INFOPLIST_FILE = "HSHacks/HSHacks-Info.plist";
@@ -466,6 +501,7 @@
 				E770469418891A7700BE6FC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E770469518891A7700BE6FC4 /* Build configuration list for PBXNativeTarget "HSHacksTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +510,7 @@
 				E770469718891A7700BE6FC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
