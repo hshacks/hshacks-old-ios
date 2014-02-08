@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6CC2247318A476D000262706 /* UpdatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2247218A476D000262706 /* UpdatesViewController.m */; };
+		6CC2247418A476D000262706 /* UpdatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2247218A476D000262706 /* UpdatesViewController.m */; };
+		6CC2247718A476FA00262706 /* ConciergeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2247618A476FA00262706 /* ConciergeViewController.m */; };
+		6CC2247818A476FA00262706 /* ConciergeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2247618A476FA00262706 /* ConciergeViewController.m */; };
+		6CC2247B18A4770A00262706 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2247A18A4770A00262706 /* ChatViewController.m */; };
+		6CC2247C18A4770A00262706 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2247A18A4770A00262706 /* ChatViewController.m */; };
+		6CC2247F18A4771600262706 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2247E18A4771600262706 /* GuideViewController.m */; };
+		6CC2248018A4771600262706 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2247E18A4771600262706 /* GuideViewController.m */; };
 		E770466118891A7700BE6FC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E770466018891A7700BE6FC4 /* Foundation.framework */; };
 		E770466318891A7700BE6FC4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E770466218891A7700BE6FC4 /* CoreGraphics.framework */; };
 		E770466518891A7700BE6FC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E770466418891A7700BE6FC4 /* UIKit.framework */; };
@@ -14,8 +22,6 @@
 		E770466D18891A7700BE6FC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E770466C18891A7700BE6FC4 /* main.m */; };
 		E770467118891A7700BE6FC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E770467018891A7700BE6FC4 /* AppDelegate.m */; };
 		E770467418891A7700BE6FC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E770467218891A7700BE6FC4 /* Main.storyboard */; };
-		E770467718891A7700BE6FC4 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E770467618891A7700BE6FC4 /* FirstViewController.m */; };
-		E770467A18891A7700BE6FC4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E770467918891A7700BE6FC4 /* SecondViewController.m */; };
 		E770467C18891A7700BE6FC4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E770467B18891A7700BE6FC4 /* Images.xcassets */; };
 		E770468318891A7700BE6FC4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E770468218891A7700BE6FC4 /* XCTest.framework */; };
 		E770468418891A7700BE6FC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E770466018891A7700BE6FC4 /* Foundation.framework */; };
@@ -27,7 +33,6 @@
 		E783EC1418891CAA00033983 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E783EC1318891CAA00033983 /* CFNetwork.framework */; };
 		E783EC1618891CB100033983 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E783EC1518891CB100033983 /* Security.framework */; };
 		E783EC1818891CBB00033983 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E783EC1718891CBB00033983 /* SystemConfiguration.framework */; };
-		E783EC1A18891DEF00033983 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E783EC1918891DEF00033983 /* Firebase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6CC2247118A476D000262706 /* UpdatesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdatesViewController.h; sourceTree = "<group>"; };
+		6CC2247218A476D000262706 /* UpdatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdatesViewController.m; sourceTree = "<group>"; };
+		6CC2247518A476FA00262706 /* ConciergeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConciergeViewController.h; sourceTree = "<group>"; };
+		6CC2247618A476FA00262706 /* ConciergeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConciergeViewController.m; sourceTree = "<group>"; };
+		6CC2247918A4770A00262706 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		6CC2247A18A4770A00262706 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		6CC2247D18A4771600262706 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
+		6CC2247E18A4771600262706 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
 		E770465D18891A7700BE6FC4 /* HSHacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSHacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E770466018891A7700BE6FC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E770466218891A7700BE6FC4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -52,10 +65,6 @@
 		E770466F18891A7700BE6FC4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E770467018891A7700BE6FC4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E770467318891A7700BE6FC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E770467518891A7700BE6FC4 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		E770467618891A7700BE6FC4 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		E770467818891A7700BE6FC4 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		E770467918891A7700BE6FC4 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		E770467B18891A7700BE6FC4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E770468118891A7700BE6FC4 /* HSHacksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HSHacksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E770468218891A7700BE6FC4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -67,7 +76,6 @@
 		E783EC1318891CAA00033983 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		E783EC1518891CB100033983 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E783EC1718891CBB00033983 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		E783EC1918891DEF00033983 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +88,6 @@
 				E783EC1418891CAA00033983 /* CFNetwork.framework in Frameworks */,
 				E783EC1218891CA500033983 /* libc++.dylib in Frameworks */,
 				E783EC1018891C9C00033983 /* libicucore.dylib in Frameworks */,
-				E783EC1A18891DEF00033983 /* Firebase.framework in Frameworks */,
 				E770466318891A7700BE6FC4 /* CoreGraphics.framework in Frameworks */,
 				E770466518891A7700BE6FC4 /* UIKit.framework in Frameworks */,
 				E770466118891A7700BE6FC4 /* Foundation.framework in Frameworks */,
@@ -122,7 +129,6 @@
 		E770465F18891A7700BE6FC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E783EC1918891DEF00033983 /* Firebase.framework */,
 				E783EC1718891CBB00033983 /* SystemConfiguration.framework */,
 				E783EC1518891CB100033983 /* Security.framework */,
 				E783EC1318891CAA00033983 /* CFNetwork.framework */,
@@ -142,10 +148,14 @@
 				E770466F18891A7700BE6FC4 /* AppDelegate.h */,
 				E770467018891A7700BE6FC4 /* AppDelegate.m */,
 				E770467218891A7700BE6FC4 /* Main.storyboard */,
-				E770467518891A7700BE6FC4 /* FirstViewController.h */,
-				E770467618891A7700BE6FC4 /* FirstViewController.m */,
-				E770467818891A7700BE6FC4 /* SecondViewController.h */,
-				E770467918891A7700BE6FC4 /* SecondViewController.m */,
+				6CC2247118A476D000262706 /* UpdatesViewController.h */,
+				6CC2247218A476D000262706 /* UpdatesViewController.m */,
+				6CC2247518A476FA00262706 /* ConciergeViewController.h */,
+				6CC2247618A476FA00262706 /* ConciergeViewController.m */,
+				6CC2247918A4770A00262706 /* ChatViewController.h */,
+				6CC2247A18A4770A00262706 /* ChatViewController.m */,
+				6CC2247D18A4771600262706 /* GuideViewController.h */,
+				6CC2247E18A4771600262706 /* GuideViewController.m */,
 				E770467B18891A7700BE6FC4 /* Images.xcassets */,
 				E770466718891A7700BE6FC4 /* Supporting Files */,
 			);
@@ -278,10 +288,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E770467A18891A7700BE6FC4 /* SecondViewController.m in Sources */,
+				6CC2247318A476D000262706 /* UpdatesViewController.m in Sources */,
 				E770467118891A7700BE6FC4 /* AppDelegate.m in Sources */,
-				E770467718891A7700BE6FC4 /* FirstViewController.m in Sources */,
+				6CC2247B18A4770A00262706 /* ChatViewController.m in Sources */,
+				6CC2247718A476FA00262706 /* ConciergeViewController.m in Sources */,
 				E770466D18891A7700BE6FC4 /* main.m in Sources */,
+				6CC2247F18A4771600262706 /* GuideViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +302,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E770468F18891A7700BE6FC4 /* HSHacksTests.m in Sources */,
+				6CC2247818A476FA00262706 /* ConciergeViewController.m in Sources */,
+				6CC2248018A4771600262706 /* GuideViewController.m in Sources */,
+				6CC2247C18A4770A00262706 /* ChatViewController.m in Sources */,
+				6CC2247418A476D000262706 /* UpdatesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,11 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/shrav/Downloads,
-					/Users/shrav/HSHacks,
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HSHacks/HSHacks-Prefix.pch";
 				INFOPLIST_FILE = "HSHacks/HSHacks-Info.plist";
@@ -427,11 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/shrav/Downloads,
-					/Users/shrav/HSHacks,
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HSHacks/HSHacks-Prefix.pch";
 				INFOPLIST_FILE = "HSHacks/HSHacks-Info.plist";
