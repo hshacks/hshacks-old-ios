@@ -11,7 +11,7 @@
 @implementation UserData
 
 @synthesize userName;
-@synthesize userPhotoURL;
+@synthesize userPhoto;
 
 //To use singleton
 // #import "UserData.h";

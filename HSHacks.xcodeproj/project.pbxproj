@@ -20,6 +20,8 @@
 		6CCB63D318A613A7004E80B4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCB63D218A613A7004E80B4 /* LoginViewController.m */; };
 		6CCB63D518A613B2004E80B4 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCB63D418A613B2004E80B4 /* FacebookSDK.framework */; };
 		6CCB63D718A621BF004E80B4 /* hshacksLOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CCB63D618A621BF004E80B4 /* hshacksLOGO.png */; };
+		6CF50EEA18A6307B00807A13 /* ChatTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF50EE918A6307B00807A13 /* ChatTableCell.m */; };
+		6CF50EEC18A630B400807A13 /* ChatTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF50EEB18A630B400807A13 /* ChatTableCell.xib */; };
 		E770466118891A7700BE6FC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E770466018891A7700BE6FC4 /* Foundation.framework */; };
 		E770466318891A7700BE6FC4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E770466218891A7700BE6FC4 /* CoreGraphics.framework */; };
 		E770466518891A7700BE6FC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E770466418891A7700BE6FC4 /* UIKit.framework */; };
@@ -66,6 +68,9 @@
 		6CCB63D218A613A7004E80B4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		6CCB63D418A613B2004E80B4 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		6CCB63D618A621BF004E80B4 /* hshacksLOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hshacksLOGO.png; sourceTree = "<group>"; };
+		6CF50EE818A6307B00807A13 /* ChatTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableCell.h; sourceTree = "<group>"; };
+		6CF50EE918A6307B00807A13 /* ChatTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTableCell.m; sourceTree = "<group>"; };
+		6CF50EEB18A630B400807A13 /* ChatTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatTableCell.xib; sourceTree = "<group>"; };
 		E770465D18891A7700BE6FC4 /* HSHacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSHacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E770466018891A7700BE6FC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E770466218891A7700BE6FC4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -166,6 +171,9 @@
 				6CCB63D118A613A7004E80B4 /* LoginViewController.h */,
 				6CCB63D218A613A7004E80B4 /* LoginViewController.m */,
 				E770467218891A7700BE6FC4 /* Main.storyboard */,
+				6CF50EE818A6307B00807A13 /* ChatTableCell.h */,
+				6CF50EE918A6307B00807A13 /* ChatTableCell.m */,
+				6CF50EEB18A630B400807A13 /* ChatTableCell.xib */,
 				6CC2247118A476D000262706 /* UpdatesViewController.h */,
 				6CC2247218A476D000262706 /* UpdatesViewController.m */,
 				6CC2247518A476FA00262706 /* ConciergeViewController.h */,
@@ -290,6 +298,7 @@
 			files = (
 				6CCB63D718A621BF004E80B4 /* hshacksLOGO.png in Resources */,
 				E770467C18891A7700BE6FC4 /* Images.xcassets in Resources */,
+				6CF50EEC18A630B400807A13 /* ChatTableCell.xib in Resources */,
 				E770466B18891A7700BE6FC4 /* InfoPlist.strings in Resources */,
 				E770467418891A7700BE6FC4 /* Main.storyboard in Resources */,
 			);
@@ -318,6 +327,7 @@
 				6CC2247718A476FA00262706 /* ConciergeViewController.m in Sources */,
 				E770466D18891A7700BE6FC4 /* main.m in Sources */,
 				6CC2247F18A4771600262706 /* GuideViewController.m in Sources */,
+				6CF50EEA18A6307B00807A13 /* ChatTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

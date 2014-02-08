@@ -7,7 +7,7 @@
 //
 
 #import "ChatViewController.h"
-
+#import "UserData.h"
 
 //firebase chat server
 #define kFirechatNS @"https://hshackschat.firebaseio.com/"
@@ -32,6 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UserData *userData = [UserData sharedManager];
     
     // Initialize array that will store chat messages.
     self.chat = [[NSMutableArray alloc] init];
@@ -39,15 +40,20 @@
     // Initialize the root of our Firebase namespace.
     self.firebase = [[Firebase alloc] initWithUrl:kFirechatNS];
     
-    // Pick a random number between 1-1000 for our username.
-    self.name = [NSString stringWithFormat:@"Guest%d", arc4random() % 1000];
-//    [chatameField setTitle:self.name forState:UIControlStateNormal];
+    // Get Username from singleton
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    userData.userName = [defaults objectForKey:@"name"];
+    userData.userPhoto = [defaults objectForKey:@"photo"];
+    NSLog(@"name: %@ ", userData.userName);
+    self.name = userData.userName;
     
     [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
         // Add the chat message to the array.
         [self.chat addObject:snapshot.value];
         // Reload the table view so the new message will show up.
         [self.chatTableView reloadData];
+         [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.chat.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
     }];
 
 }
@@ -88,16 +94,21 @@
     return [self.chat count];
 }
 
-- (UITableViewCell*)tableView:(UITableView*)table cellForRowAtIndexPath:(NSIndexPath *)index
+- (UITableViewCell*)tableView:(UITableView*)table cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [table dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if(indexPath.row % 2 == 0)
+        cell.backgroundColor = [UIColor whiteColor];
+    else
+        cell.backgroundColor = [UIColor colorWithRed:189.0/255.0 green:195.0/255.0 blue:199.0/255.0 alpha:0.1];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    NSDictionary* chatMessage = [self.chat objectAtIndex:index.row];
+    NSDictionary* chatMessage = [self.chat objectAtIndex:indexPath.row];
     
     cell.textLabel.text = chatMessage[@"text"];
     cell.detailTextLabel.text = chatMessage[@"name"];

@@ -10,7 +10,7 @@
 
 @interface UserData : NSObject{
     NSString *userName;
-    NSURL *userPhotoURL;
+    NSString *userPhoto;
     
     
 }
@@ -19,6 +19,6 @@
 + (id)sharedManager;
 
 @property (nonatomic,retain)NSString *userName;
-@property (nonatomic,retain)NSURL *userPhotoURL;
+@property (nonatomic,retain)NSString *userPhoto;
 
 @end

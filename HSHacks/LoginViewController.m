@@ -80,15 +80,18 @@
                  
                  UserData *userData = [UserData sharedManager];
                  userData.userName = user.name;
-                    NSURL *photoURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large", user.username]];
-                 NSLog(@"facebook pic: %@", photoURL);
-                 userData.userPhotoURL = photoURL;
+                   NSString *photo = [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large", user.username];
+                 NSLog(@"facebook pic: %@", photo);
+                 userData.userPhoto = photo;
                  
                  //now store data in nsuserdefault
                  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+      
                  
-                 userData.userName = [defaults objectForKey:@"name"];
-                 userData.userPhotoURL = [defaults objectForKey:@"photoURL"];
+                 [defaults setObject:userData.userName forKey:@"name"];
+                 [defaults setObject:userData.userPhoto forKey:@"photo"];
+                 
+                 [defaults synchronize];
                  
                  //should show animations and user info
                  [self doneWithLogin];
