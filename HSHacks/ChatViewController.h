@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <Firebase/Firebase.h>
 @interface ChatViewController : UIViewController
+
+
+@property (nonatomic, strong) NSString* name;
+@property (nonatomic, strong) NSMutableArray* chat;
+@property (nonatomic, strong) Firebase* firebase;
+
+
+
+@property (strong, nonatomic) IBOutlet UITableView *chatTableView;
+@property (strong, nonatomic) IBOutlet UITextField *chatTextField;
 
 @end

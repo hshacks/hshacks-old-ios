@@ -7,6 +7,7 @@
 //
 
 #import "UpdatesViewController.h"
+#import "LoginViewController.h"
 
 @interface UpdatesViewController ()
 
@@ -26,13 +27,43 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+     }
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if([self isFirstRun]){
+        //check if first run, if so show login controller
+        NSLog(@"isfirst run");
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        LoginViewController *loginVC = (LoginViewController*)[storyboard instantiateViewControllerWithIdentifier:@"loginVC"];
+        [self presentViewController:loginVC animated:YES completion:nil];
+
+    }
 }
+
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+ 
 }
+
+- (BOOL)isFirstRun
+{
+ //Check if it is the first run
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"isFirstRun"])
+    {
+        return NO;
+    }
+    
+    [defaults setObject:@"ALREADY_FIRST_RUN" forKey:@"isFirstRun"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    return YES;
+}
+
+
 
 @end
