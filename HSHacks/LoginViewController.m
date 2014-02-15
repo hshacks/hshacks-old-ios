@@ -80,7 +80,7 @@
                  
                  UserData *userData = [UserData sharedManager];
                  userData.userName = user.name;
-                   NSString *photo = [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large", user.username];
+                   NSString *photo = [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=square", user.username];
                  NSLog(@"facebook pic: %@", photo);
                  userData.userPhoto = photo;
                  

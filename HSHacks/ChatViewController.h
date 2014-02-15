@@ -12,6 +12,7 @@
 
 
 @property (nonatomic, strong) NSString* name;
+@property (nonatomic, strong) NSString* photoURL;
 @property (nonatomic, strong) NSMutableArray* chat;
 @property (nonatomic, strong) Firebase* firebase;
 

@@ -10,4 +10,6 @@
 
 @interface ConciergeViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
 @end

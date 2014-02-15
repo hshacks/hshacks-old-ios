@@ -8,9 +8,11 @@
 
 #import "ChatViewController.h"
 #import "UserData.h"
+#import <QuartzCore/QuartzCore.h>
+#import "SDWebImage/UIImageView+WebCache.h"
 
-//firebase chat server
-#define kFirechatNS @"https://hshackschat.firebaseio.com/"
+//Firebase chat server
+#define kFirechatNS @"https://hshacks.firebaseio.com/"
 
 @interface ChatViewController ()
 
@@ -20,6 +22,8 @@
 
 @synthesize chatTableView;
 @synthesize chatTextField;
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -32,21 +36,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UserData *userData = [UserData sharedManager];
     
+    //Remove separator
+    self.chatTableView.separatorColor = [UIColor clearColor];
+    
+    self.chatTextField.enablesReturnKeyAutomatically = YES;
+    
+    UserData *userData = [UserData sharedManager];
+
     // Initialize array that will store chat messages.
     self.chat = [[NSMutableArray alloc] init];
     
     // Initialize the root of our Firebase namespace.
     self.firebase = [[Firebase alloc] initWithUrl:kFirechatNS];
-    
-    // Get Username from singleton
+
+    //Store name and photoURL in UserDefaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     userData.userName = [defaults objectForKey:@"name"];
     userData.userPhoto = [defaults objectForKey:@"photo"];
-    NSLog(@"name: %@ ", userData.userName);
+
     self.name = userData.userName;
+    self.photoURL = userData.userPhoto;
+    
+    NSLog(@"photo url%@", self.photoURL);
     
     [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
         // Add the chat message to the array.
@@ -74,7 +87,7 @@
     
     // This will also add the message to our local array self.chat because
     // the FEventTypeChildAdded event will be immediately fired.
-    [[self.firebase childByAutoId] setValue:@{@"name" : self.name, @"text": aTextField.text}];
+    [[self.firebase childByAutoId] setValue:@{@"user" : self.name, @"message": aTextField.text, @"image" : self.photoURL}];
     
     [aTextField setText:@""];
     return NO;
@@ -96,13 +109,14 @@
 
 - (UITableViewCell*)tableView:(UITableView*)table cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    
+    static NSString *CellIdentifier = @"ChatCell";
     UITableViewCell *cell = [table dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if(indexPath.row % 2 == 0)
-        cell.backgroundColor = [UIColor whiteColor];
+        cell.backgroundColor = [UIColor colorWithRed:189.0/255.0 green:195.0/255.0 blue:199.0/255.0 alpha:0.02];
     else
-        cell.backgroundColor = [UIColor colorWithRed:189.0/255.0 green:195.0/255.0 blue:199.0/255.0 alpha:0.1];
+        cell.backgroundColor = [UIColor colorWithRed:189.0/255.0 green:195.0/255.0 blue:199.0/255.0 alpha:0.08];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
@@ -110,8 +124,19 @@
     
     NSDictionary* chatMessage = [self.chat objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = chatMessage[@"text"];
-    cell.detailTextLabel.text = chatMessage[@"name"];
+    UIImageView *imageView = (UIImageView*) [cell viewWithTag:100];
+    imageView.clipsToBounds = YES;
+    imageView.layer.cornerRadius = imageView.frame.size.width / 2;
+    [imageView setImageWithURL:[NSURL URLWithString:chatMessage[@"image"]] placeholderImage:[UIImage imageNamed:@"placeholderIcon.png"]];
+    
+    
+    UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
+    nameLabel.text = chatMessage[@"user"];
+
+    
+    UILabel *messageLabel = (UILabel*) [cell viewWithTag:102];
+    messageLabel.text = chatMessage[@"message"];
+
     
     return cell;
 }
