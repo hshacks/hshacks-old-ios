@@ -37,6 +37,10 @@
 {
     [super viewDidLoad];
     
+ 
+    
+    chatTableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
+    
     //Remove separator
     self.chatTableView.separatorColor = [UIColor clearColor];
     
@@ -66,7 +70,7 @@
         [self.chat addObject:snapshot.value];
         // Reload the table view so the new message will show up.
         [self.chatTableView reloadData];
-         [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.chat.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+         [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.chat.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
     }];
 
 }
@@ -165,44 +169,43 @@
      removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 }
 
+
 // Setup keyboard handlers to slide the view containing the table view and
 // text field upwards when the keyboard shows, and downwards when it hides.
 - (void)keyboardWillShow:(NSNotification*)notification
 {
-    [self moveView:[notification userInfo] up:YES];
+    CGRect chatTableViewFrame = CGRectMake(0,65,320,chatTableView.frame.size.height-170);
+    [UIView animateWithDuration:0.5 animations:^{ chatTableView.frame = chatTableViewFrame;}];
+    
+    [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.chat.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+
+    
+    CGRect chatTextFieldFrame = CGRectMake(chatTextField.frame.origin.x,chatTextField.frame.origin.y-170,chatTextField.frame.size.width,chatTextField.frame.size.height);
+    [UIView animateWithDuration:0.3 animations:^{ chatTextField.frame = chatTextFieldFrame;}];
+ 
+    
+  
+   
+    
+    //[self moveView:[notification userInfo] up:YES];
+
 }
 
 - (void)keyboardWillHide:(NSNotification*)notification
 {
-    [self moveView:[notification userInfo] up:NO];
+    CGRect chatTableViewFrame = CGRectMake(0,65,320,chatTableView.frame.size.height+170);
+    [UIView animateWithDuration:0.5 animations:^{ chatTableView.frame = chatTableViewFrame;}];
+    
+    CGRect chatTextFieldFrame = CGRectMake(chatTextField.frame.origin.x,chatTextField.frame.origin.y+170,chatTextField.frame.size.width,chatTextField.frame.size.height);
+    [UIView animateWithDuration:0.3 animations:^{ chatTextField.frame = chatTextFieldFrame;}];
+  
+//    [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.chat.count -1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    
+    
+    
 }
 
-- (void)moveView:(NSDictionary*)userInfo up:(BOOL)up
-{
-    CGRect keyboardEndFrame;
-    [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey]
-     getValue:&keyboardEndFrame];
-    
-    UIViewAnimationCurve animationCurve;
-    [[userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey]
-     getValue:&animationCurve];
-    
-    NSTimeInterval animationDuration;
-    [[userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey]
-     getValue:&animationDuration];
-    
-    // Get the correct keyboard size to we slide the right amount.
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationBeginsFromCurrentState:YES];
-    [UIView setAnimationDuration:animationDuration];
-    [UIView setAnimationCurve:animationCurve];
-    
-    CGRect keyboardFrame = [self.view convertRect:keyboardEndFrame toView:nil];
-    int y = keyboardFrame.size.height * (up ? -1 : 1);
-    self.view.frame = CGRectOffset(self.view.frame, 0, y);
-    
-    [UIView commitAnimations];
-}
+
 
 // This method will be called when the user touches on the tableView, at
 // which point we will hide the keyboard (if open). This method is called
@@ -210,6 +213,7 @@
 - (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event
 {
     if ([chatTextField isFirstResponder]) {
+        NSLog(@"lasdlkfajsd");
         [chatTextField resignFirstResponder];
     }
 }

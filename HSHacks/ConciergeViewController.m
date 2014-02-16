@@ -7,7 +7,8 @@
 //
 
 #import "ConciergeViewController.h"
-
+#import <MessageUI/MessageUI.h>
+#import <Social/Social.h>
 @interface ConciergeViewController ()
 
 @end
@@ -44,18 +45,60 @@
 	// Do any additional setup after loading the view.
 }
 
--(id)initWithStyle:(UITableViewStyle)style {
-    self = [super initWithStyle:style];
-    if (self) {
-        self.parseClassName = @"Mentors";
-        self.textKey = @"name";
-        self.pullToRefreshEnabled = YES;
-        self.paginationEnabled = NO;
-        self.objectsPerPage = 150;
-        self.sections = [NSMutableDictionary dictionary];
-        self.sectionToCompanyMap = [NSMutableDictionary dictionary];
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:{
+            NSLog(@"Mail sent");
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Horray!" message: @"Your email was sent!" delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }
+        case MFMailComposeResultFailed:{
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Hm..." message: @"Something went wrong. Try sending the email again." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }
+            break;
+        default:
+            break;
     }
-    return self;
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult) result
+{
+    switch (result) {
+        case MessageComposeResultCancelled:
+            break;
+            
+        case MessageComposeResultFailed:
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Hm..." message: @"Something wnet wrong. Try sending the text again." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+            break;
+        }
+            
+        case MessageComposeResultSent:{
+        
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Horray!" message: @"Your text was sent!" delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,7 +117,7 @@
         //Default display
         self.textKey = @"name";
         
-        self.pullToRefreshEnabled = YES;
+        self.pullToRefreshEnabled = NO;
         self.paginationEnabled = NO;
         self.objectsPerPage = 150;
         self.sections = [NSMutableDictionary dictionary];
@@ -162,7 +205,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 52.0;
+    return 50.0;
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -170,16 +213,25 @@
     
     //Make custom header
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 52)];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 50)];
     /* Create custom view to display section header... */
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 30, tableView.frame.size.width, 18)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 25, tableView.frame.size.width, 18)];
     [label setFont:[UIFont systemFontOfSize:14]];
-    [label setTextColor:[UIColor colorWithRed:166/255.0 green:177/255.0 blue:186/255.0 alpha:1.0]];
+    [label setTextColor:[UIColor colorWithRed:123/255.0 green:123/255.0 blue:127/255.0 alpha:1.0]];
     NSString *company = [[self companyForSection:section] uppercaseString];
-    /* Section header is in 0th index... */
+
+
+    
     [label setText:company];
     [view addSubview:label];
-    [view setBackgroundColor:[UIColor colorWithRed:166/255.0 green:177/255.0 blue:186/255.0 alpha:0.2]]; //your background color...
+    [view setBackgroundColor:[UIColor colorWithRed:232/255.0 green:232/255.0 blue:239/255.0 alpha:0.9]];
+    
+    //add header separator
+    CGRect sepFrame = CGRectMake(0, view.frame.size.height-1, 320, 1);
+    UIView *seperatorView = [[UIView alloc] initWithFrame:sepFrame];
+    seperatorView.backgroundColor = [UIColor colorWithWhite:224.0/255.0 alpha:1.0];
+    [view addSubview:seperatorView];
+    
     return view;
 }
 
@@ -191,19 +243,53 @@
     
     PFObject *selectedObject = [self objectAtIndexPath:indexPath];
     if([[selectedObject objectForKey:@"contactType"]isEqualToString: @"email"]){
-    //show email stuff
+        
+        // Email Subject
+        NSString *emailTitle = @"Test Email";
+        // Email Content
+        NSString *messageBody = [NSString stringWithFormat:@"Hey %@,", [selectedObject objectForKey:@"name"]];
+        NSArray *sendArray = [NSArray arrayWithObject:[selectedObject objectForKey:@"contactInfo"]];
+        MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+        mc.mailComposeDelegate = self;
+        [mc setSubject:emailTitle];
+        [mc setSubject:@"HSHacks Help"];
+        [mc setMessageBody:messageBody isHTML:NO];
+        [mc setToRecipients:sendArray];
+        
+        // Present mail view controller on screen
+        [self presentViewController:mc animated:YES completion:NULL];
+
     
     }
     
     if([[selectedObject objectForKey:@"contactType"]isEqualToString: @"twitter"]){
-        //show tweet @
+        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+        {
+            SLComposeViewController *tweetSheet = [SLComposeViewController
+                                                   composeViewControllerForServiceType:SLServiceTypeTwitter];
+            NSString *message = [NSString stringWithFormat:@"Hey %@ ", [selectedObject objectForKey:@"contactInfo"]];
+            [tweetSheet setInitialText:message];
+            [self presentViewController:tweetSheet animated:YES completion:nil];
+        }
     }
     
     if([[selectedObject objectForKey:@"contactType"]isEqualToString: @"phone"]){
-        //show text message
-    
+        
+        NSArray *sendArray = [NSArray arrayWithObject:[selectedObject objectForKey:@"contactInfo"]];
+
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        MFMessageComposeViewController *messageController = [[MFMessageComposeViewController alloc] init];
+        messageController.messageComposeDelegate = self;
+            
+        [messageController setRecipients:sendArray];
+        [messageController setBody:[NSString stringWithFormat:@"Hey %@, ", [selectedObject objectForKey:@"name"]]];
+        [self presentViewController:messageController animated:YES completion:nil];
+                       });
     }
     
+
+     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
 }
 
@@ -219,12 +305,18 @@
     
     // Configure the cell
 
-
+    //If no skills, then move name downto center of cell
     
+    if([[object objectForKey:@"skills"]isEqualToString:@""]){
+        UILabel *nameLabel = (UILabel*) [cell viewWithTag:100];
+        nameLabel.frame =  CGRectMake(16, 11, 232, 21);
+        //Doesn't work right now :(
+        nameLabel.text = [object objectForKey:@"name"];
+    }
+    else{
         UILabel *nameLabel = (UILabel*) [cell viewWithTag:100];
         nameLabel.text = [object objectForKey:@"name"];
-    
-    NSLog(@"name %@", [object objectForKey:@"name"]);
+    }
         UILabel *skillsLabel = (UILabel*) [cell viewWithTag:101];
         skillsLabel.text = [object objectForKey:@"skills"];
     

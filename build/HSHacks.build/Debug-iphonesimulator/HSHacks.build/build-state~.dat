@@ -14,12 +14,6 @@ cCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal
 cCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UpdatesViewController.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UpdatesViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/AppDelegate.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UIButton+WebCache.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/UIButton+WebCache.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/SDWebImagePrefetcher.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImagePrefetcher.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/SDWebImageDownloaderOperation.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageDownloaderOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UserData.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UserData.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/ChatViewController.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ChatViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UIImage+MultiFormat.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/UIImage+MultiFormat.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/ConciergeViewController.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ConciergeViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 
 N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/SDKSettings.plist
 c00000000523E21DA00000000000003B5
@@ -41,16 +35,6 @@ c000000005300028C0000000000000891
 t1392509580
 s2193
 
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ChatViewController.m
-c0000000052FFF4B20000000000001AFC
-t1392506034
-s6908
-
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ConciergeViewController.m
-c00000000530049550000000000002000
-t1392527701
-s8192
-
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/HSHacks-Prefix.pch
 c0000000052F425930000000000000158
 t1391732115
@@ -61,95 +45,35 @@ c0000000052FFE7260000000000001084
 t1392502566
 s4228
 
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/NSData+ImageContentType.h
-c0000000052FFDA3800000000000000EC
-t1392499256
-s236
-
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/NSData+ImageContentType.m
 c0000000052FFDA3800000000000003EA
 t1392499256
 s1002
-
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDImageCache.h
-c0000000052FFDA3800000000000012FE
-t1392499256
-s4862
-
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageCompat.h
-c0000000052FFDA3800000000000005F8
-t1392499256
-s1528
 
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageCompat.m
 c0000000052FFDA380000000000000591
 t1392499256
 s1425
 
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageDecoder.h
-c0000000052FFDA3800000000000001C5
-t1392499256
-s453
-
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageDecoder.m
 c0000000052FFDA380000000000000A24
 t1392499256
 s2596
-
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageDownloader.h
-c0000000052FFDA380000000000001554
-t1392499256
-s5460
-
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageDownloaderOperation.m
-c0000000052FFDA3800000000000039D5
-t1392499256
-s14805
-
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageManager.h
-c0000000052FFDA380000000000001CD5
-t1392499256
-s7381
 
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageManager.m
 c0000000052FFDA3800000000000027F2
 t1392499256
 s10226
 
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageOperation.h
-c0000000052FFDA380000000000000149
-t1392499256
-s329
-
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImagePrefetcher.m
-c0000000052FFDA38000000000000129D
-t1392499256
-s4765
-
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/UIButton+WebCache.h
-c0000000052FFDA38000000000000223A
-t1392499256
-s8762
-
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/UIButton+WebCache.m
 c0000000052FFDA380000000000001476
 t1392499256
 s5238
 
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/UIImage+MultiFormat.m
-c0000000052FFDA380000000000000347
-t1392499256
-s839
-
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/UIImage+WebP.m
 c0000000052FFDA3800000000000007A3
 t1392499256
 s1955
-
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/UIImageView+WebCache.h
-c0000000052FFDA380000000000001860
-t1392499256
-s6240
 
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/UIImageView+WebCache.m
 c0000000052FFDA38000000000000129F
@@ -161,20 +85,7 @@ c0000000052F5EE3200000000000005E2
 t1391849010
 s1506
 
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UserData.m
-c0000000052F5F80400000000000002A5
-t1391851524
-s677
-
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/AppDelegate.o
-t2
-s0
-
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/ChatViewController.o
-t2
-s0
-
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/ConciergeViewController.o
 t2
 s0
 
@@ -183,50 +94,34 @@ t2
 s0
 
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/NSData+ImageContentType.o
-t1392527810
-s8588
+t2
+s0
 
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/SDWebImageCompat.o
-t1392527811
-s11944
+t2
+s0
 
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/SDWebImageDecoder.o
-t1392527811
-s12692
-
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/SDWebImageDownloaderOperation.o
 t2
 s0
 
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/SDWebImageManager.o
-t1392527811
-s93608
-
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/SDWebImagePrefetcher.o
 t2
 s0
 
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UIButton+WebCache.o
-t1392527812
-s77920
-
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UIImage+MultiFormat.o
 t2
 s0
 
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UIImage+WebP.o
-t1392527805
-s1780
-
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UIImageView+WebCache.o
-t1392527812
-s70564
-
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UpdatesViewController.o
 t2
 s0
 
-N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UserData.o
+N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UIImageView+WebCache.o
+t2
+s0
+
+N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UpdatesViewController.o
 t2
 s0
 
@@ -235,8 +130,8 @@ t1392527802
 s113956
 
 N/var/folders/4q/pzp61xxd1wb294rvmvlr1tp00000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/HSHacks-Prefix-ekgumjtnvjklajdmbzkpjovingjl/HSHacks-Prefix.pch.pch
-t1392527803
-s114820
+t2
+s0
 
 CBuild AST from /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/AppDelegate.m
 r0
@@ -306,14 +201,14 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies354540e284b0b841^5391fee384b0b841^---0#1#1#--18"Check dependencies36"36DDC68F-405C-402B-9457-CB12C6CA75C4-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies64e97b2d81b0b841^1a6f672e81b0b841^---0#1#1#--18"Check dependencies36"6F83EEB5-4083-49C6-A71C-CB5AC520AE8C-
 
 CCompileAssetCatalog /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/Images.xcassets
 r0
 
 CCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/AppDelegate.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s414221539.996969
-e414221548.679125
+s414220605.673381
+e414220609.476239
 r0
 xCompileC
 xbuild/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/AppDelegate.o
@@ -326,53 +221,21 @@ o/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/AppDelegate.m:10:9: fatal er
 o#import <Parse/Parse.h>
 o        ^
 o1 error generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Compile /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/AppDelegate.m188"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/AppDelegate.o HSHacks/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler94dd0ce484b0b841^27c2aeec84b0b841^-168"/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/AppDelegate.m:10:9: fatal error: 'Parse/Parse.h' file not found#import <Parse/Parse.h>        ^1 error generated.1(36%IDEClangDiagnosticActivityLogMessage2@30"'Parse/Parse.h' file not found-414221548#18446744073709551615#0#-2#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@71"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/AppDelegate.m0000000000000000^9#8#9#8#168#0#29"Lexical or Preprocessor Issue--0#0#1#-19%DVTDocumentLocation4@71"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/AppDelegate.m0000000000000000^3623"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/AppDelegate.o HSHacks/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/alexyeh/Dropbox/Spencer/hshacks-ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/alexyeh/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-generated-files.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-own-target-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-all-target-headers.hmap -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-project-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources/i386 -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources -F/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator -F/Users/spenceryen/Dropbox/Spencer/hshacks-ios -include /var/folders/4q/pzp61xxd1wb294rvmvlr1tp00000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/HSHacks-Prefix-btrqsubfdwbbqeevwupqbuqxzusc/HSHacks-Prefix.pch -MMD -MT dependencies -MF /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/AppDelegate.dia -c /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/AppDelegate.m -o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/AppDelegate.o36"B0826D41-342F-4070-9D13-52A6BA9544C8-
-b7C370850-9CF3-4074-B8EB-5ECA570E042F
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Compile /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/AppDelegate.m188"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/AppDelegate.o HSHacks/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler457fac3d81b0b841^3ae9794181b0b841^-168"/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/AppDelegate.m:10:9: fatal error: 'Parse/Parse.h' file not found#import <Parse/Parse.h>        ^1 error generated.1(36%IDEClangDiagnosticActivityLogMessage2@30"'Parse/Parse.h' file not found-414220609#18446744073709551615#0#-2#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@71"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/AppDelegate.m0000000000000000^9#8#9#8#168#0#29"Lexical or Preprocessor Issue--0#0#1#-19%DVTDocumentLocation4@71"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/AppDelegate.m0000000000000000^3623"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/AppDelegate.o HSHacks/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/alexyeh/Dropbox/Spencer/hshacks-ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/alexyeh/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-generated-files.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-own-target-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-all-target-headers.hmap -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-project-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources/i386 -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources -F/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator -F/Users/spenceryen/Dropbox/Spencer/hshacks-ios -include /var/folders/4q/pzp61xxd1wb294rvmvlr1tp00000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/HSHacks-Prefix-btrqsubfdwbbqeevwupqbuqxzusc/HSHacks-Prefix.pch -MMD -MT dependencies -MF /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/AppDelegate.dia -c /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/AppDelegate.m -o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/AppDelegate.o36"C54C47A5-9A0C-45B3-BC57-2F2CDC011F84-
+b79E8B6AC-915B-4400-A089-EEF9D6B52925
 
 CCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/ChatViewController.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ChatViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s414221548.860201
-e414221555.133163
 r0
-xCompileC
-xbuild/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/ChatViewController.o
-x/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ChatViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-oIn file included from /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ChatViewController.m:9:
-o/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ChatViewController.h:10:9: fatal error: 'Firebase/Firebase.h' file not found
-o#import <Firebase/Firebase.h>
-o        ^
-o1 error generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ChatViewController.m202"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/ChatViewController.o HSHacks/ChatViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilera54edcec84b0b841^011522f384b0b841^-284"In file included from /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ChatViewController.m:9:/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ChatViewController.h:10:9: fatal error: 'Firebase/Firebase.h' file not found#import <Firebase/Firebase.h>        ^1 error generated.1(36%IDEClangDiagnosticActivityLogMessage2@36"'Firebase/Firebase.h' file not found-414221555#18446744073709551615#0#1(2@96"In file included from /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ChatViewController.m:9:-414221555#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@78"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ChatViewController.m0000000000000000^8#8#8#8#150#0#21"Apple LLVM 5.0 Notice--2#27"com.apple.dt.IDE.diagnostic3@78"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ChatViewController.h0000000000000000^9#8#9#8#174#0#29"Lexical or Preprocessor Issue--0#0#1#-19%DVTDocumentLocation4@78"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ChatViewController.m0000000000000000^3665"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/ChatViewController.o HSHacks/ChatViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/alexyeh/Dropbox/Spencer/hshacks-ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/alexyeh/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-generated-files.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-own-target-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-all-target-headers.hmap -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-project-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources/i386 -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources -F/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator -F/Users/spenceryen/Dropbox/Spencer/hshacks-ios -include /var/folders/4q/pzp61xxd1wb294rvmvlr1tp00000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/HSHacks-Prefix-btrqsubfdwbbqeevwupqbuqxzusc/HSHacks-Prefix.pch -MMD -MT dependencies -MF /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/ChatViewController.d --serialize-diagnostics /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/ChatViewController.dia -c /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ChatViewController.m -o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/ChatViewController.o36"7EA39BF2-E11C-4B87-A887-EA1D67E8EB8D-
-b7C370850-9CF3-4074-B8EB-5ECA570E042F
 
 CCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/ConciergeViewController.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ConciergeViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s414221555.307084
-e414221557.058140
 r0
-xCompileC
-xbuild/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/ConciergeViewController.o
-x/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ConciergeViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-oIn file included from /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ConciergeViewController.m:9:
-o/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ConciergeViewController.h:10:9: fatal error: 'Parse/Parse.h' file not found
-o#import <Parse/Parse.h>
-o        ^
-o1 error generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ConciergeViewController.m212"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/ConciergeViewController.o HSHacks/ConciergeViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler0ebc4ef384b0b841^2ae40ef584b0b841^-282"In file included from /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ConciergeViewController.m:9:/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ConciergeViewController.h:10:9: fatal error: 'Parse/Parse.h' file not found#import <Parse/Parse.h>        ^1 error generated.1(36%IDEClangDiagnosticActivityLogMessage2@30"'Parse/Parse.h' file not found-414221557#18446744073709551615#0#1(2@101"In file included from /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ConciergeViewController.m:9:-414221557#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@83"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ConciergeViewController.m0000000000000000^8#8#8#8#155#0#21"Apple LLVM 5.0 Notice--2#27"com.apple.dt.IDE.diagnostic3@83"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ConciergeViewController.h0000000000000000^9#8#9#8#179#0#29"Lexical or Preprocessor Issue--0#0#1#-19%DVTDocumentLocation4@83"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ConciergeViewController.m0000000000000000^3695"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/ConciergeViewController.o HSHacks/ConciergeViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/alexyeh/Dropbox/Spencer/hshacks-ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/alexyeh/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-generated-files.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-own-target-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-all-target-headers.hmap -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-project-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources/i386 -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources -F/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator -F/Users/spenceryen/Dropbox/Spencer/hshacks-ios -include /var/folders/4q/pzp61xxd1wb294rvmvlr1tp00000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/HSHacks-Prefix-btrqsubfdwbbqeevwupqbuqxzusc/HSHacks-Prefix.pch -MMD -MT dependencies -MF /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/ConciergeViewController.d --serialize-diagnostics /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/ConciergeViewController.dia -c /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ConciergeViewController.m -o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/ConciergeViewController.o36"54A0A6FD-7BEB-4684-97C5-3E66222E094D-
-b7C370850-9CF3-4074-B8EB-5ECA570E042F
 
 CCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/GuideViewController.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/GuideViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 r0
 
 CCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/LoginViewController.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s414221539.996391
-e414221548.684024
+s414220603.649225
+e414220609.476445
 r0
 xCompileC
 xbuild/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/LoginViewController.o
@@ -386,8 +249,8 @@ o/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.h:10:9: 
 o#import <FacebookSDK/FacebookSDK.h>
 o        ^
 o1 error generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.m204"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/LoginViewController.o HSHacks/LoginViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler0ad60ce484b0b841^16a5b0ec84b0b841^-298"In file included from /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.m:9:/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.h:10:9: fatal error: 'FacebookSDK/FacebookSDK.h' file not found#import <FacebookSDK/FacebookSDK.h>        ^1 error generated.1(36%IDEClangDiagnosticActivityLogMessage2@42"'FacebookSDK/FacebookSDK.h' file not found-414221548#18446744073709551615#0#1(2@97"In file included from /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.m:9:-414221548#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@79"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.m0000000000000000^8#8#8#8#151#0#21"Apple LLVM 5.0 Notice--2#27"com.apple.dt.IDE.diagnostic3@79"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.h0000000000000000^9#8#9#8#175#0#29"Lexical or Preprocessor Issue--0#0#1#-19%DVTDocumentLocation4@79"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.m0000000000000000^3671"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/LoginViewController.o HSHacks/LoginViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/alexyeh/Dropbox/Spencer/hshacks-ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/alexyeh/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-generated-files.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-own-target-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-all-target-headers.hmap -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-project-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources/i386 -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources -F/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator -F/Users/spenceryen/Dropbox/Spencer/hshacks-ios -include /var/folders/4q/pzp61xxd1wb294rvmvlr1tp00000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/HSHacks-Prefix-btrqsubfdwbbqeevwupqbuqxzusc/HSHacks-Prefix.pch -MMD -MT dependencies -MF /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/LoginViewController.d --serialize-diagnostics /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/LoginViewController.dia -c /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.m -o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/LoginViewController.o36"94F9816F-15EF-41BA-AA72-5C00C55682E4-
-b7C370850-9CF3-4074-B8EB-5ECA570E042F
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.m204"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/LoginViewController.o HSHacks/LoginViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerae9fa63b81b0b841^fdf6794181b0b841^-298"In file included from /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.m:9:/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.h:10:9: fatal error: 'FacebookSDK/FacebookSDK.h' file not found#import <FacebookSDK/FacebookSDK.h>        ^1 error generated.1(36%IDEClangDiagnosticActivityLogMessage2@42"'FacebookSDK/FacebookSDK.h' file not found-414220609#18446744073709551615#0#1(2@97"In file included from /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.m:9:-414220609#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@79"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.m0000000000000000^8#8#8#8#151#0#21"Apple LLVM 5.0 Notice--2#27"com.apple.dt.IDE.diagnostic3@79"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.h0000000000000000^9#8#9#8#175#0#29"Lexical or Preprocessor Issue--0#0#1#-19%DVTDocumentLocation4@79"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.m0000000000000000^3671"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/LoginViewController.o HSHacks/LoginViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/alexyeh/Dropbox/Spencer/hshacks-ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/alexyeh/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-generated-files.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-own-target-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-all-target-headers.hmap -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-project-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources/i386 -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources -F/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator -F/Users/spenceryen/Dropbox/Spencer/hshacks-ios -include /var/folders/4q/pzp61xxd1wb294rvmvlr1tp00000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/HSHacks-Prefix-btrqsubfdwbbqeevwupqbuqxzusc/HSHacks-Prefix.pch -MMD -MT dependencies -MF /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/LoginViewController.d --serialize-diagnostics /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/LoginViewController.dia -c /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.m -o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/LoginViewController.o36"20D290C5-DAC4-49B8-B196-CD3C3B3E0B8D-
+b79E8B6AC-915B-4400-A089-EEF9D6B52925
 
 CCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/MKAnnotationView+WebCache.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/MKAnnotationView+WebCache.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 r0
@@ -448,25 +311,7 @@ CCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal
 r0
 
 CCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/SDWebImageDownloaderOperation.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageDownloaderOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s414221548.860168
-e414221554.803459
-r1
-xCompileC
-xbuild/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/SDWebImageDownloaderOperation.o
-x/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageDownloaderOperation.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageDownloaderOperation.m
-d/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageDownloaderOperation.h
-d/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageDownloader.h
-d/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageCompat.h
-d/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageOperation.h
-d/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageDecoder.h
-d/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/UIImage+MultiFormat.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Compile /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageDownloaderOperation.m235"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/SDWebImageDownloaderOperation.o HSHacks/SDWebImage/SDWebImageDownloaderOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerb54edcec84b0b841^68b0cdf284b0b841^---0#0#1#-19%DVTDocumentLocation2@100"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageDownloaderOperation.m0000000000000000^3753"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/SDWebImageDownloaderOperation.o HSHacks/SDWebImage/SDWebImageDownloaderOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/alexyeh/Dropbox/Spencer/hshacks-ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/alexyeh/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-generated-files.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-own-target-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-all-target-headers.hmap -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-project-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources/i386 -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources -F/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator -F/Users/spenceryen/Dropbox/Spencer/hshacks-ios -include /var/folders/4q/pzp61xxd1wb294rvmvlr1tp00000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/HSHacks-Prefix-btrqsubfdwbbqeevwupqbuqxzusc/HSHacks-Prefix.pch -MMD -MT dependencies -MF /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/SDWebImageDownloaderOperation.d --serialize-diagnostics /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/SDWebImageDownloaderOperation.dia -c /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageDownloaderOperation.m -o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/SDWebImageDownloaderOperation.o36"AC2E0F69-42A6-4AD9-8782-935CC17559DD-
-b7C370850-9CF3-4074-B8EB-5ECA570E042F
+r0
 
 CCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/SDWebImageManager.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s414220603.645572
@@ -489,25 +334,7 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile
 b79E8B6AC-915B-4400-A089-EEF9D6B52925
 
 CCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/SDWebImagePrefetcher.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImagePrefetcher.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s414221539.998115
-e414221553.623711
-r1
-xCompileC
-xbuild/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/SDWebImagePrefetcher.o
-x/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImagePrefetcher.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImagePrefetcher.m
-d/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImagePrefetcher.h
-d/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageManager.h
-d/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageCompat.h
-d/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageOperation.h
-d/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImageDownloader.h
-d/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDImageCache.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImagePrefetcher.m217"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/SDWebImagePrefetcher.o HSHacks/SDWebImage/SDWebImagePrefetcher.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerb3ce0ce484b0b841^213fa3f184b0b841^---0#0#1#-19%DVTDocumentLocation2@91"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImagePrefetcher.m0000000000000000^3699"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/SDWebImagePrefetcher.o HSHacks/SDWebImage/SDWebImagePrefetcher.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/alexyeh/Dropbox/Spencer/hshacks-ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/alexyeh/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-generated-files.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-own-target-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-all-target-headers.hmap -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-project-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources/i386 -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources -F/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator -F/Users/spenceryen/Dropbox/Spencer/hshacks-ios -include /var/folders/4q/pzp61xxd1wb294rvmvlr1tp00000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/HSHacks-Prefix-btrqsubfdwbbqeevwupqbuqxzusc/HSHacks-Prefix.pch -MMD -MT dependencies -MF /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/SDWebImagePrefetcher.d --serialize-diagnostics /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/SDWebImagePrefetcher.dia -c /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/SDWebImagePrefetcher.m -o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/SDWebImagePrefetcher.o36"FB0A14B1-A563-49A1-8591-1D21AEBB39E1-
-b7C370850-9CF3-4074-B8EB-5ECA570E042F
+r0
 
 CCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UIButton+WebCache.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/UIButton+WebCache.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s414220611.437920
@@ -534,22 +361,7 @@ CCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal
 r0
 
 CCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UIImage+MultiFormat.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/UIImage+MultiFormat.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s414221554.803803
-e414221555.306756
-r1
-xCompileC
-xbuild/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UIImage+MultiFormat.o
-x/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/UIImage+MultiFormat.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/UIImage+MultiFormat.m
-d/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/UIImage+MultiFormat.h
-d/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/UIImage+GIF.h
-d/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/NSData+ImageContentType.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/UIImage+MultiFormat.m215"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UIImage+MultiFormat.o HSHacks/SDWebImage/UIImage+MultiFormat.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler98dfcdf284b0b841^4d874ef384b0b841^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/UIImage+MultiFormat.m0000000000000000^3693"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UIImage+MultiFormat.o HSHacks/SDWebImage/UIImage+MultiFormat.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/alexyeh/Dropbox/Spencer/hshacks-ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/alexyeh/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-generated-files.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-own-target-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-all-target-headers.hmap -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-project-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources/i386 -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources -F/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator -F/Users/spenceryen/Dropbox/Spencer/hshacks-ios -include /var/folders/4q/pzp61xxd1wb294rvmvlr1tp00000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/HSHacks-Prefix-btrqsubfdwbbqeevwupqbuqxzusc/HSHacks-Prefix.pch -MMD -MT dependencies -MF /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UIImage+MultiFormat.d --serialize-diagnostics /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UIImage+MultiFormat.dia -c /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/UIImage+MultiFormat.m -o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UIImage+MultiFormat.o36"517B3993-5E9B-415F-B1A8-C1DE8B448697-
-b7C370850-9CF3-4074-B8EB-5ECA570E042F
+r0
 
 CCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UIImage+WebP.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/SDWebImage/UIImage+WebP.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s414220603.648586
@@ -588,8 +400,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile
 b79E8B6AC-915B-4400-A089-EEF9D6B52925
 
 CCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UpdatesViewController.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UpdatesViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s414221539.996685
-e414221548.684039
+s414220603.650070
+e414220609.436141
 r0
 xCompileC
 xbuild/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UpdatesViewController.o
@@ -603,24 +415,11 @@ o/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.h:10:9: 
 o#import <FacebookSDK/FacebookSDK.h>
 o        ^
 o1 error generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UpdatesViewController.m208"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UpdatesViewController.o HSHacks/UpdatesViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler63d50ce484b0b841^2fa7b0ec84b0b841^-301"In file included from /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UpdatesViewController.m:10:/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.h:10:9: fatal error: 'FacebookSDK/FacebookSDK.h' file not found#import <FacebookSDK/FacebookSDK.h>        ^1 error generated.1(36%IDEClangDiagnosticActivityLogMessage2@42"'FacebookSDK/FacebookSDK.h' file not found-414221548#18446744073709551615#0#1(2@100"In file included from /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UpdatesViewController.m:10:-414221548#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@81"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UpdatesViewController.m0000000000000000^9#8#9#8#187#0#21"Apple LLVM 5.0 Notice--2#27"com.apple.dt.IDE.diagnostic3@79"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.h0000000000000000^9#8#9#8#175#0#29"Lexical or Preprocessor Issue--0#0#1#-19%DVTDocumentLocation4@81"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UpdatesViewController.m0000000000000000^3683"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UpdatesViewController.o HSHacks/UpdatesViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/alexyeh/Dropbox/Spencer/hshacks-ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/alexyeh/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-generated-files.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-own-target-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-all-target-headers.hmap -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-project-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources/i386 -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources -F/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator -F/Users/spenceryen/Dropbox/Spencer/hshacks-ios -include /var/folders/4q/pzp61xxd1wb294rvmvlr1tp00000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/HSHacks-Prefix-btrqsubfdwbbqeevwupqbuqxzusc/HSHacks-Prefix.pch -MMD -MT dependencies -MF /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UpdatesViewController.d --serialize-diagnostics /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UpdatesViewController.dia -c /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UpdatesViewController.m -o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UpdatesViewController.o36"1A809E13-C633-4478-8A5C-F29ADA576D62-
-b7C370850-9CF3-4074-B8EB-5ECA570E042F
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UpdatesViewController.m208"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UpdatesViewController.o HSHacks/UpdatesViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerdcbba63b81b0b841^94a06f4181b0b841^-301"In file included from /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UpdatesViewController.m:10:/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.h:10:9: fatal error: 'FacebookSDK/FacebookSDK.h' file not found#import <FacebookSDK/FacebookSDK.h>        ^1 error generated.1(36%IDEClangDiagnosticActivityLogMessage2@42"'FacebookSDK/FacebookSDK.h' file not found-414220609#18446744073709551615#0#1(2@100"In file included from /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UpdatesViewController.m:10:-414220609#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@81"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UpdatesViewController.m0000000000000000^9#8#9#8#187#0#21"Apple LLVM 5.0 Notice--2#27"com.apple.dt.IDE.diagnostic3@79"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoginViewController.h0000000000000000^9#8#9#8#175#0#29"Lexical or Preprocessor Issue--0#0#1#-19%DVTDocumentLocation4@81"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UpdatesViewController.m0000000000000000^3683"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UpdatesViewController.o HSHacks/UpdatesViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/alexyeh/Dropbox/Spencer/hshacks-ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/alexyeh/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-generated-files.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-own-target-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-all-target-headers.hmap -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-project-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources/i386 -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources -F/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator -F/Users/spenceryen/Dropbox/Spencer/hshacks-ios -include /var/folders/4q/pzp61xxd1wb294rvmvlr1tp00000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/HSHacks-Prefix-btrqsubfdwbbqeevwupqbuqxzusc/HSHacks-Prefix.pch -MMD -MT dependencies -MF /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UpdatesViewController.d --serialize-diagnostics /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UpdatesViewController.dia -c /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UpdatesViewController.m -o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UpdatesViewController.o36"C523B9A1-87B8-487B-BF2F-572B292F5B3F-
+b79E8B6AC-915B-4400-A089-EEF9D6B52925
 
 CCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UserData.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UserData.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s414221548.860185
-e414221552.913315
-r1
-xCompileC
-xbuild/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UserData.o
-x/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UserData.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UserData.m
-d/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UserData.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Compile /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UserData.m182"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UserData.o HSHacks/UserData.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler3c4fdcec84b0b841^0fd0e9f084b0b841^---0#0#1#-19%DVTDocumentLocation2@68"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UserData.m0000000000000000^3605"CompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UserData.o HSHacks/UserData.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/alexyeh/Dropbox/Spencer/hshacks-ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/alexyeh/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-generated-files.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-own-target-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-all-target-headers.hmap -iquote /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/HSHacks-project-headers.hmap -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources/i386 -I/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/DerivedSources -F/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator -F/Users/spenceryen/Dropbox/Spencer/hshacks-ios -include /var/folders/4q/pzp61xxd1wb294rvmvlr1tp00000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/HSHacks-Prefix-btrqsubfdwbbqeevwupqbuqxzusc/HSHacks-Prefix.pch -MMD -MT dependencies -MF /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UserData.d --serialize-diagnostics /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UserData.dia -c /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UserData.m -o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/UserData.o36"509A01D8-A4E1-4403-9BF1-A68853EDCD9A-
-b7C370850-9CF3-4074-B8EB-5ECA570E042F
+r0
 
 CCompileC build/HSHacks.build/Debug-iphonesimulator/HSHacks.build/Objects-normal/i386/main.o /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 r0
