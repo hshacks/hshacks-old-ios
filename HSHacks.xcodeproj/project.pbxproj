@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6CB6738718B081C100719CEB /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB6738418B081C100719CEB /* FacebookSDK.framework */; };
+		6CB6738818B081C100719CEB /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB6738518B081C100719CEB /* Firebase.framework */; };
+		6CB6738918B081C100719CEB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB6738618B081C100719CEB /* Parse.framework */; };
 		6CC2247318A476D000262706 /* UpdatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2247218A476D000262706 /* UpdatesViewController.m */; };
 		6CC2247418A476D000262706 /* UpdatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2247218A476D000262706 /* UpdatesViewController.m */; };
 		6CC2247718A476FA00262706 /* ConciergeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2247618A476FA00262706 /* ConciergeViewController.m */; };
@@ -15,10 +18,8 @@
 		6CC2247C18A4770A00262706 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2247A18A4770A00262706 /* ChatViewController.m */; };
 		6CC2247F18A4771600262706 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2247E18A4771600262706 /* GuideViewController.m */; };
 		6CC2248018A4771600262706 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2247E18A4771600262706 /* GuideViewController.m */; };
-		6CCB63CB18A5D0AC004E80B4 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCB63CA18A5D0AC004E80B4 /* Firebase.framework */; };
 		6CCB63CE18A60324004E80B4 /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCB63CD18A60324004E80B4 /* UserData.m */; };
 		6CCB63D318A613A7004E80B4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCB63D218A613A7004E80B4 /* LoginViewController.m */; };
-		6CCB63D518A613B2004E80B4 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCB63D418A613B2004E80B4 /* FacebookSDK.framework */; };
 		6CCB63D718A621BF004E80B4 /* hshacksLOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CCB63D618A621BF004E80B4 /* hshacksLOGO.png */; };
 		6CE2CAFE18B01F17007AC3AA /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE2CAE218B01F17007AC3AA /* MKAnnotationView+WebCache.m */; };
 		6CE2CAFF18B01F17007AC3AA /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE2CAE418B01F17007AC3AA /* NSData+ImageContentType.m */; };
@@ -35,7 +36,6 @@
 		6CE2CB0A18B01F17007AC3AA /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE2CAFB18B01F17007AC3AA /* UIImage+WebP.m */; };
 		6CE2CB0B18B01F17007AC3AA /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE2CAFD18B01F17007AC3AA /* UIImageView+WebCache.m */; };
 		6CE2CB0D18B02047007AC3AA /* placeholderIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE2CB0C18B02047007AC3AA /* placeholderIcon.png */; };
-		6CE2CB1018B031E7007AC3AA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE2CB0F18B031E6007AC3AA /* Parse.framework */; };
 		6CE2CB1218B03B97007AC3AA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE2CB1118B03B97007AC3AA /* AudioToolbox.framework */; };
 		6CE2CB1418B03BAB007AC3AA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE2CB1318B03BAB007AC3AA /* CoreLocation.framework */; };
 		6CE2CB1618B03BB7007AC3AA /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE2CB1518B03BB7007AC3AA /* libz.1.1.3.dylib */; };
@@ -72,6 +72,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6CB6738418B081C100719CEB /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = HSHacks/FacebookSDK.framework; sourceTree = "<group>"; };
+		6CB6738518B081C100719CEB /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = HSHacks/Firebase.framework; sourceTree = "<group>"; };
+		6CB6738618B081C100719CEB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = HSHacks/Parse.framework; sourceTree = "<group>"; };
 		6CC2247118A476D000262706 /* UpdatesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdatesViewController.h; sourceTree = "<group>"; };
 		6CC2247218A476D000262706 /* UpdatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdatesViewController.m; sourceTree = "<group>"; };
 		6CC2247518A476FA00262706 /* ConciergeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConciergeViewController.h; sourceTree = "<group>"; };
@@ -80,12 +83,10 @@
 		6CC2247A18A4770A00262706 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		6CC2247D18A4771600262706 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
 		6CC2247E18A4771600262706 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
-		6CCB63CA18A5D0AC004E80B4 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		6CCB63CC18A60324004E80B4 /* UserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserData.h; sourceTree = "<group>"; };
 		6CCB63CD18A60324004E80B4 /* UserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserData.m; sourceTree = "<group>"; };
 		6CCB63D118A613A7004E80B4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		6CCB63D218A613A7004E80B4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		6CCB63D418A613B2004E80B4 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		6CCB63D618A621BF004E80B4 /* hshacksLOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hshacksLOGO.png; sourceTree = "<group>"; };
 		6CE2CAE118B01F17007AC3AA /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		6CE2CAE218B01F17007AC3AA /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
@@ -117,7 +118,6 @@
 		6CE2CAFC18B01F17007AC3AA /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		6CE2CAFD18B01F17007AC3AA /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		6CE2CB0C18B02047007AC3AA /* placeholderIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholderIcon.png; sourceTree = "<group>"; };
-		6CE2CB0F18B031E6007AC3AA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		6CE2CB1118B03B97007AC3AA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		6CE2CB1318B03BAB007AC3AA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6CE2CB1518B03BB7007AC3AA /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
@@ -158,16 +158,16 @@
 				6CE2CB1418B03BAB007AC3AA /* CoreLocation.framework in Frameworks */,
 				6CE2CB1218B03B97007AC3AA /* AudioToolbox.framework in Frameworks */,
 				E783EC1818891CBB00033983 /* SystemConfiguration.framework in Frameworks */,
-				6CCB63D518A613B2004E80B4 /* FacebookSDK.framework in Frameworks */,
-				6CCB63CB18A5D0AC004E80B4 /* Firebase.framework in Frameworks */,
+				6CB6738918B081C100719CEB /* Parse.framework in Frameworks */,
 				E783EC1618891CB100033983 /* Security.framework in Frameworks */,
 				E783EC1418891CAA00033983 /* CFNetwork.framework in Frameworks */,
 				E783EC1218891CA500033983 /* libc++.dylib in Frameworks */,
-				6CE2CB1018B031E7007AC3AA /* Parse.framework in Frameworks */,
 				E783EC1018891C9C00033983 /* libicucore.dylib in Frameworks */,
+				6CB6738818B081C100719CEB /* Firebase.framework in Frameworks */,
 				E770466318891A7700BE6FC4 /* CoreGraphics.framework in Frameworks */,
 				E770466518891A7700BE6FC4 /* UIKit.framework in Frameworks */,
 				E770466118891A7700BE6FC4 /* Foundation.framework in Frameworks */,
+				6CB6738718B081C100719CEB /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,14 +251,14 @@
 		E770465F18891A7700BE6FC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6CB6738418B081C100719CEB /* FacebookSDK.framework */,
+				6CB6738518B081C100719CEB /* Firebase.framework */,
+				6CB6738618B081C100719CEB /* Parse.framework */,
 				6CE2CB1918B03BCC007AC3AA /* QuartzCore.framework */,
 				6CE2CB1718B03BC2007AC3AA /* MobileCoreServices.framework */,
 				6CE2CB1518B03BB7007AC3AA /* libz.1.1.3.dylib */,
 				6CE2CB1318B03BAB007AC3AA /* CoreLocation.framework */,
 				6CE2CB1118B03B97007AC3AA /* AudioToolbox.framework */,
-				6CE2CB0F18B031E6007AC3AA /* Parse.framework */,
-				6CCB63D418A613B2004E80B4 /* FacebookSDK.framework */,
-				6CCB63CA18A5D0AC004E80B4 /* Firebase.framework */,
 				E783EC1718891CBB00033983 /* SystemConfiguration.framework */,
 				E783EC1518891CB100033983 /* Security.framework */,
 				E783EC1318891CAA00033983 /* CFNetwork.framework */,
@@ -582,6 +582,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/spenceryen/Dropbox/Spencer/hshacks-ios",
+					"/Users/spenceryen/Dropbox/Spencer/hshacks-ios/HSHacks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HSHacks/HSHacks-Prefix.pch";
@@ -600,6 +601,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/spenceryen/Dropbox/Spencer/hshacks-ios",
+					"/Users/spenceryen/Dropbox/Spencer/hshacks-ios/HSHacks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HSHacks/HSHacks-Prefix.pch";

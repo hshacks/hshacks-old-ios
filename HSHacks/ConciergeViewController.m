@@ -139,7 +139,6 @@
     NSString *company = [self companyForSection:indexPath.section];
     
     NSArray *rowIndecesInSection = [self.sections objectForKey:company];
-    
     NSNumber *rowIndex = [rowIndecesInSection objectAtIndex:indexPath.row];
     return [self.objects objectAtIndex:[rowIndex intValue]];
 }
@@ -161,21 +160,26 @@
     return company;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 52.0;
+}
+
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     
-
+    //Make custom header
     
-    
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 1000)];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 52)];
     /* Create custom view to display section header... */
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, tableView.frame.size.width, 18)];
-    [label setFont:[UIFont boldSystemFontOfSize:12]];
-    NSString *company = [self companyForSection:section];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 30, tableView.frame.size.width, 18)];
+    [label setFont:[UIFont systemFontOfSize:14]];
+    [label setTextColor:[UIColor colorWithRed:166/255.0 green:177/255.0 blue:186/255.0 alpha:1.0]];
+    NSString *company = [[self companyForSection:section] uppercaseString];
     /* Section header is in 0th index... */
     [label setText:company];
     [view addSubview:label];
-    [view setBackgroundColor:[UIColor colorWithRed:166/255.0 green:177/255.0 blue:186/255.0 alpha:0.5]]; //your background color...
+    [view setBackgroundColor:[UIColor colorWithRed:166/255.0 green:177/255.0 blue:186/255.0 alpha:0.2]]; //your background color...
     return view;
 }
 
@@ -245,53 +249,6 @@
     return cell;
 }
 
-
-
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//    return 2 ;
-//}
-//
-//
-//
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-//    return @"mhacks";
-//}
-//- (CGFloat)tableView:(UITableView *)aTableView heightForHeaderInSection:(NSInteger)section{
-//    return 20;
-//
-//}
-// - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-// 
-//     return 0;
-//     
-// }
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//    return 3;
-//}
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    static NSString *simpleTableIdentifier = @"ConciergeCell";
-//    
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-//    
-//    if (cell == nil) {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-//    }
-//    
-////    Recipe *recipe = [recipes objectAtIndex:indexPath.row];
-////    
-//
-////    UILabel *nameLabel = (UILabel*) [cell viewWithTag:100];
-////    nameLabel.text = recipe.name;
-////    UILabel *skillsLabel = (UILabel*) [cell viewWithTag:101];
-////    skillsLabel.text = recipe.prepTime;
-////    UIImageView *comImage = (UIImageView*) [cell viewWithTag:102];
-////    comImage.image = [UIImage imageNamed:recipe.imageFile];
-//    
-//    return cell;
-//}
 
 
 
