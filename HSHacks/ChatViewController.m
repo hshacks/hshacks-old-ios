@@ -183,11 +183,6 @@
     CGRect chatTextFieldFrame = CGRectMake(chatTextField.frame.origin.x,chatTextField.frame.origin.y-170,chatTextField.frame.size.width,chatTextField.frame.size.height);
     [UIView animateWithDuration:0.3 animations:^{ chatTextField.frame = chatTextFieldFrame;}];
  
-    
-  
-   
-    
-    //[self moveView:[notification userInfo] up:YES];
 
 }
 
@@ -206,17 +201,6 @@
 }
 
 
-
-// This method will be called when the user touches on the tableView, at
-// which point we will hide the keyboard (if open). This method is called
-// because UITouchTableView.m calls nextResponder in its touch handler.
-- (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event
-{
-    if ([chatTextField isFirstResponder]) {
-        NSLog(@"lasdlkfajsd");
-        [chatTextField resignFirstResponder];
-    }
-}
 
 
 @end
