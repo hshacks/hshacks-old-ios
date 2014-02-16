@@ -174,25 +174,29 @@
 // text field upwards when the keyboard shows, and downwards when it hides.
 - (void)keyboardWillShow:(NSNotification*)notification
 {
-    CGRect chatTableViewFrame = CGRectMake(0,65,320,chatTableView.frame.size.height-170);
-    [UIView animateWithDuration:0.5 animations:^{ chatTableView.frame = chatTableViewFrame;}];
-    
-    [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.chat.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+   
 
     
     CGRect chatTextFieldFrame = CGRectMake(chatTextField.frame.origin.x,chatTextField.frame.origin.y-170,chatTextField.frame.size.width,chatTextField.frame.size.height);
     [UIView animateWithDuration:0.3 animations:^{ chatTextField.frame = chatTextFieldFrame;}];
+    
+    CGRect chatTableViewFrame = CGRectMake(0,65,320,chatTableView.frame.size.height-170);
+    [UIView animateWithDuration:0.0 animations:^{ chatTableView.frame = chatTableViewFrame;}];
+    
+    [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.chat.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
  
 
 }
 
 - (void)keyboardWillHide:(NSNotification*)notification
 {
-    CGRect chatTableViewFrame = CGRectMake(0,65,320,chatTableView.frame.size.height+170);
-    [UIView animateWithDuration:0.5 animations:^{ chatTableView.frame = chatTableViewFrame;}];
+   
     
     CGRect chatTextFieldFrame = CGRectMake(chatTextField.frame.origin.x,chatTextField.frame.origin.y+170,chatTextField.frame.size.width,chatTextField.frame.size.height);
     [UIView animateWithDuration:0.3 animations:^{ chatTextField.frame = chatTextFieldFrame;}];
+    
+    CGRect chatTableViewFrame = CGRectMake(0,65,320,chatTableView.frame.size.height+170);
+    [UIView animateWithDuration:0.0 animations:^{ chatTableView.frame = chatTableViewFrame;}];
   
 //    [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.chat.count -1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
     

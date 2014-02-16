@@ -51,7 +51,7 @@
     [segmentedControl setFrame:CGRectMake(85,25,150,30)];
  segmentedControl.segmentedControlStyle = UISegmentedControlStylePlain;
 
-    
+     [segmentedControl addTarget:self action:@selector(changeView:)forControlEvents:UIControlEventValueChanged];
     [segControlView addSubview:segmentedControl];
 
     
