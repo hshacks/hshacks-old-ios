@@ -142,7 +142,10 @@
     }
     
     // Order by company
-    [query orderByAscending:@"company"];
+    [query orderByAscending:@"companyID"];
+    
+    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+
     return query;
     
 }

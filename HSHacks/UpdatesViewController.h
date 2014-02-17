@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
+
+@interface UpdatesViewController : PFQueryTableViewController
 
 
-@interface UpdatesViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

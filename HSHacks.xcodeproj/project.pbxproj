@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6CB6738718B081C100719CEB /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB6738418B081C100719CEB /* FacebookSDK.framework */; };
-		6CB6738818B081C100719CEB /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB6738518B081C100719CEB /* Firebase.framework */; };
-		6CB6738918B081C100719CEB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB6738618B081C100719CEB /* Parse.framework */; };
 		6CB6738B18B08D5E00719CEB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB6738A18B08D5E00719CEB /* MessageUI.framework */; };
 		6CB6738D18B08F6A00719CEB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB6738C18B08F6A00719CEB /* CoreTelephony.framework */; };
 		6CB6738F18B093C300719CEB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB6738E18B093C300719CEB /* Social.framework */; };
@@ -44,6 +41,10 @@
 		6CE2CB1618B03BB7007AC3AA /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE2CB1518B03BB7007AC3AA /* libz.1.1.3.dylib */; };
 		6CE2CB1818B03BC2007AC3AA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE2CB1718B03BC2007AC3AA /* MobileCoreServices.framework */; };
 		6CE2CB1A18B03BCC007AC3AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE2CB1918B03BCC007AC3AA /* QuartzCore.framework */; };
+		6CF15AB918B1E30800AE5A04 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E783EC1518891CB100033983 /* Security.framework */; };
+		6CF15AC318B1E4E200AE5A04 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF15AC018B1E4E200AE5A04 /* FacebookSDK.framework */; };
+		6CF15AC418B1E4E200AE5A04 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF15AC118B1E4E200AE5A04 /* Firebase.framework */; };
+		6CF15AC518B1E4E200AE5A04 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF15AC218B1E4E200AE5A04 /* Parse.framework */; };
 		E770466118891A7700BE6FC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E770466018891A7700BE6FC4 /* Foundation.framework */; };
 		E770466318891A7700BE6FC4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E770466218891A7700BE6FC4 /* CoreGraphics.framework */; };
 		E770466518891A7700BE6FC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E770466418891A7700BE6FC4 /* UIKit.framework */; };
@@ -60,7 +61,6 @@
 		E783EC1018891C9C00033983 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E783EC0F18891C9C00033983 /* libicucore.dylib */; };
 		E783EC1218891CA500033983 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E783EC1118891CA500033983 /* libc++.dylib */; };
 		E783EC1418891CAA00033983 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E783EC1318891CAA00033983 /* CFNetwork.framework */; };
-		E783EC1618891CB100033983 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E783EC1518891CB100033983 /* Security.framework */; };
 		E783EC1818891CBB00033983 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E783EC1718891CBB00033983 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,9 +75,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6CB6738418B081C100719CEB /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = HSHacks/FacebookSDK.framework; sourceTree = "<group>"; };
-		6CB6738518B081C100719CEB /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = HSHacks/Firebase.framework; sourceTree = "<group>"; };
-		6CB6738618B081C100719CEB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = HSHacks/Parse.framework; sourceTree = "<group>"; };
 		6CB6738A18B08D5E00719CEB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		6CB6738C18B08F6A00719CEB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		6CB6738E18B093C300719CEB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -129,6 +126,9 @@
 		6CE2CB1518B03BB7007AC3AA /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		6CE2CB1718B03BC2007AC3AA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		6CE2CB1918B03BCC007AC3AA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6CF15AC018B1E4E200AE5A04 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		6CF15AC118B1E4E200AE5A04 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		6CF15AC218B1E4E200AE5A04 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		E770465D18891A7700BE6FC4 /* HSHacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSHacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E770466018891A7700BE6FC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E770466218891A7700BE6FC4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -158,6 +158,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CF15AC318B1E4E200AE5A04 /* FacebookSDK.framework in Frameworks */,
+				6CF15AC418B1E4E200AE5A04 /* Firebase.framework in Frameworks */,
+				6CF15AC518B1E4E200AE5A04 /* Parse.framework in Frameworks */,
+				6CF15AB918B1E30800AE5A04 /* Security.framework in Frameworks */,
 				6CB6738F18B093C300719CEB /* Social.framework in Frameworks */,
 				6CB6738D18B08F6A00719CEB /* CoreTelephony.framework in Frameworks */,
 				6CB6738B18B08D5E00719CEB /* MessageUI.framework in Frameworks */,
@@ -167,16 +171,12 @@
 				6CE2CB1418B03BAB007AC3AA /* CoreLocation.framework in Frameworks */,
 				6CE2CB1218B03B97007AC3AA /* AudioToolbox.framework in Frameworks */,
 				E783EC1818891CBB00033983 /* SystemConfiguration.framework in Frameworks */,
-				6CB6738918B081C100719CEB /* Parse.framework in Frameworks */,
-				E783EC1618891CB100033983 /* Security.framework in Frameworks */,
 				E783EC1418891CAA00033983 /* CFNetwork.framework in Frameworks */,
 				E783EC1218891CA500033983 /* libc++.dylib in Frameworks */,
 				E783EC1018891C9C00033983 /* libicucore.dylib in Frameworks */,
-				6CB6738818B081C100719CEB /* Firebase.framework in Frameworks */,
 				E770466318891A7700BE6FC4 /* CoreGraphics.framework in Frameworks */,
 				E770466518891A7700BE6FC4 /* UIKit.framework in Frameworks */,
 				E770466118891A7700BE6FC4 /* Foundation.framework in Frameworks */,
-				6CB6738718B081C100719CEB /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,12 +260,12 @@
 		E770465F18891A7700BE6FC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6CF15AC018B1E4E200AE5A04 /* FacebookSDK.framework */,
+				6CF15AC118B1E4E200AE5A04 /* Firebase.framework */,
+				6CF15AC218B1E4E200AE5A04 /* Parse.framework */,
 				6CB6738E18B093C300719CEB /* Social.framework */,
 				6CB6738C18B08F6A00719CEB /* CoreTelephony.framework */,
 				6CB6738A18B08D5E00719CEB /* MessageUI.framework */,
-				6CB6738418B081C100719CEB /* FacebookSDK.framework */,
-				6CB6738518B081C100719CEB /* Firebase.framework */,
-				6CB6738618B081C100719CEB /* Parse.framework */,
 				6CE2CB1918B03BCC007AC3AA /* QuartzCore.framework */,
 				6CE2CB1718B03BC2007AC3AA /* MobileCoreServices.framework */,
 				6CE2CB1518B03BB7007AC3AA /* libz.1.1.3.dylib */,
@@ -530,7 +530,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Scott Yen (BAYVK93Q46)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Scott Yen (BAYVK93Q46)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -548,6 +549,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = NO;
+				PROVISIONING_PROFILE = "B9BE3DB7-FCA5-443F-9A08-CAB243D92876";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -569,7 +571,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Scott Yen (MRQT579S8E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Scott Yen (MRQT579S8E)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -581,6 +584,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = NO;
+				PROVISIONING_PROFILE = "829F4D8C-E46C-4619-9AAB-B88203782053";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -591,11 +595,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/spenceryen/Dropbox/Spencer/hshacks-ios",
-					"/Users/spenceryen/Dropbox/Spencer/hshacks-ios/HSHacks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "./**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HSHacks/HSHacks-Prefix.pch";
 				INFOPLIST_FILE = "HSHacks/HSHacks-Info.plist";
@@ -610,11 +610,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/spenceryen/Dropbox/Spencer/hshacks-ios",
-					"/Users/spenceryen/Dropbox/Spencer/hshacks-ios/HSHacks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "./**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HSHacks/HSHacks-Prefix.pch";
 				INFOPLIST_FILE = "HSHacks/HSHacks-Info.plist";
