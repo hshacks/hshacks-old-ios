@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CountdownViewController : UIViewController
+@interface CountdownViewController : UIViewController {
+    int days;
+    int min;
+    int sec;
+    
+    BOOL isStarting;
+    BOOL hasStarted;
+    BOOL hasEnded;
+    
+    
+}
 
 @end

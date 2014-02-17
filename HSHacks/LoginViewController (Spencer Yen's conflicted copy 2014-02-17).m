@@ -58,7 +58,8 @@
                             @"user_photos",
                             @"user_status",
                             nil];
-
+    
+    NSLog(@"called login twitter");
     
     
     if ([TWTweetComposeViewController canSendTweet])
@@ -148,13 +149,15 @@
                             
                             NSString *screen_name = [(NSDictionary *)TWData objectForKey:@"screen_name"];
                             NSString *name = [(NSDictionary *)TWData objectForKey:@"name"];
-                      
+                            
+                            int followers = [[(NSDictionary *)TWData objectForKey:@"followers_count"] integerValue];
+                            int following = [[(NSDictionary *)TWData objectForKey:@"friends_count"] integerValue];
+                            int tweets = [[(NSDictionary *)TWData objectForKey:@"statuses_count"] integerValue];
+                            
                             NSString *profileImageStringURL = [(NSDictionary *)TWData objectForKey:@"photo"];
-             
+                            NSString *bannerImageStringURL =[(NSDictionary *)TWData objectForKey:@"profile_banner_url"];
                             
                             UserData *userData = [UserData sharedManager];
-                            userData.userName = name;
-                            userData.userPhoto = profileImageStringURL;
                             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
                             [defaults setObject:userData.userName forKey:@"name"];
@@ -164,10 +167,34 @@
                             
                             //should show animations and user info
                             [self doneWithLogin];
-  
+                            // Update the interface with the loaded data
                             
-
-                    
+//                            nameLabel.text = name;
+//                            usernameLabel.text= [NSString stringWithFormat:@"@%@",screen_name];
+//                            
+//                            tweetsLabel.text = [NSString stringWithFormat:@"%i", tweets];
+//                            followingLabel.text= [NSString stringWithFormat:@"%i", following];
+//                            followersLabel.text = [NSString stringWithFormat:@"%i", followers];
+                            
+//                            NSString *lastTweet = [[(NSDictionary *)TWData objectForKey:@"status"] objectForKey:@"text"];
+//                            lastTweetTextView.text= lastTweet;
+                            
+                            
+                            
+                            // Get the profile image in the original resolution
+                            
+                            profileImageStringURL = [profileImageStringURL stringByReplacingOccurrencesOfString:@"_normal" withString:@""];
+                            //[self getProfileImageForURLString:profileImageStringURL];
+                            
+                            
+                            // Get the banner image, if the user has one
+                            
+                           // if (bannerImageStringURL) {
+                             //   NSString *bannerURLString = [NSString stringWithFormat:@"%@mobile_retina", bannerImageStringURL];
+                            //    [self getBannerImageForURLString:bannerURLString];
+                           // } else {
+                             //   bannerImageView.backgroundColor = [UIColor underPageBackgroundColor];
+                            //}
                         }
                     });
                 }];

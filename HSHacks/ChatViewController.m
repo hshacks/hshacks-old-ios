@@ -91,8 +91,9 @@
     
     // This will also add the message to our local array self.chat because
     // the FEventTypeChildAdded event will be immediately fired.
+
     [[self.firebase childByAutoId] setValue:@{@"user" : self.name, @"message": aTextField.text, @"image" : self.photoURL}];
-    
+ 
     [aTextField setText:@""];
     return NO;
 }

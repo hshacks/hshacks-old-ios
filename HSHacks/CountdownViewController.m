@@ -26,7 +26,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	NSDate *today = [NSDate date];
+    NSDateFormatter *weekdayFormatter = [[NSDateFormatter alloc] init];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat: @"d MMMM yyyy"];
+    [weekdayFormatter setDateFormat: @"EEEE"];
+    NSString *formattedDate = [formatter stringFromDate: today];
+    NSString *weekday = [weekdayFormatter stringFromDate: today];
 }
 
 - (void)didReceiveMemoryWarning
