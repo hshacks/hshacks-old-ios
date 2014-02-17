@@ -34,7 +34,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Updates" id="u1e-5L-l1D">
+                    <tabBarItem key="tabBarItem" title="Updates" image="updates" id="u1e-5L-l1D">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
                     </tabBarItem>
                     <connections>
@@ -185,7 +185,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Concierge" id="Z7h-1E-pvt">
+                    <tabBarItem key="tabBarItem" title="Concierge" image="mentors" id="Z7h-1E-pvt">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
                     </tabBarItem>
                 </viewController>
@@ -231,7 +231,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Guide" id="SMR-RC-3bh">
+                    <tabBarItem key="tabBarItem" title="Guide" image="calendar" id="SMR-RC-3bh">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
                     </tabBarItem>
                     <connections>
@@ -312,7 +312,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Chat" id="Asx-aT-ge9">
+                    <tabBarItem key="tabBarItem" title="Chat" image="chat" id="Asx-aT-ge9">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
                     </tabBarItem>
                     <connections>
@@ -1042,7 +1042,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" width="23" height="25"/>
+        <image name="chat" width="24" height="22"/>
         <image name="hshacksLOGO.png" width="700" height="700"/>
+        <image name="mentors" width="18" height="25"/>
+        <image name="updates" width="24" height="17"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -1050,6 +1054,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="7os-vu-x8j"/>
+        <segue reference="76i-Fw-3Zv"/>
     </inferredMetricsTieBreakers>
 </document>
