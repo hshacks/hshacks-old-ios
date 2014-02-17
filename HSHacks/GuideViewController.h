@@ -13,5 +13,6 @@
 
 @property (strong, nonatomic) IBOutlet UIView *scheduleContainer;
 @property (strong, nonatomic) IBOutlet UIView *awardsContainer;
+@property (strong, nonatomic) IBOutlet UIView *countdownContainer;
 
 @end

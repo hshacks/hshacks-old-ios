@@ -15,6 +15,7 @@
 @implementation GuideViewController
 @synthesize awardsContainer = _awardsContainer;
 @synthesize scheduleContainer = _scheduleContainer;
+@synthesize countdownContainer = _countdownContainer;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -113,11 +114,14 @@
         //Show schedule
         _awardsContainer.hidden = YES;
         _scheduleContainer.hidden = NO;
+        _countdownContainer.hidden = NO;
+        
     }
     if (selectedSegment == 1) {
         //Show Awards
         _awardsContainer.hidden = NO;
         _scheduleContainer.hidden = YES;
+        _countdownContainer.hidden = YES;
 
     }
 }

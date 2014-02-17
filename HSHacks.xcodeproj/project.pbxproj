@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0759E22918B2198A00E67B23 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0759E22818B2198A00E67B23 /* Twitter.framework */; };
 		6CB6738B18B08D5E00719CEB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB6738A18B08D5E00719CEB /* MessageUI.framework */; };
 		6CB6738D18B08F6A00719CEB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB6738C18B08F6A00719CEB /* CoreTelephony.framework */; };
 		6CB6738F18B093C300719CEB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB6738E18B093C300719CEB /* Social.framework */; };
@@ -79,6 +80,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0759E22818B2198A00E67B23 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		6CB6738A18B08D5E00719CEB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		6CB6738C18B08F6A00719CEB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		6CB6738E18B093C300719CEB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -170,11 +172,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0759E22918B2198A00E67B23 /* Twitter.framework in Frameworks */,
+				6CB6738F18B093C300719CEB /* Social.framework in Frameworks */,
 				6CF15AC318B1E4E200AE5A04 /* FacebookSDK.framework in Frameworks */,
 				6CF15AC418B1E4E200AE5A04 /* Firebase.framework in Frameworks */,
 				6CF15AC518B1E4E200AE5A04 /* Parse.framework in Frameworks */,
 				6CF15AB918B1E30800AE5A04 /* Security.framework in Frameworks */,
-				6CB6738F18B093C300719CEB /* Social.framework in Frameworks */,
 				6CB6738D18B08F6A00719CEB /* CoreTelephony.framework in Frameworks */,
 				6CB6738B18B08D5E00719CEB /* MessageUI.framework in Frameworks */,
 				6CE2CB1A18B03BCC007AC3AA /* QuartzCore.framework in Frameworks */,
@@ -298,6 +301,7 @@
 		E770465F18891A7700BE6FC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0759E22818B2198A00E67B23 /* Twitter.framework */,
 				6CF15AC018B1E4E200AE5A04 /* FacebookSDK.framework */,
 				6CF15AC118B1E4E200AE5A04 /* Firebase.framework */,
 				6CF15AC218B1E4E200AE5A04 /* Parse.framework */,
@@ -423,7 +427,7 @@
 				ORGANIZATIONNAME = hshacks.com;
 				TargetAttributes = {
 					E770465C18891A7700BE6FC4 = {
-						DevelopmentTeam = 3779WUCD3T;
+						DevelopmentTeam = 6K2U3WGB8U;
 					};
 					E770468018891A7700BE6FC4 = {
 						TestTargetID = E770465C18891A7700BE6FC4;
