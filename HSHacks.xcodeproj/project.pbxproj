@@ -66,6 +66,14 @@
 		E783EC1218891CA500033983 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E783EC1118891CA500033983 /* libc++.dylib */; };
 		E783EC1418891CAA00033983 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E783EC1318891CAA00033983 /* CFNetwork.framework */; };
 		E783EC1818891CBB00033983 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E783EC1718891CBB00033983 /* SystemConfiguration.framework */; };
+		E7D344EA18B218530024687A /* updates.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D344E218B218530024687A /* updates.png */; };
+		E7D344EB18B218530024687A /* mentors.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D344E318B218530024687A /* mentors.png */; };
+		E7D344EC18B218530024687A /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D344E418B218530024687A /* chat.png */; };
+		E7D344ED18B218530024687A /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D344E518B218530024687A /* calendar.png */; };
+		E7D344EE18B218530024687A /* calendar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D344E618B218530024687A /* calendar@2x.png */; };
+		E7D344EF18B218530024687A /* chat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D344E718B218530024687A /* chat@2x.png */; };
+		E7D344F018B218530024687A /* mentors@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D344E818B218530024687A /* mentors@2x.png */; };
+		E7D344F118B218530024687A /* updates@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D344E918B218530024687A /* updates@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +171,14 @@
 		E783EC1318891CAA00033983 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		E783EC1518891CB100033983 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E783EC1718891CBB00033983 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E7D344E218B218530024687A /* updates.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = updates.png; sourceTree = "<group>"; };
+		E7D344E318B218530024687A /* mentors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mentors.png; sourceTree = "<group>"; };
+		E7D344E418B218530024687A /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
+		E7D344E518B218530024687A /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
+		E7D344E618B218530024687A /* calendar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar@2x.png"; sourceTree = "<group>"; };
+		E7D344E718B218530024687A /* chat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat@2x.png"; sourceTree = "<group>"; };
+		E7D344E818B218530024687A /* mentors@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mentors@2x.png"; sourceTree = "<group>"; };
+		E7D344E918B218530024687A /* updates@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "updates@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +260,14 @@
 		6CE2CB0E18B02053007AC3AA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E7D344E218B218530024687A /* updates.png */,
+				E7D344E318B218530024687A /* mentors.png */,
+				E7D344E418B218530024687A /* chat.png */,
+				E7D344E518B218530024687A /* calendar.png */,
+				E7D344E618B218530024687A /* calendar@2x.png */,
+				E7D344E718B218530024687A /* chat@2x.png */,
+				E7D344E818B218530024687A /* mentors@2x.png */,
+				E7D344E918B218530024687A /* updates@2x.png */,
 				6CCB63D618A621BF004E80B4 /* hshacksLOGO.png */,
 				6CE2CB0C18B02047007AC3AA /* placeholderIcon.png */,
 			);
@@ -454,8 +478,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7D344EB18B218530024687A /* mentors.png in Resources */,
 				6CCB63D718A621BF004E80B4 /* hshacksLOGO.png in Resources */,
 				E770467C18891A7700BE6FC4 /* Images.xcassets in Resources */,
+				E7D344F018B218530024687A /* mentors@2x.png in Resources */,
+				E7D344EF18B218530024687A /* chat@2x.png in Resources */,
+				E7D344EC18B218530024687A /* chat.png in Resources */,
+				E7D344EE18B218530024687A /* calendar@2x.png in Resources */,
+				E7D344ED18B218530024687A /* calendar.png in Resources */,
+				E7D344EA18B218530024687A /* updates.png in Resources */,
+				E7D344F118B218530024687A /* updates@2x.png in Resources */,
 				6CE2CB0D18B02047007AC3AA /* placeholderIcon.png in Resources */,
 				E770466B18891A7700BE6FC4 /* InfoPlist.strings in Resources */,
 				E770467418891A7700BE6FC4 /* Main.storyboard in Resources */,
