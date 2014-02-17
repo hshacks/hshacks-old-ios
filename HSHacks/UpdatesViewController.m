@@ -9,7 +9,6 @@
 #import "UpdatesViewController.h"
 #import "LoginViewController.h"
 
-#import <Parse/Parse.h>
 
 @interface UpdatesViewController ()
 
@@ -94,35 +93,35 @@
 
     return query;
 }
-//
-//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    if(indexPath.row%2 == 1){
-//        return 55;
-//    }
-//    else{
-//        return 60;
-//    }
-//
-//
-//
-//}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.row%2 == 0){
+        return 55;
+    }
+    else{
+        return 60;
+    }
+
+
+
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
 {
-    if(indexPath.row%2 == 1){
-    
-        static NSString *simpleTableIdentifier = @"HeaderCell";
-        
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-        if (cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-        }
-        
-        return cell;
-    
-    
-    }
-    else {
-    static NSString *simpleTableIdentifier = @"UpdatesCell";
+//    if(indexPath.row == 0 || indexPath.row%2 == 0){
+//    
+//        static NSString *simpleTableIdentifier = @"HeaderCell";
+//        
+//        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+//        if (cell == nil) {
+//            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+//        }
+//        
+//        return cell;
+//    
+//    
+//    }
+//    else {
+    static NSString *simpleTableIdentifier = @"UpdateCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil) {
@@ -132,22 +131,24 @@
     
     UILabel *titleLabel = (UILabel*) [cell viewWithTag:101];
     titleLabel.text = [object objectForKey:@"title"];
+        NSLog(@"title: %@", [object objectForKey:@"title"]);
+        
     
     UILabel *bodyLabel = (UILabel*) [cell viewWithTag:102];
     bodyLabel.text = [object objectForKey:@"body"];
     
     UILabel *timeLabel = (UILabel*) [cell viewWithTag:103];
-    NSDate *time = [object objectForKey:@"createdAt"];
+    NSString *time = [object objectForKey:@"createdAt"];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"MM/DD HH:mm a"];
-    NSLog(@"date:  %@",[dateFormatter stringFromDate:time]);
-    timeLabel.text = [dateFormatter stringFromDate:time];
+    NSLog(@"date:  %@",time);
+ //   timeLabel.text = [dateFormatter stringFromDate:time];
     
     
     return cell;
     }
-}
+//}
 
 
 @end
