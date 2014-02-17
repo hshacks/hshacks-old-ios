@@ -13,7 +13,8 @@
 @end
 
 @implementation GuideViewController
-
+@synthesize awardsContainer = _awardsContainer;
+@synthesize scheduleContainer = _scheduleContainer;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -77,18 +78,23 @@
     
     
     UIScrollView *scroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 435)];
-    scroll.contentSize = CGSizeMake(320, 700);
-    scroll.showsHorizontalScrollIndicator = YES;
+    scroll.contentSize = CGSizeMake(320, 44);
+    scroll.showsHorizontalScrollIndicator = NO;
     
     NSArray *itemArray = [NSArray arrayWithObjects: @"Schedule", @"Awards",  nil];
     UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:itemArray];
-    segmentedControl.frame = CGRectMake(35, 200, 250, 50);
+    segmentedControl.frame = CGRectMake(85,25,150,30);
     segmentedControl.segmentedControlStyle = UISegmentedControlStylePlain;
+    [segmentedControl addTarget:self action:@selector(changeView:)
+                  forControlEvents:UIControlEventValueChanged];
+
     segmentedControl.selectedSegmentIndex = 1;
     
     [scroll addSubview:segmentedControl];
     
+    
     [self.view addSubview:scroll];
+    //[[self navigationItem] setTitleView:segmentedControl];
     
     //TO TOGGLE BETWEEN VIEWS:
     //show awards
@@ -97,6 +103,23 @@
     
     //vice versa!!
     
+}
+
+-(void)changeView: (id)sender{
+    UISegmentedControl *segmentedControl = (UISegmentedControl *) sender;
+    NSInteger selectedSegment = segmentedControl.selectedSegmentIndex;
+
+    if (selectedSegment == 0) {
+        //Show schedule
+        _awardsContainer.hidden = YES;
+        _scheduleContainer.hidden = NO;
+    }
+    if (selectedSegment == 1) {
+        //Show Awards
+        _awardsContainer.hidden = NO;
+        _scheduleContainer.hidden = YES;
+
+    }
 }
 
 
