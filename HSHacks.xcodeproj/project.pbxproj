@@ -45,6 +45,10 @@
 		6CF15AC318B1E4E200AE5A04 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF15AC018B1E4E200AE5A04 /* FacebookSDK.framework */; };
 		6CF15AC418B1E4E200AE5A04 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF15AC118B1E4E200AE5A04 /* Firebase.framework */; };
 		6CF15AC518B1E4E200AE5A04 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF15AC218B1E4E200AE5A04 /* Parse.framework */; };
+		6CF15AC918B1FA3800AE5A04 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF15AC718B1FA3800AE5A04 /* ScheduleViewController.m */; };
+		6CF15AD618B1FACC00AE5A04 /* AwardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF15AD518B1FACC00AE5A04 /* AwardsViewController.m */; };
+		6CF15ADC18B1FDBD00AE5A04 /* LoggedInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF15ADB18B1FDBD00AE5A04 /* LoggedInViewController.m */; };
+		6CF15ADF18B1FE3000AE5A04 /* GuestLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF15ADE18B1FE3000AE5A04 /* GuestLoginViewController.m */; };
 		E770466118891A7700BE6FC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E770466018891A7700BE6FC4 /* Foundation.framework */; };
 		E770466318891A7700BE6FC4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E770466218891A7700BE6FC4 /* CoreGraphics.framework */; };
 		E770466518891A7700BE6FC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E770466418891A7700BE6FC4 /* UIKit.framework */; };
@@ -129,6 +133,14 @@
 		6CF15AC018B1E4E200AE5A04 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		6CF15AC118B1E4E200AE5A04 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		6CF15AC218B1E4E200AE5A04 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		6CF15AC618B1FA3800AE5A04 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
+		6CF15AC718B1FA3800AE5A04 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
+		6CF15AD418B1FACC00AE5A04 /* AwardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwardsViewController.h; sourceTree = "<group>"; };
+		6CF15AD518B1FACC00AE5A04 /* AwardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwardsViewController.m; sourceTree = "<group>"; };
+		6CF15ADA18B1FDBD00AE5A04 /* LoggedInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggedInViewController.h; sourceTree = "<group>"; };
+		6CF15ADB18B1FDBD00AE5A04 /* LoggedInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoggedInViewController.m; sourceTree = "<group>"; };
+		6CF15ADD18B1FE3000AE5A04 /* GuestLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuestLoginViewController.h; sourceTree = "<group>"; };
+		6CF15ADE18B1FE3000AE5A04 /* GuestLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuestLoginViewController.m; sourceTree = "<group>"; };
 		E770465D18891A7700BE6FC4 /* HSHacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSHacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E770466018891A7700BE6FC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E770466218891A7700BE6FC4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -238,6 +250,32 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		6CF15AE018B1FE4300AE5A04 /* Login Views */ = {
+			isa = PBXGroup;
+			children = (
+				6CCB63D118A613A7004E80B4 /* LoginViewController.h */,
+				6CCB63D218A613A7004E80B4 /* LoginViewController.m */,
+				6CF15ADD18B1FE3000AE5A04 /* GuestLoginViewController.h */,
+				6CF15ADE18B1FE3000AE5A04 /* GuestLoginViewController.m */,
+				6CF15ADA18B1FDBD00AE5A04 /* LoggedInViewController.h */,
+				6CF15ADB18B1FDBD00AE5A04 /* LoggedInViewController.m */,
+			);
+			name = "Login Views";
+			sourceTree = "<group>";
+		};
+		6CF15AE118B1FE5A00AE5A04 /* Guide Views */ = {
+			isa = PBXGroup;
+			children = (
+				6CC2247D18A4771600262706 /* GuideViewController.h */,
+				6CC2247E18A4771600262706 /* GuideViewController.m */,
+				6CF15AD418B1FACC00AE5A04 /* AwardsViewController.h */,
+				6CF15AD518B1FACC00AE5A04 /* AwardsViewController.m */,
+				6CF15AC618B1FA3800AE5A04 /* ScheduleViewController.h */,
+				6CF15AC718B1FA3800AE5A04 /* ScheduleViewController.m */,
+			);
+			name = "Guide Views";
+			sourceTree = "<group>";
+		};
 		E770465418891A7700BE6FC4 = {
 			isa = PBXGroup;
 			children = (
@@ -291,8 +329,7 @@
 				6CE2CAE018B01F17007AC3AA /* SDWebImage */,
 				E770466F18891A7700BE6FC4 /* AppDelegate.h */,
 				E770467018891A7700BE6FC4 /* AppDelegate.m */,
-				6CCB63D118A613A7004E80B4 /* LoginViewController.h */,
-				6CCB63D218A613A7004E80B4 /* LoginViewController.m */,
+				6CF15AE018B1FE4300AE5A04 /* Login Views */,
 				E770467218891A7700BE6FC4 /* Main.storyboard */,
 				6CC2247118A476D000262706 /* UpdatesViewController.h */,
 				6CC2247218A476D000262706 /* UpdatesViewController.m */,
@@ -300,8 +337,7 @@
 				6CC2247618A476FA00262706 /* ConciergeViewController.m */,
 				6CC2247918A4770A00262706 /* ChatViewController.h */,
 				6CC2247A18A4770A00262706 /* ChatViewController.m */,
-				6CC2247D18A4771600262706 /* GuideViewController.h */,
-				6CC2247E18A4771600262706 /* GuideViewController.m */,
+				6CF15AE118B1FE5A00AE5A04 /* Guide Views */,
 				6CCB63CC18A60324004E80B4 /* UserData.h */,
 				6CCB63CD18A60324004E80B4 /* UserData.m */,
 				E770467B18891A7700BE6FC4 /* Images.xcassets */,
@@ -439,7 +475,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CE2CB0B18B01F17007AC3AA /* UIImageView+WebCache.m in Sources */,
+				6CF15ADC18B1FDBD00AE5A04 /* LoggedInViewController.m in Sources */,
 				6CE2CB0218B01F17007AC3AA /* SDWebImageDecoder.m in Sources */,
+				6CF15AD618B1FACC00AE5A04 /* AwardsViewController.m in Sources */,
 				6CE2CB0518B01F17007AC3AA /* SDWebImageManager.m in Sources */,
 				6CE2CAFF18B01F17007AC3AA /* NSData+ImageContentType.m in Sources */,
 				6CE2CB0118B01F17007AC3AA /* SDWebImageCompat.m in Sources */,
@@ -457,7 +495,9 @@
 				6CE2CB0018B01F17007AC3AA /* SDImageCache.m in Sources */,
 				E770466D18891A7700BE6FC4 /* main.m in Sources */,
 				6CC2247F18A4771600262706 /* GuideViewController.m in Sources */,
+				6CF15ADF18B1FE3000AE5A04 /* GuestLoginViewController.m in Sources */,
 				6CE2CB0818B01F17007AC3AA /* UIImage+GIF.m in Sources */,
+				6CF15AC918B1FA3800AE5A04 /* ScheduleViewController.m in Sources */,
 				6CE2CB0318B01F17007AC3AA /* SDWebImageDownloader.m in Sources */,
 				6CE2CAFE18B01F17007AC3AA /* MKAnnotationView+WebCache.m in Sources */,
 			);

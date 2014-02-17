@@ -29,7 +29,9 @@
 {
     [super viewDidLoad];
     
-     }
+    self.tableView.separatorInset = UIEdgeInsetsZero;
+    
+}
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -82,6 +84,8 @@
         // Whether the built-in pagination is enabled
         self.paginationEnabled = NO;
         
+        
+        
     }
     return self;
 }
@@ -90,37 +94,21 @@
 {
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-
+    
+    [query orderByDescending:@"createdAt"];
+    
     return query;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if(indexPath.row%2 == 0){
-        return 55;
-    }
-    else{
-        return 60;
-    }
-
-
-
+    return 115.0;
 }
+
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
 {
-//    if(indexPath.row == 0 || indexPath.row%2 == 0){
-//    
-//        static NSString *simpleTableIdentifier = @"HeaderCell";
-//        
-//        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-//        if (cell == nil) {
-//            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-//        }
-//        
-//        return cell;
-//    
-//    
-//    }
-//    else {
+
     static NSString *simpleTableIdentifier = @"UpdateCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -134,7 +122,8 @@
         NSLog(@"title: %@", [object objectForKey:@"title"]);
         
     
-    UILabel *bodyLabel = (UILabel*) [cell viewWithTag:102];
+    UITextView *bodyLabel = (UITextView*) [cell viewWithTag:102];
+   // bodyLabel.automaticallyAdjustsScrollViewInsets = NO;
     bodyLabel.text = [object objectForKey:@"body"];
     
     UILabel *timeLabel = (UILabel*) [cell viewWithTag:103];
@@ -148,7 +137,7 @@
     
     return cell;
     }
-//}
+
 
 
 @end
