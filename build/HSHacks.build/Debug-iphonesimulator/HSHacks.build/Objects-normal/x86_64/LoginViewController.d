@@ -36,4 +36,5 @@ dependencies: \
   FacebookSDK.framework/Headers/FBSettings.h \
   FacebookSDK.framework/Headers/FBUserSettingsViewController.h \
   FacebookSDK.framework/Headers/NSError+FBError.h \
-  /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UserData.h
+  /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/UserData.h \
+  /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/LoggedInViewController.h

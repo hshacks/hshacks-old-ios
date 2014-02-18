@@ -2,8 +2,9 @@
 //  CountdownViewController.m
 //  HSHacks
 //
-//  Created by Spencer Yen on 2/17/14.
+//  Created by Spencer Yen (noob) on 2/17/14.
 //  Copyright (c) 2014 hshacks.com. All rights reserved.
+//  Alex Yeh too pro!!!!!!!!!
 //
 
 #import "CountdownViewController.h"
@@ -70,35 +71,36 @@
 -(void)countdownDisplay:(id)sender{
     today = [NSDate date];
     [self checkDate];
-    
+    NSUInteger unitFlags = NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit|NSHourCalendarUnit|NSMinuteCalendarUnit|NSSecondCalendarUnit;
     if(isStarting){
-       
-        daysComponent = [gregorianCalendar components:NSDayCalendarUnit
-                                             fromDate: today
-                                               toDate:HShacksBegin
-                                              options:0];
+     
+        NSDateComponents *dateComponents = [gregorianCalendar components:unitFlags fromDate:today toDate:HShacksBegin options:0];
         
-        hoursComponent = [gregorianCalendar components:NSHourCalendarUnit
-                                              fromDate: today
-                                                toDate:HShacksBegin
-                                               options:0];
+        NSNumber *days = [NSNumber numberWithInteger:[dateComponents day]];
+        NSNumber *hours = [NSNumber numberWithInteger:[dateComponents hour]];
+        NSNumber *mins = [NSNumber numberWithInteger:[dateComponents minute]];
+        NSNumber *secs = [NSNumber numberWithInteger:[dateComponents second]];
         
-        minsComponent = [gregorianCalendar components:NSMinuteCalendarUnit
-                                             fromDate: today
-                                               toDate:HShacksBegin
-                                              options:0];
+        NSString *s = [days stringValue];
+        s = [s stringByAppendingString:@" days  "];
+        s = [s stringByAppendingString:[hours stringValue]];
+        s = [s stringByAppendingString:@" hours  "];
+        s = [s stringByAppendingString:[mins stringValue]];
+        s = [s stringByAppendingString:@" minutes  "];
+        s = [s stringByAppendingString:[secs stringValue]];
+        s = [s stringByAppendingString:@" seconds  "];
         
-        secsComponent = [gregorianCalendar components:NSSecondCalendarUnit
-                                             fromDate: today
-                                               toDate:HShacksBegin
-                                              options:0];
+        countdown.text = s;
+        NSLog(@"%@",s);
         
-
+    }
+    else if (hasStarted){
+        NSDateComponents *dateComponents = [gregorianCalendar components:unitFlags fromDate:HShacksBegin toDate:HShacksEnd options:0];
         
-        NSNumber *days = [NSNumber numberWithInteger:[daysComponent day]];
-        NSNumber *hours = [NSNumber numberWithInteger:[hoursComponent hour]];
-        NSNumber *mins = [NSNumber numberWithInteger:[minsComponent minute]];
-        NSNumber *secs = [NSNumber numberWithInteger:[secsComponent second]];
+        NSNumber *days = [NSNumber numberWithInteger:[dateComponents day]];
+        NSNumber *hours = [NSNumber numberWithInteger:[dateComponents hour]];
+        NSNumber *mins = [NSNumber numberWithInteger:[dateComponents minute]];
+        NSNumber *secs = [NSNumber numberWithInteger:[dateComponents second]];
         
         NSString *s = [days stringValue];
         s = [s stringByAppendingString:@" days "];
@@ -111,10 +113,10 @@
         
         countdown.text = s;
         NSLog(@"%@",s);
-        
+
     }
-    else if (hasStarted){
-        
+    else if (hasEnded){
+        countdown.text = @"We hope you enjoyed this experience!";
     }
 }
 

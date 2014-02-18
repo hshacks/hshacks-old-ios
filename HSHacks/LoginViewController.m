@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "LoggedInViewController.h"
+
 @interface LoginViewController ()
 
 
@@ -46,12 +47,7 @@
 
 
 
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    LoginViewController *profileViewController = [segue destinationViewController];
-  //  [profileViewController setUsername:usernameTextfield.text];
 
-}
 -(void)loginTwitter{
     
     NSArray *permissions = [[NSArray alloc] initWithObjects:
@@ -93,9 +89,9 @@
 - (void) getTInfo
 {
     
-    NSString *username;
-
     // Request access to the Twitter accounts
+
+    
     
     ACAccountStore *accountStore = [[ACAccountStore alloc] init];
     ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
@@ -103,21 +99,30 @@
     [accountStore requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error){
         if (granted) {
             
+            NSArray *accountsArray = [accountStore accountsWithAccountType:accountType];
+            
+            
+            
             NSArray *accounts = [accountStore accountsWithAccountType:accountType];
             
             // Check if the users has setup at least one Twitter account
             
-            if (accounts.count > 0)
+            if ([accountsArray count] > 0)
             {
-                ACAccount *twitterAccount = [accounts objectAtIndex:0];
+                
+                ACAccount *twitterAccount = [accountsArray objectAtIndex:0];
+                NSLog(@"The following person is absolute poo: %@",twitterAccount.username);
+                NSLog(@"poo%@",twitterAccount.accountType);
                 
                 
                 // Creating a request to get the info about a user on Twitter
                 
-                SLRequest *twitterInfoRequest = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodGET URL:[NSURL URLWithString:@"https://api.twitter.com/1.1/users/show.json"] parameters:[NSDictionary dictionaryWithObject:username forKey:@"screen_name"]];
+                SLRequest *twitterInfoRequest = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodGET URL:[NSURL URLWithString:@"https://api.twitter.com/1.1/users/show.json"] parameters:[NSDictionary dictionaryWithObject:twitterAccount.username forKey:@"screen_name"]];
                 [twitterInfoRequest setAccount:twitterAccount];
                 
                 // Making the request
+                NSLog(@"The following person is absolute poo: %@",twitterAccount.username);
+
                 
                 [twitterInfoRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
                     dispatch_async(dispatch_get_main_queue(), ^{
@@ -143,17 +148,21 @@
                             NSError *error = nil;
                             NSArray *TWData = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableLeaves error:&error];
                             
-                            
+                            NSLog(@"data: %@", TWData);
                             // Filter the preferred data
                             
                             NSString *screen_name = [(NSDictionary *)TWData objectForKey:@"screen_name"];
+                        
+
                             NSString *name = [(NSDictionary *)TWData objectForKey:@"name"];
-                      
+                          NSLog(@"The following person is absolute poo: %@",name);
                             NSString *profileImageStringURL = [(NSDictionary *)TWData objectForKey:@"photo"];
-             
+                            NSLog(@"twitter photo url: %@", profileImageStringURL);
                             
                             UserData *userData = [UserData sharedManager];
                             userData.userName = name;
+                            NSLog(@"userdata.username: %@",userData.userName);
+
                             userData.userPhoto = profileImageStringURL;
                             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
@@ -162,8 +171,10 @@
                             
                             [defaults synchronize];
                             
+                            NSLog(@"The following person is absolute poo(unless this works): %@",userData.userPhoto);
+
                             //should show animations and user info
-                            [self doneWithLogin];
+                           [self doneWithLogin];
   
                             
 
