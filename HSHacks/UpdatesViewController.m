@@ -36,7 +36,7 @@
     [query selectKeys:@[@"body"]];
    NSArray *objects = [query findObjects];
     for (int i = 0; i < objects.count;i++) {
-            [bodyArray addObject:[objects[i] objectForKey:@"body"]];
+            [bodyArray insertObject:[objects[i] objectForKey:@"body"] atIndex:0];
           }
 
    
@@ -119,9 +119,9 @@
     
     for (PFObject *object in self.objects) {
       
-        NSString *body = [object objectForKey:@"title"];
+        NSString *body = [object objectForKey:@"body"];
         if(![bodyArray containsObject:body]){
-            [bodyArray addObject:body];
+            [bodyArray insertObject:body atIndex:0];
         }
     }
     
@@ -145,8 +145,8 @@
     CGRect textsize = [bodyString boundingRectWithSize:constraint options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
     //calculate your size
     float textHeight = textsize.size.height + 10;
-    NSLog(@"%f", textHeight + 79);
-    return textHeight + 79;
+    NSLog(@"%f", textHeight + 76);
+    return textHeight + 76;
 }
 
 
@@ -175,9 +175,10 @@
    // NSLog(@"the new frame: %@", newFrame);
     NSLog(@"width = %f, height = %f", newFrame.size.width, newFrame.size.height);
     bodyText.frame = CGRectMake(10,78,newFrame.size.width, newFrame.size.height);
-    
+ 
+    bodyText.lineBreakMode = NSLineBreakByWordWrapping;
+    bodyText.numberOfLines = 0;
     bodyText.text = bodyString;
-    
     UILabel *timeLabel = (UILabel*) [cell viewWithTag:103];
     //  NSDate *time = [NSDate date];
     NSDate *time = object.createdAt;
