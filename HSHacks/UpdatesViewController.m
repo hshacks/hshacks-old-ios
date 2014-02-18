@@ -34,18 +34,18 @@
     bodyArray = [[NSMutableArray alloc]init];
     PFQuery *query = [PFQuery queryWithClassName:@"Announcements"];
     [query selectKeys:@[@"body"]];
-   NSArray *objects = [query findObjects];
+    NSArray *objects = [query findObjects];
     for (int i = 0; i < objects.count;i++) {
-            [bodyArray insertObject:[objects[i] objectForKey:@"body"] atIndex:0];
-          }
-
-   
-//    NSArray *objects = [[NSArray alloc]init];
-//    [PFObject fetchAll:(NSArray *)objects];
-//    for (int i = 0; i < objects.count;i++) {
-//        [bodyArray addObject:[objects[i] objectForKey:@"body"]];
-//    }
-
+        [bodyArray insertObject:[objects[i] objectForKey:@"body"] atIndex:0];
+    }
+    
+    
+    //    NSArray *objects = [[NSArray alloc]init];
+    //    [PFObject fetchAll:(NSArray *)objects];
+    //    for (int i = 0; i < objects.count;i++) {
+    //        [bodyArray addObject:[objects[i] objectForKey:@"body"]];
+    //    }
+    
     
     NSLog(@"body array from 1%@", bodyArray);
     
@@ -55,13 +55,13 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    if([self isFirstRun]){
-        //check if first run, if so show login controller
+    if(![self isLoggedIn]){
+        //check if logged in, if not, show login view
         NSLog(@"is first run");
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         LoginViewController *loginVC = (LoginViewController*)[storyboard instantiateViewControllerWithIdentifier:@"loginVC"];
         [self presentViewController:loginVC animated:NO completion:nil];
-
+        
     }
 }
 
@@ -69,12 +69,12 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
- 
+    
 }
 
 - (BOOL)isFirstRun
 {
- //Check if it is the first run
+    //Check if it is the first run
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ([defaults objectForKey:@"isFirstRun"])
     {
@@ -85,7 +85,23 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     return YES;
 }
-
+-(BOOL)isLoggedIn{
+    
+    UserData *userData = [UserData sharedManager];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if([defaults objectForKey:@"name"] == nil || [defaults objectForKey:@"photo"] == nil){
+        return NO;
+    }
+    
+    if(userData.userName == nil || userData.userPhoto == nil){
+        return NO;
+    }
+    
+    else{
+        return YES;
+    }
+}
 
 - (id)initWithCoder:(NSCoder *)aCoder
 {
@@ -118,7 +134,7 @@
     
     
     for (PFObject *object in self.objects) {
-      
+        
         NSString *body = [object objectForKey:@"body"];
         if(![bodyArray containsObject:body]){
             [bodyArray insertObject:body atIndex:0];
@@ -127,7 +143,7 @@
     
     NSLog(@"body array %@", bodyArray);
     
-        
+    
     return query;
 }
 
@@ -145,14 +161,15 @@
     CGRect textsize = [bodyString boundingRectWithSize:constraint options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
     //calculate your size
     float textHeight = textsize.size.height + 10;
-    NSLog(@"%f", textHeight + 76);
-    return textHeight + 76;
+    NSLog(@"%f", textHeight + 78);
+    return textHeight + 78;
 }
+
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
 {
-
+    
     static NSString *simpleTableIdentifier = @"UpdateCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -168,31 +185,30 @@
     UILabel *bodyText = (UILabel*) [cell viewWithTag:104];
     
     NSString *bodyString =[object objectForKey:@"body"];
-
+    
     CGSize constraint = CGSizeMake(298, MAXFLOAT);
     NSDictionary *attributes = [NSDictionary dictionaryWithObject:[UIFont systemFontOfSize:13.0] forKey:NSFontAttributeName];
     CGRect newFrame = [bodyString boundingRectWithSize:constraint options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
-   // NSLog(@"the new frame: %@", newFrame);
     NSLog(@"width = %f, height = %f", newFrame.size.width, newFrame.size.height);
-    bodyText.frame = CGRectMake(10,78,newFrame.size.width, newFrame.size.height);
- 
-    bodyText.lineBreakMode = NSLineBreakByWordWrapping;
-    bodyText.numberOfLines = 0;
-    bodyText.text = bodyString;
-    UILabel *timeLabel = (UILabel*) [cell viewWithTag:103];
-    //  NSDate *time = [NSDate date];
-    NSDate *time = object.createdAt;
+    bodyText.frame = CGRectMake(10,79,newFrame.size.width, newFrame.size.height);
     
+    //    bodyText.numberOfLines = 0;
+    //bodyText.lineBreakMode = NSLineBreakByWordWrapping;
+    int numberOfLines = newFrame.size.height / bodyText.font.pointSize;
+    bodyText.numberOfLines = numberOfLines;//[self lineCountForLabel:bodyText];
+    NSLog(@"number of lines for %@ : %ld",bodyString, (long)bodyText.numberOfLines);
+    bodyText.text = bodyString;
+    
+    //Set date label
+    UILabel *timeLabel = (UILabel*) [cell viewWithTag:103];
+    NSDate *time = object.createdAt;
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-
     [dateFormatter setDateFormat:@"MM/dd hh:mm a"];
-
-    NSLog(@"date:  %@",time);
     timeLabel.text = [dateFormatter stringFromDate:time];
     
     
     return cell;
-    }
+}
 
 
 

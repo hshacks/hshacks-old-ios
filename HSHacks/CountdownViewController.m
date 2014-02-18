@@ -28,22 +28,27 @@
     [super viewDidLoad];
     
     formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat: @"MM-dd-yyyy hh:mm:ss"];
+    [formatter setDateFormat: @"MM/dd/yyyy HH:mm:ss"];
     
     today = [NSDate date];
-    HShacksDate = [formatter dateFromString:@"03-08-2014 13:00:00"];
-    NSLog(@"7878 %@ %@", today, HShacksDate);
+    HShacksDate = [formatter dateFromString:@"03/08/2014 13:00:00"];
+    
+    
+    
+    
+    NSLog(@"lol %@ %@", today, HShacksDate);
     [NSTimer scheduledTimerWithTimeInterval:1.0
-                                    target:self
-                                    selector:@selector(countdownDisplay)
-                                    userInfo:nil
+                                     target:self
+                                   selector:@selector(countdownDisplay:)
+                                   userInfo:nil
                                     repeats:YES];
-      NSLog(@"%@ %@", today, HShacksDate);
+    
     
 }
 
 -(void)checkDate{
-    if([today compare: HShacksDate] == NSOrderedDescending){
+    if([today compare: HShacksDate] == NSOrderedAscending){
+        NSLog(@"wow hshacks hasnt begun yet");
         interval.text = @"Hacking has not begun. HShacks will begin in:";
         isStarting = TRUE;
         hasEnded = FALSE;
@@ -55,7 +60,7 @@
         hasEnded = TRUE;
         hasEnded = FALSE;
     }
-    else if ([today compare: HShacksDate] == NSOrderedSame){
+    else if ([today compare: HShacksDate] == NSOrderedDescending){
         interval.text = @"Hacking has ended!";
         isStarting = FALSE;
         hasEnded = FALSE;
@@ -63,35 +68,35 @@
     }
 }
 
--(void)countdownDisplay{
+-(void)countdownDisplay:(id)sender{
     today = [NSDate date];
     [self checkDate];
     
     if(isStarting){
         NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
         NSDateComponents *daysComponent = [gregorianCalendar components:NSDayCalendarUnit
-                                                            fromDate: today
-                                                            toDate:HShacksDate
-                                                            options:0];
+                                                               fromDate: today
+                                                                 toDate:HShacksDate
+                                                                options:0];
         NSDateComponents *hoursComponent = [gregorianCalendar components:NSHourCalendarUnit
-                                                            fromDate: today
-                                                              toDate:HShacksDate
-                                                             options:0];
+                                                                fromDate: today
+                                                                  toDate:HShacksDate
+                                                                 options:0];
         NSDateComponents *minsComponent = [gregorianCalendar components:NSMinuteCalendarUnit
-                                                            fromDate: today
-                                                              toDate:HShacksDate
-                                                             options:0];
+                                                               fromDate: today
+                                                                 toDate:HShacksDate
+                                                                options:0];
         NSDateComponents *secsComponent = [gregorianCalendar components:NSSecondCalendarUnit
-                                                            fromDate: today
-                                                              toDate:HShacksDate
-                                                             options:0];
-
+                                                               fromDate: today
+                                                                 toDate:HShacksDate
+                                                                options:0];
+        
         NSInteger days = [daysComponent day];
         NSInteger hours = [hoursComponent hour];
         NSInteger mins = [minsComponent minute];
         NSInteger secs = [secsComponent second];
         
-        NSLog(@"%li %li %li %li", (long)days, (long)hours, (long)mins, (long)secs);
+        NSLog(@"%li %li %li %li until HSHacks starts!", (long)days, (long)hours, (long)mins, (long)secs);
         
     }
 }
