@@ -20,6 +20,8 @@
     
     IBOutlet UILabel *interval;
     IBOutlet UILabel *countdown;
+    NSDateComponents *daysComponent;
+    NSDateComponents *hoursComponent;
     
     
 }

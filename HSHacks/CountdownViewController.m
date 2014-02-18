@@ -32,11 +32,22 @@
     
     today = [NSDate date];
     HShacksDate = [formatter dateFromString:@"03/08/2014 13:00:00"];
-    
-    
+    NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+
+    daysComponent = [gregorianCalendar components:NSDayCalendarUnit
+                                         fromDate: today
+                                           toDate:HShacksDate
+                                          options:0];
+    hoursComponent = [gregorianCalendar components:NSHourCalendarUnit
+                                                            fromDate: today
+                                                              toDate:HShacksDate
+                                                             options:0];
+
+
     
     
     NSLog(@"lol %@ %@", today, HShacksDate);
+    
     [NSTimer scheduledTimerWithTimeInterval:1.0
                                      target:self
                                    selector:@selector(countdownDisplay:)
@@ -73,16 +84,7 @@
     [self checkDate];
     
     if(isStarting){
-        NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-        NSDateComponents *daysComponent = [gregorianCalendar components:NSDayCalendarUnit
-                                                               fromDate: today
-                                                                 toDate:HShacksDate
-                                                                options:0];
-        NSDateComponents *hoursComponent = [gregorianCalendar components:NSHourCalendarUnit
-                                                                fromDate: today
-                                                                  toDate:HShacksDate
-                                                                 options:0];
-        NSDateComponents *minsComponent = [gregorianCalendar components:NSMinuteCalendarUnit
+                             NSDateComponents *minsComponent = [gregorianCalendar components:NSMinuteCalendarUnit
                                                                fromDate: today
                                                                  toDate:HShacksDate
                                                                 options:0];
