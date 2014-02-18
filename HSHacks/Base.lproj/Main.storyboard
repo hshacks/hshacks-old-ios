@@ -49,8 +49,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GdP-9X-2pL">
                                 <rect key="frame" x="0.0" y="255" width="320" height="54"/>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdP-9X-2pL">
+                                <rect key="frame" x="19" y="255" width="283" height="54"/>
+>>>>>>> d4f8d5908f36ac645520f1dc10d600e2b90448a1
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25098039215686274" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -62,8 +67,13 @@
                                     <action selector="loginTwitter:" destination="SiW-8W-CZh" eventType="touchUpInside" id="YGz-xq-9cN"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QD3-8W-ehJ">
                                 <rect key="frame" x="0.0" y="332" width="320" height="54"/>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QD3-8W-ehJ">
+                                <rect key="frame" x="19" y="332" width="283" height="54"/>
+>>>>>>> d4f8d5908f36ac645520f1dc10d600e2b90448a1
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -75,8 +85,13 @@
                                     <action selector="loginFacebook:" destination="SiW-8W-CZh" eventType="touchUpInside" id="4NZ-Tt-LYK"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="exm-L4-iPr">
                                 <rect key="frame" x="0.0" y="406" width="320" height="54"/>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exm-L4-iPr">
+                                <rect key="frame" x="20" y="406" width="282" height="54"/>
+>>>>>>> d4f8d5908f36ac645520f1dc10d600e2b90448a1
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.40776466157687485" blue="0.24886751686146846" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -89,8 +104,13 @@
                                     <segue destination="J9F-kv-YAZ" kind="push" identifier="pushGuestLogin" id="f3N-Ir-Boq"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hshacksLOGO.png" id="eIB-fE-HJs">
                                 <rect key="frame" x="66" y="39" width="188" height="188"/>
+=======
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hshacksLOGO.png" translatesAutoresizingMaskIntoConstraints="NO" id="eIB-fE-HJs">
+                                <rect key="frame" x="85" y="57" width="150" height="150"/>
+>>>>>>> d4f8d5908f36ac645520f1dc10d600e2b90448a1
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -1022,7 +1042,7 @@
     <resources>
         <image name="calendar.png" width="30" height="30"/>
         <image name="chat.png" width="30" height="30"/>
-        <image name="hshacksLOGO.png" width="700" height="700"/>
+        <image name="hshacksLOGO.png" width="1000" height="1000"/>
         <image name="mentors.png" width="30" height="30"/>
         <image name="updates.png" width="30" height="30"/>
     </resources>
