@@ -34,18 +34,18 @@
     bodyArray = [[NSMutableArray alloc]init];
     PFQuery *query = [PFQuery queryWithClassName:@"Announcements"];
     [query selectKeys:@[@"body"]];
-   NSArray *objects = [query findObjects];
+    NSArray *objects = [query findObjects];
     for (int i = 0; i < objects.count;i++) {
-            [bodyArray insertObject:[objects[i] objectForKey:@"body"] atIndex:0];
-          }
-
-   
-//    NSArray *objects = [[NSArray alloc]init];
-//    [PFObject fetchAll:(NSArray *)objects];
-//    for (int i = 0; i < objects.count;i++) {
-//        [bodyArray addObject:[objects[i] objectForKey:@"body"]];
-//    }
-
+        [bodyArray insertObject:[objects[i] objectForKey:@"body"] atIndex:0];
+    }
+    
+    
+    //    NSArray *objects = [[NSArray alloc]init];
+    //    [PFObject fetchAll:(NSArray *)objects];
+    //    for (int i = 0; i < objects.count;i++) {
+    //        [bodyArray addObject:[objects[i] objectForKey:@"body"]];
+    //    }
+    
     
     NSLog(@"body array from 1%@", bodyArray);
     
@@ -61,7 +61,7 @@
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         LoginViewController *loginVC = (LoginViewController*)[storyboard instantiateViewControllerWithIdentifier:@"loginVC"];
         [self presentViewController:loginVC animated:NO completion:nil];
-
+        
     }
 }
 
@@ -69,12 +69,12 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
- 
+    
 }
 
 - (BOOL)isFirstRun
 {
- //Check if it is the first run
+    //Check if it is the first run
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ([defaults objectForKey:@"isFirstRun"])
     {
@@ -134,7 +134,7 @@
     
     
     for (PFObject *object in self.objects) {
-      
+        
         NSString *body = [object objectForKey:@"body"];
         if(![bodyArray containsObject:body]){
             [bodyArray insertObject:body atIndex:0];
@@ -143,7 +143,7 @@
     
     NSLog(@"body array %@", bodyArray);
     
-        
+    
     return query;
 }
 
@@ -166,16 +166,10 @@
 }
 
 
-- (int)lineCountForLabel:(UILabel *)label {
-    CGSize constrain = CGSizeMake(label.bounds.size.width, FLT_MAX);
-    CGSize size = [label.text sizeWithFont:label.font constrainedToSize:constrain lineBreakMode:NSLineBreakByWordWrapping];
-    
-    return ceil(size.height / label.font.lineHeight);
-}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
 {
-
+    
     static NSString *simpleTableIdentifier = @"UpdateCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -191,13 +185,13 @@
     UILabel *bodyText = (UILabel*) [cell viewWithTag:104];
     
     NSString *bodyString =[object objectForKey:@"body"];
-
+    
     CGSize constraint = CGSizeMake(298, MAXFLOAT);
     NSDictionary *attributes = [NSDictionary dictionaryWithObject:[UIFont systemFontOfSize:13.0] forKey:NSFontAttributeName];
     CGRect newFrame = [bodyString boundingRectWithSize:constraint options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
     NSLog(@"width = %f, height = %f", newFrame.size.width, newFrame.size.height);
     bodyText.frame = CGRectMake(10,79,newFrame.size.width, newFrame.size.height);
- 
+    
     //    bodyText.numberOfLines = 0;
     //bodyText.lineBreakMode = NSLineBreakByWordWrapping;
     int numberOfLines = newFrame.size.height / bodyText.font.pointSize;
@@ -214,7 +208,7 @@
     
     
     return cell;
-    }
+}
 
 
 
