@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-
+#import "LoggedInViewController.h"
 @interface LoginViewController ()
 
 
@@ -263,7 +263,7 @@
 }
 
 - (IBAction)loginGuest:(id)sender {
-    [self doneWithLogin];
+    
     
 }
 
@@ -275,8 +275,11 @@
     [defaults setObject:@"YES" forKey:@"loggedIn"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    LoggedInViewController *loggedInVC = (LoggedInViewController*)[storyboard instantiateViewControllerWithIdentifier:@"loggedInVC"];
+    [self presentViewController:loggedInVC animated:YES completion:nil];
+
     
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

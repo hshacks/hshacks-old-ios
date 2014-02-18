@@ -32,9 +32,9 @@
     
     today = [NSDate date];
     HShacksBegin = [formatter dateFromString:@"03/08/2014 12:30:00"];
-    HSHacksEnd = [formatter dateFromString:@"03/09/2014 13:00:00"];
+    HShacksEnd = [formatter dateFromString:@"03/09/2014 13:00:00"];
 
-    NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+   gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 
     
     [NSTimer scheduledTimerWithTimeInterval:1.0
@@ -47,19 +47,19 @@
 }
 
 -(void)checkDate{
-    if([today compare: HShacksBegin] == NSOrderedAscending && [today compare: HShacksBegin] == NSOrderedAscending){
+    if([today compare: HShacksBegin] == NSOrderedAscending && [today compare: HShacksEnd] == NSOrderedAscending){
         interval.text = @"Hacking begins in:";
         isStarting = TRUE;
         hasEnded = FALSE;
         hasEnded = FALSE;
     }
-    else if ([today compare: HShacksBegin] == NSOrderedSame){
+    else if ([today compare: HShacksBegin] == NSOrderedSame || ([today compare: HShacksEnd] == NSOrderedAscending && [today compare: HShacksBegin] == NSOrderedAscending)){
         interval.text = @"Hacking ends in:";
         isStarting = FALSE;
         hasEnded = TRUE;
         hasEnded = FALSE;
     }
-    else if ([today compare: HShacksBegin] == NSOrderedDescending){
+    else if ([today compare: HShacksBegin] == NSOrderedDescending && [today compare: HShacksEnd] == NSOrderedDescending){
         interval.text = @"Hacking has ended!";
         isStarting = FALSE;
         hasEnded = FALSE;
@@ -72,8 +72,7 @@
     [self checkDate];
     
     if(isStarting){
-        NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-
+       
         daysComponent = [gregorianCalendar components:NSDayCalendarUnit
                                              fromDate: today
                                                toDate:HShacksBegin
@@ -111,6 +110,7 @@
         s = [s stringByAppendingString:@" seconds "];
         
         countdown.text = s;
+        NSLog(@"%@",s);
         
     }
     else if (hasStarted){

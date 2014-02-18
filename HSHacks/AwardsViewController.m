@@ -29,16 +29,12 @@
     self.tableView.separatorInset = UIEdgeInsetsZero;
     detailsArray = [[NSMutableArray alloc]init];
     PFQuery *query = [PFQuery queryWithClassName:@"Awards"];
-    [query selectKeys:@[@"body"]];
+    [query selectKeys:@[@"details"]];
     NSArray *objects = [query findObjects];
     for (int i = 0; i < objects.count;i++) {
-        [detailsArray insertObject:[objects[i] objectForKey:@"details"] atIndex:0];
+        [detailsArray addObject:[objects[i] objectForKey:@"details"]];
     }
-    
-    NSLog(@"details array from 1%@", detailsArray);
-
-    
-	// Do any additional setup after loading the view.
+	
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,8 +54,7 @@
         self.textKey = @"title";
         self.pullToRefreshEnabled = NO;
         self.paginationEnabled = NO;
-        
-        
+      
         
     }
     return self;
@@ -77,13 +72,10 @@
         
         NSString *details = [object objectForKey:@"details"];
         if(![detailsArray containsObject:details]){
-            [detailsArray insertObject:details atIndex:0];
+            [detailsArray addObject:details];
         }
     }
-    
-    NSLog(@"details array %@", detailsArray);
-    
-    
+
     return query;
 }
 
@@ -92,7 +84,6 @@
 {
     //Get a reference to your string to base the cell size on.
     NSString *detailsString = [detailsArray objectAtIndex:indexPath.row];
-    NSLog(@"detailsstring : %@", detailsString);
     //set the desired size of your textbox
     CGSize constraint = CGSizeMake(298, MAXFLOAT);
     //set your text attribute dictionary
@@ -101,7 +92,6 @@
     CGRect textsize = [detailsString boundingRectWithSize:constraint options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
     //calculate your size
     float textHeight = textsize.size.height + 10;
-    NSLog(@"%f", textHeight + 78);
     return textHeight + 78;
 }
 
@@ -118,18 +108,17 @@
     }
     
     //Set title
-    UILabel *titleLabel = (UILabel*) [cell viewWithTag:101];
-    titleLabel.text = [object objectForKey:@"title"];
+    UILabel *titleLabel = (UILabel*) [cell viewWithTag:11];
+    titleLabel.text = [[object objectForKey:@"title"]uppercaseString];
     
     //Set Prize label
-    UILabel *prizeLabel = (UILabel*) [cell viewWithTag:102];
+    UILabel *prizeLabel = (UILabel*) [cell viewWithTag:12];
     prizeLabel.text = [object objectForKey:@"prize"];
     
     //Set detailstext, adjust size of label
-    UILabel *detailsText = (UILabel*) [cell viewWithTag:104];
+    UILabel *detailsText = (UILabel*) [cell viewWithTag:14];
     
     NSString *detailsString =[object objectForKey:@"details"];
-    
     CGSize constraint = CGSizeMake(298, MAXFLOAT);
     NSDictionary *attributes = [NSDictionary dictionaryWithObject:[UIFont systemFontOfSize:13.0] forKey:NSFontAttributeName];
     CGRect newFrame = [detailsString boundingRectWithSize:constraint options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
@@ -138,7 +127,7 @@
     [detailsText sizeToFit];
     
     //Set date label
-    UILabel *companyLabel = (UILabel*) [cell viewWithTag:103];
+    UILabel *companyLabel = (UILabel*) [cell viewWithTag:13];
     companyLabel.text = [object objectForKey:@"company"];
     
     

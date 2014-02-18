@@ -7,7 +7,7 @@
 //
 
 #import "LoggedInViewController.h"
-
+#import "UpdatesViewController.h"
 @interface LoggedInViewController ()
 
 @end
@@ -26,6 +26,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+   //  [self dismissViewControllerAnimated:YES completion:nil];
+    
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UpdatesViewController *updatesVC = (UpdatesViewController*)[storyboard instantiateViewControllerWithIdentifier:@"updatesVC"];
+    [self presentViewController:updatesVC animated:YES completion:nil];
+
 	// Do any additional setup after loading the view.
 }
 

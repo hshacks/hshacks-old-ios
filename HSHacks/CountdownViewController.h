@@ -12,8 +12,9 @@
     
     NSDate *today;
     NSDate *HShacksBegin;
-    NSDate *HSHacksEnd;
+    NSDate *HShacksEnd;
     NSDateFormatter *formatter;
+    NSCalendar *gregorianCalendar;
     
     BOOL isStarting;
     BOOL hasStarted;
