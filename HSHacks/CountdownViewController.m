@@ -13,7 +13,7 @@
 @end
 
 @implementation CountdownViewController
-
+@synthesize countdown, interval;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -26,13 +26,73 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	NSDate *today = [NSDate date];
-    NSDateFormatter *weekdayFormatter = [[NSDateFormatter alloc] init];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat: @"d MMMM yyyy"];
-    [weekdayFormatter setDateFormat: @"EEEE"];
-    NSString *formattedDate = [formatter stringFromDate: today];
-    NSString *weekday = [weekdayFormatter stringFromDate: today];
+    
+    formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat: @"MM dd hh mm ss"];
+    
+    HShacksDate = [formatter dateFromString:@"Mar 08 13 00 00"];
+    
+    [NSTimer scheduledTimerWithTimeInterval:1.0
+                                    target:self
+                                    selector:@selector(countdownDisplay)
+                                    userInfo:nil
+                                    repeats:YES];
+      NSLog(@"%@ %@", today, HShacksDate);
+    
+}
+
+-(void)checkDate{
+    if([today compare: HShacksDate] == NSOrderedDescending){
+        interval.text = @"Hacking has not begun. HShacks will begin in:";
+        isStarting = TRUE;
+        hasEnded = FALSE;
+        hasEnded = FALSE;
+    }
+    else if ([today compare: HShacksDate] == NSOrderedSame){
+        interval.text = @"Hacking has begun. HShacks will be over in:";
+        isStarting = FALSE;
+        hasEnded = TRUE;
+        hasEnded = FALSE;
+    }
+    else if ([today compare: HShacksDate] == NSOrderedSame){
+        interval.text = @"Hacking has ended!";
+        isStarting = FALSE;
+        hasEnded = FALSE;
+        hasEnded = TRUE;
+    }
+}
+
+-(void)countdownDisplay{
+    today = [NSDate date];
+    [self checkDate];
+    
+    if(!isStarting){
+        NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+        NSDateComponents *daysComponent = [gregorianCalendar components:NSDayCalendarUnit
+                                                            fromDate: today
+                                                            toDate:HShacksDate
+                                                            options:0];
+        NSDateComponents *hoursComponent = [gregorianCalendar components:NSHourCalendarUnit
+                                                            fromDate: today
+                                                              toDate:HShacksDate
+                                                             options:0];
+        NSDateComponents *minsComponent = [gregorianCalendar components:NSMinuteCalendarUnit
+                                                            fromDate: today
+                                                              toDate:HShacksDate
+                                                             options:0];
+        NSDateComponents *secsComponent = [gregorianCalendar components:NSSecondCalendarUnit
+                                                            fromDate: today
+                                                              toDate:HShacksDate
+                                                             options:0];
+
+        NSInteger days = [daysComponent day];
+        NSInteger hours = [hoursComponent hour];
+        NSInteger mins = [minsComponent minute];
+        NSInteger secs = [secsComponent second];
+        
+        NSLog(@"%li %li %li %li", (long)days, (long)hours, (long)mins, (long)secs);
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning

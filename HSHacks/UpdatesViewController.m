@@ -172,18 +172,19 @@
     CGSize constraint = CGSizeMake(298, MAXFLOAT);
     NSDictionary *attributes = [NSDictionary dictionaryWithObject:[UIFont systemFontOfSize:13.0] forKey:NSFontAttributeName];
     CGRect newFrame = [bodyString boundingRectWithSize:constraint options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
-    NSLog(@"the new frame: %@", newFrame);
+   // NSLog(@"the new frame: %@", newFrame);
+    NSLog(@"width = %f, height = %f", newFrame.size.width, newFrame.size.height);
     bodyText.frame = CGRectMake(10,78,newFrame.size.width, newFrame.size.height);
     
     bodyText.text = bodyString;
     
     UILabel *timeLabel = (UILabel*) [cell viewWithTag:103];
     //  NSDate *time = [NSDate date];
-    NSDate *time = [[object objectForKey:@"updatedAt"] date];
+    NSDate *time = object.createdAt;
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    
-    [dateFormatter setDateFormat:@"MM/dd HH:mm a"];
+
+    [dateFormatter setDateFormat:@"MM/dd hh:mm a"];
 
     NSLog(@"date:  %@",time);
     timeLabel.text = [dateFormatter stringFromDate:time];

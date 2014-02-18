@@ -178,6 +178,7 @@
         [objectsInSection addObject:[NSNumber numberWithInt:rowIndex++]];
         [self.sections setObject:objectsInSection forKey:company];
     }
+    [self.tableView reloadData];
 }
 
 

@@ -16,6 +16,8 @@
 @property (nonatomic, strong) NSMutableArray* chat;
 @property (nonatomic, strong) Firebase* firebase;
 
+- (IBAction)logoutPressed:(id)sender;
+
 
 
 @property (strong, nonatomic) IBOutlet UITableView *chatTableView;

@@ -7,6 +7,7 @@
 //
 
 #import "ChatViewController.h"
+#import "LoginViewController.h"
 #import "UserData.h"
 #import <QuartzCore/QuartzCore.h>
 #import "SDWebImage/UIImageView+WebCache.h"
@@ -184,7 +185,9 @@
     CGRect chatTableViewFrame = CGRectMake(0,65,320,chatTableView.frame.size.height-170);
     [UIView animateWithDuration:0.0 animations:^{ chatTableView.frame = chatTableViewFrame;}];
     
-    [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.chat.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+    if([NSIndexPath indexPathForRow:self.chat.count-1 inSection:0]){
+        [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.chat.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+    }
  
 
 }
@@ -208,4 +211,27 @@
 
 
 
+- (IBAction)logoutPressed:(id)sender {
+	
+    
+    UserData *userData = [UserData sharedManager];
+    userData.userName = nil;
+    userData.userPhoto = nil;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    [defaults setObject:nil forKey:@"name"];
+    [defaults setObject:nil forKey:@"photo"];
+    
+    [defaults synchronize];
+    
+   
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+     LoginViewController *loginVC = [storyboard instantiateViewControllerWithIdentifier:@"loginVC"];
+    
+    loginVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:loginVC animated:YES completion:nil];
+
+
+    
+}
 @end

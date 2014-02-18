@@ -250,7 +250,13 @@
                                     <constraint firstAttribute="width" constant="320" id="waV-X4-cmZ"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Chat" id="QR8-WY-Mk0"/>
+                                    <navigationItem title="Chat" id="QR8-WY-Mk0">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="3aE-WV-tO1">
+                                            <connections>
+                                                <action selector="logoutPressed:" destination="zZ2-Ja-P8W" id="Vd0-4l-wxu"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZE9-BS-otn">

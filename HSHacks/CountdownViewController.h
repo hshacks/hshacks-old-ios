@@ -9,15 +9,22 @@
 #import <UIKit/UIKit.h>
 
 @interface CountdownViewController : UIViewController {
-    int days;
-    int min;
-    int sec;
+    
+    NSDate *today;
+    NSDate *HShacksDate;
+    NSDateFormatter *formatter;
     
     BOOL isStarting;
     BOOL hasStarted;
     BOOL hasEnded;
     
+    IBOutlet UILabel *interval;
+    IBOutlet UILabel *countdown;
+    
     
 }
+
+@property (nonatomic, retain) IBOutlet UILabel *interval;
+@property (nonatomic, retain) IBOutlet UILabel *countdown;
 
 @end
