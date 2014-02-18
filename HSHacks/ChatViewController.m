@@ -37,7 +37,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+     self.chatTextField.userInteractionEnabled = NO;
  
     
     chatTableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
@@ -70,7 +70,9 @@
         // Add the chat message to the array.
         [self.chat addObject:snapshot.value];
         // Reload the table view so the new message will show up.
+        
         [self.chatTableView reloadData];
+        self.chatTextField.userInteractionEnabled = TRUE;
          [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.chat.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
     }];
 

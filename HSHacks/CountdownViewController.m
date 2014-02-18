@@ -28,10 +28,11 @@
     [super viewDidLoad];
     
     formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat: @"MM dd hh mm ss"];
+    [formatter setDateFormat: @"MM-dd-yyyy hh:mm:ss"];
     
-    HShacksDate = [formatter dateFromString:@"Mar 08 13 00 00"];
-    
+    today = [NSDate date];
+    HShacksDate = [formatter dateFromString:@"03-08-2014 13:00:00"];
+    NSLog(@"7878 %@ %@", today, HShacksDate);
     [NSTimer scheduledTimerWithTimeInterval:1.0
                                     target:self
                                     selector:@selector(countdownDisplay)
@@ -66,7 +67,7 @@
     today = [NSDate date];
     [self checkDate];
     
-    if(!isStarting){
+    if(isStarting){
         NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
         NSDateComponents *daysComponent = [gregorianCalendar components:NSDayCalendarUnit
                                                             fromDate: today
