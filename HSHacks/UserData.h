@@ -11,6 +11,7 @@
 @interface UserData : NSObject{
     NSString *userName;
     NSString *userPhoto;
+
     
     
 }
@@ -18,7 +19,9 @@
 
 + (id)sharedManager;
 
+
 @property (nonatomic,retain)NSString *userName;
+
 @property (nonatomic,retain)NSString *userPhoto;
 
 @end

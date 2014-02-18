@@ -13,6 +13,8 @@
 @synthesize userName;
 @synthesize userPhoto;
 
+
+
 //To use singleton
 // #import "UserData.h";
 //UserData *userData = [UserData sharedManager];
@@ -30,7 +32,7 @@
 - (id)init {
     if (self = [super init]) {
         //Initialize stuff in singleton
-        
+  
     }
     return self;
 }

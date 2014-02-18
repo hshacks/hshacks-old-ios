@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
-@interface AwardsViewController : UIViewController
+@interface AwardsViewController : PFQueryTableViewController
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic, retain) NSMutableArray *detailsArray;
 
 @end

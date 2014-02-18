@@ -269,6 +269,13 @@
 
 -(void)doneWithLogin{
     //Method to push controller to updates
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+
+    [defaults setObject:@"YES" forKey:@"loggedIn"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

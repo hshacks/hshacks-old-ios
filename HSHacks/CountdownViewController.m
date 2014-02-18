@@ -31,55 +31,35 @@
     [formatter setDateFormat: @"MM/dd/yyyy HH:mm:ss"];
     
     today = [NSDate date];
-    HShacksDate = [formatter dateFromString:@"03/08/2014 13:00:00"];
-<<<<<<< HEAD
+    HShacksBegin = [formatter dateFromString:@"03/08/2014 12:30:00"];
+    HSHacksEnd = [formatter dateFromString:@"03/09/2014 13:00:00"];
+
     NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 
-    daysComponent = [gregorianCalendar components:NSDayCalendarUnit
-                                         fromDate: today
-                                           toDate:HShacksDate
-                                          options:0];
-    hoursComponent = [gregorianCalendar components:NSHourCalendarUnit
-                                                            fromDate: today
-                                                              toDate:HShacksDate
-                                                             options:0];
-
-
     
-    
-    NSLog(@"lol %@ %@", today, HShacksDate);
-    
-=======
-    
-    
-    
-    
-    NSLog(@"lol %@ %@", today, HShacksDate);
->>>>>>> b0dd5d74eb4115bc4a0a33b74c290ec55427297d
     [NSTimer scheduledTimerWithTimeInterval:1.0
-                                     target:self
-                                   selector:@selector(countdownDisplay:)
-                                   userInfo:nil
-                                    repeats:YES];
+                                        target:self
+                                        selector:@selector(countdownDisplay:)
+                                        userInfo:nil
+                                        repeats:YES];
     
     
 }
 
 -(void)checkDate{
-    if([today compare: HShacksDate] == NSOrderedAscending){
-        NSLog(@"wow hshacks hasnt begun yet");
-        interval.text = @"Hacking has not begun. HShacks will begin in:";
+    if([today compare: HShacksBegin] == NSOrderedAscending && [today compare: HShacksBegin] == NSOrderedAscending){
+        interval.text = @"Hacking begins in:";
         isStarting = TRUE;
         hasEnded = FALSE;
         hasEnded = FALSE;
     }
-    else if ([today compare: HShacksDate] == NSOrderedSame){
-        interval.text = @"Hacking has begun. HShacks will be over in:";
+    else if ([today compare: HShacksBegin] == NSOrderedSame){
+        interval.text = @"Hacking ends in:";
         isStarting = FALSE;
         hasEnded = TRUE;
         hasEnded = FALSE;
     }
-    else if ([today compare: HShacksDate] == NSOrderedDescending){
+    else if ([today compare: HShacksBegin] == NSOrderedDescending){
         interval.text = @"Hacking has ended!";
         isStarting = FALSE;
         hasEnded = FALSE;
@@ -92,34 +72,48 @@
     [self checkDate];
     
     if(isStarting){
-<<<<<<< HEAD
-                             NSDateComponents *minsComponent = [gregorianCalendar components:NSMinuteCalendarUnit
-=======
         NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-        NSDateComponents *daysComponent = [gregorianCalendar components:NSDayCalendarUnit
-                                                               fromDate: today
-                                                                 toDate:HShacksDate
-                                                                options:0];
-        NSDateComponents *hoursComponent = [gregorianCalendar components:NSHourCalendarUnit
-                                                                fromDate: today
-                                                                  toDate:HShacksDate
-                                                                 options:0];
-        NSDateComponents *minsComponent = [gregorianCalendar components:NSMinuteCalendarUnit
->>>>>>> b0dd5d74eb4115bc4a0a33b74c290ec55427297d
-                                                               fromDate: today
-                                                                 toDate:HShacksDate
-                                                                options:0];
-        NSDateComponents *secsComponent = [gregorianCalendar components:NSSecondCalendarUnit
-                                                               fromDate: today
-                                                                 toDate:HShacksDate
-                                                                options:0];
+
+        daysComponent = [gregorianCalendar components:NSDayCalendarUnit
+                                             fromDate: today
+                                               toDate:HShacksBegin
+                                              options:0];
         
-        NSInteger days = [daysComponent day];
-        NSInteger hours = [hoursComponent hour];
-        NSInteger mins = [minsComponent minute];
-        NSInteger secs = [secsComponent second];
+        hoursComponent = [gregorianCalendar components:NSHourCalendarUnit
+                                              fromDate: today
+                                                toDate:HShacksBegin
+                                               options:0];
         
-        NSLog(@"%li %li %li %li until HSHacks starts!", (long)days, (long)hours, (long)mins, (long)secs);
+        minsComponent = [gregorianCalendar components:NSMinuteCalendarUnit
+                                             fromDate: today
+                                               toDate:HShacksBegin
+                                              options:0];
+        
+        secsComponent = [gregorianCalendar components:NSSecondCalendarUnit
+                                             fromDate: today
+                                               toDate:HShacksBegin
+                                              options:0];
+        
+
+        
+        NSNumber *days = [NSNumber numberWithInteger:[daysComponent day]];
+        NSNumber *hours = [NSNumber numberWithInteger:[hoursComponent hour]];
+        NSNumber *mins = [NSNumber numberWithInteger:[minsComponent minute]];
+        NSNumber *secs = [NSNumber numberWithInteger:[secsComponent second]];
+        
+        NSString *s = [days stringValue];
+        s = [s stringByAppendingString:@" days "];
+        s = [s stringByAppendingString:[hours stringValue]];
+        s = [s stringByAppendingString:@" hours "];
+        s = [s stringByAppendingString:[mins stringValue]];
+        s = [s stringByAppendingString:@" minutes "];
+        s = [s stringByAppendingString:[secs stringValue]];
+        s = [s stringByAppendingString:@" seconds "];
+        
+        countdown.text = s;
+        
+    }
+    else if (hasStarted){
         
     }
 }

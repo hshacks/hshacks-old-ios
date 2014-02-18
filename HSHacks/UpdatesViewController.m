@@ -39,16 +39,7 @@
         [bodyArray insertObject:[objects[i] objectForKey:@"body"] atIndex:0];
     }
     
-    
-    //    NSArray *objects = [[NSArray alloc]init];
-    //    [PFObject fetchAll:(NSArray *)objects];
-    //    for (int i = 0; i < objects.count;i++) {
-    //        [bodyArray addObject:[objects[i] objectForKey:@"body"]];
-    //    }
-    
-    
     NSLog(@"body array from 1%@", bodyArray);
-    
     
 }
 
@@ -56,8 +47,6 @@
 {
     [super viewDidAppear:animated];
     if(![self isLoggedIn]){
-        //check if logged in, if not, show login view
-        NSLog(@"is first run");
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         LoginViewController *loginVC = (LoginViewController*)[storyboard instantiateViewControllerWithIdentifier:@"loginVC"];
         [self presentViewController:loginVC animated:NO completion:nil];
@@ -72,34 +61,15 @@
     
 }
 
-- (BOOL)isFirstRun
-{
-    //Check if it is the first run
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([defaults objectForKey:@"isFirstRun"])
-    {
-        return NO;
-    }
-    
-    [defaults setObject:@"ALREADY_FIRST_RUN" forKey:@"isFirstRun"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    return YES;
-}
+
 -(BOOL)isLoggedIn{
-    
-    UserData *userData = [UserData sharedManager];
-    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if([defaults objectForKey:@"name"] == nil || [defaults objectForKey:@"photo"] == nil){
-        return NO;
-    }
-    
-    if(userData.userName == nil || userData.userPhoto == nil){
-        return NO;
-    }
-    
-    else{
+
+    if([defaults objectForKey:@"loggedIn"]){
         return YES;
+    }
+    else{
+        return NO;
     }
 }
 
@@ -112,15 +82,11 @@
         
         // The key of the PFObject to display in the label of the default cell style
         self.textKey = @"createdAt";
-        
-        // Whether the built-in pull-to-refresh is enabled
         self.pullToRefreshEnabled = YES;
-        
-        // Whether the built-in pagination is enabled
         self.paginationEnabled = NO;
         
         
-        
+    
     }
     return self;
 }
@@ -189,15 +155,9 @@
     CGSize constraint = CGSizeMake(298, MAXFLOAT);
     NSDictionary *attributes = [NSDictionary dictionaryWithObject:[UIFont systemFontOfSize:13.0] forKey:NSFontAttributeName];
     CGRect newFrame = [bodyString boundingRectWithSize:constraint options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
-    NSLog(@"width = %f, height = %f", newFrame.size.width, newFrame.size.height);
     bodyText.frame = CGRectMake(10,79,newFrame.size.width, newFrame.size.height);
-    
-    //    bodyText.numberOfLines = 0;
-    //bodyText.lineBreakMode = NSLineBreakByWordWrapping;
-    int numberOfLines = newFrame.size.height / bodyText.font.pointSize;
-    bodyText.numberOfLines = numberOfLines;//[self lineCountForLabel:bodyText];
-    NSLog(@"number of lines for %@ : %ld",bodyString, (long)bodyText.numberOfLines);
     bodyText.text = bodyString;
+    [bodyText sizeToFit];
     
     //Set date label
     UILabel *timeLabel = (UILabel*) [cell viewWithTag:103];

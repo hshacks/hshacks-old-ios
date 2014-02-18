@@ -11,7 +11,8 @@
 @interface CountdownViewController : UIViewController {
     
     NSDate *today;
-    NSDate *HShacksDate;
+    NSDate *HShacksBegin;
+    NSDate *HSHacksEnd;
     NSDateFormatter *formatter;
     
     BOOL isStarting;
@@ -22,7 +23,8 @@
     IBOutlet UILabel *countdown;
     NSDateComponents *daysComponent;
     NSDateComponents *hoursComponent;
-    
+    NSDateComponents *minsComponent;
+    NSDateComponents *secsComponent;
     
 }
 
