@@ -32,6 +32,7 @@
     
     today = [NSDate date];
     HShacksDate = [formatter dateFromString:@"03/08/2014 13:00:00"];
+<<<<<<< HEAD
     NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 
     daysComponent = [gregorianCalendar components:NSDayCalendarUnit
@@ -48,6 +49,13 @@
     
     NSLog(@"lol %@ %@", today, HShacksDate);
     
+=======
+    
+    
+    
+    
+    NSLog(@"lol %@ %@", today, HShacksDate);
+>>>>>>> b0dd5d74eb4115bc4a0a33b74c290ec55427297d
     [NSTimer scheduledTimerWithTimeInterval:1.0
                                      target:self
                                    selector:@selector(countdownDisplay:)
@@ -84,7 +92,20 @@
     [self checkDate];
     
     if(isStarting){
+<<<<<<< HEAD
                              NSDateComponents *minsComponent = [gregorianCalendar components:NSMinuteCalendarUnit
+=======
+        NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+        NSDateComponents *daysComponent = [gregorianCalendar components:NSDayCalendarUnit
+                                                               fromDate: today
+                                                                 toDate:HShacksDate
+                                                                options:0];
+        NSDateComponents *hoursComponent = [gregorianCalendar components:NSHourCalendarUnit
+                                                                fromDate: today
+                                                                  toDate:HShacksDate
+                                                                 options:0];
+        NSDateComponents *minsComponent = [gregorianCalendar components:NSMinuteCalendarUnit
+>>>>>>> b0dd5d74eb4115bc4a0a33b74c290ec55427297d
                                                                fromDate: today
                                                                  toDate:HShacksDate
                                                                 options:0];
