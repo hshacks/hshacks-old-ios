@@ -8,7 +8,7 @@
 
 #import "GuestLoginViewController.h"
 #import <AVFoundation/AVFoundation.h>
-#import "LoggedInViewController.h"
+#import "UpdatesViewController.h"
 
 #define DegreesToRadians(x) ((x) * M_PI / 180.0)
 @interface GuestLoginViewController ()
@@ -106,6 +106,14 @@
     }
 }
 
+- (IBAction)doneTapped:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UpdatesViewController *updatesVC = (UpdatesViewController*)[storyboard instantiateViewControllerWithIdentifier:@"updatesVC"];
+    [self presentViewController:updatesVC animated:YES completion:nil];
+
+    
+}
+
 - (void) capImage { //method to capture image from AVCaptureSession video feed
     AVCaptureConnection *videoConnection = nil;
     for (AVCaptureConnection *connection in stillImageOutput.connections) {
@@ -151,22 +159,9 @@
         
         CGImageRelease(imageRef);
     
-    
-
-        [UIView beginAnimations:@"rotate" context:nil];
-        [UIView setAnimationDuration:0.5];
-        captureImage.transform = CGAffineTransformMakeRotation(DegreesToRadians(0));
-        [UIView commitAnimations];
-    
 }
 
--(void)go{
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    LoggedInViewController *loggedInVC = (LoggedInViewController*)[storyboard instantiateViewControllerWithIdentifier:@"loggedInVC"];
-    [self presentViewController:loggedInVC animated:YES completion:nil];
 
-
-}
 
 
 @end

@@ -33,8 +33,8 @@
     NSArray *objects = [query findObjects];
     for (int i = 0; i < objects.count;i++) {
         [detailsArray addObject:[objects[i] objectForKey:@"details"]];
-    }
-	
+    }    
+	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning

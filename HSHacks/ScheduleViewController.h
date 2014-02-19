@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
-@interface ScheduleViewController : UIViewController
+@interface ScheduleViewController : PFQueryTableViewController
+
+@property (nonatomic, retain) NSMutableDictionary *sections;
+@property (nonatomic, retain) NSMutableDictionary *sectionToDayMap;
+
+@property (nonatomic, retain) NSMutableArray *bodyArray;
+
+@property (nonatomic, retain) NSMutableDictionary *days;
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

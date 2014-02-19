@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
    //  [self dismissViewControllerAnimated:YES completion:nil];
-    
+    NSLog(@"Loaded loggeninViewController");
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UpdatesViewController *updatesVC = (UpdatesViewController*)[storyboard instantiateViewControllerWithIdentifier:@"updatesVC"];

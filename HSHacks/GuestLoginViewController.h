@@ -18,6 +18,12 @@
 @property (nonatomic, retain) AVCaptureStillImageOutput *stillImageOutput;
 @property (weak, nonatomic) IBOutlet UIView *imagePreview;
 
+
+@property (weak, nonatomic) IBOutlet UIButton *doneOutlet;
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+
 - (IBAction)snapImage:(id)sender;
+- (IBAction)doneTapped:(id)sender;
+
 
 @end
