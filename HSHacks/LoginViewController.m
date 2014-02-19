@@ -67,14 +67,14 @@
                                           completion:^(BOOL finished){}
                           ];
                          
-                         [UIView animateWithDuration:1.0f animations:^{  }];
+                         [UIView animateWithDuration:0.7f animations:^{  }];
                          CGRect logoF2 = CGRectMake(logo.frame.origin.x+30,logo.frame.origin.y-70+30,logo.frame.size.width-60,logo.frame.size.height-60);
                          CGRect tbuttonF = CGRectMake(twitterButton.frame.origin.x,logo.frame.origin.y+140,twitterButton.frame.size.width,twitterButton.frame.size.height);
                          CGRect fButtonF = CGRectMake(facebookButton.frame.origin.x,logo.frame.origin.y+220,facebookButton.frame.size.width,facebookButton.frame.size.height);
                          CGRect gButtonF = CGRectMake(guestButton.frame.origin.x,logo.frame.origin.y+300,guestButton.frame.size.width,guestButton.frame.size.height);
                          
                          
-                         [UIView animateWithDuration: 1.0f
+                         [UIView animateWithDuration: 0.7f
                                                delay: 1.0f
                                              options: UIViewAnimationOptionCurveEaseIn
                                           animations:^{
@@ -92,6 +92,11 @@
                           ];
                      }
      ];
+    
+    
+    
+    
+    
 }
 
 -(void)loginTwitter{
@@ -345,6 +350,8 @@
 }
 
 -(void)doneWithLogin{
+    UserData *userData = [UserData sharedManager];
+
     //Method to push controller to updates
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
@@ -360,12 +367,37 @@
     
     
     
-
-                         
-                         
-    [self dismissModalViewControllerAnimated:YES];
+    [UIView animateWithDuration: 1.0f
+                          delay: 0.0f
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         logo.alpha = 0.0;
+                         facebookButton.alpha = 0.0;
+                         twitterButton.alpha = 0.0;
+                         guestButton.alpha = 0.0;
+                     }
+                     completion:^(BOOL finished){
+                         statusLabel.numberOfLines = 2;
+                         statusLabel.lineBreakMode = NSLineBreakByWordWrapping;
+                         statusLabel.text = [NSString stringWithFormat:@"Have a good time, %@", userData.userName];
+                         [UIView animateWithDuration: 0.7f
+                                                delay: 0.0f
+                                              options: UIViewAnimationOptionCurveEaseIn
+                                           animations:^{
+                                    
+                                               statusLabel.alpha = 1.0;
+                                           }
+                                           completion:^(BOOL finished){
+                                               [self performSelector:@selector(dismissView:) withObject:self afterDelay:1];
+                                             
+                                           }
+                                    ];
+                     }];
     
 }
 
+-(void)dismissView:(id)sender {
+[self dismissModalViewControllerAnimated:YES];
+}
 
 @end
