@@ -226,14 +226,14 @@
 
     detailsLabel.text = detailsString;
     [detailsLabel sizeToFit];
+   
     
    UILabel *timeLabel = (UILabel*) [cell viewWithTag:101];
     NSDate *time = [object objectForKey:@"time"];
     NSLog(@"time: %@", time);
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    NSLocale *twelveHourLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
-    dateFormatter.locale = twelveHourLocale;
-    [dateFormatter setDateFormat:@"hh:mm a"];
+    [NSTimeZone timeZoneWithAbbreviation:@"PDT"];
+    [dateFormatter setDateFormat:@"h:mm a"];
     timeLabel.text = [dateFormatter stringFromDate:time];
     
     return cell;
