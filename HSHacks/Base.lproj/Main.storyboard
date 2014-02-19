@@ -1152,9 +1152,9 @@
                                 <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hshacksLOGO.png" id="MRP-mz-Ggd">
-                                <rect key="frame" x="13" y="9" width="35" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" image="clock.gif" id="Ec2-h2-4i1">
+                                <rect key="frame" x="13" y="9" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1173,6 +1173,7 @@
     <resources>
         <image name="calendar.png" width="30" height="30"/>
         <image name="chat.png" width="30" height="30"/>
+        <image name="clock.gif" width="200" height="200"/>
         <image name="hshacksLOGO.png" width="1000" height="1000"/>
         <image name="mentors.png" width="30" height="30"/>
         <image name="updates.png" width="30" height="30"/>
