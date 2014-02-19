@@ -52,39 +52,46 @@
     statusLabel.alpha = 0.0;
     
     [UIView animateWithDuration: 1.0f
-                          delay: 0.5f
+                          delay: 0.0f
                         options: UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          statusLabel.alpha = 1.0;
                      }
                      completion:^(BOOL finished){
-                         [UIView animateWithDuration:1.0f animations:^{ statusLabel.alpha = 0.0; }];
+                         [UIView animateWithDuration: 0.7f
+                                               delay: 1.0f
+                                             options: UIViewAnimationOptionCurveEaseIn
+                                          animations:^{
+                                              statusLabel.alpha = 0.0;
+                                          }
+                                          completion:^(BOOL finished){}
+                          ];
+                         
+                         [UIView animateWithDuration:1.0f animations:^{  }];
+                         CGRect logoF2 = CGRectMake(logo.frame.origin.x+30,logo.frame.origin.y-70+30,logo.frame.size.width-60,logo.frame.size.height-60);
+                         CGRect tbuttonF = CGRectMake(twitterButton.frame.origin.x,logo.frame.origin.y+140,twitterButton.frame.size.width,twitterButton.frame.size.height);
+                         CGRect fButtonF = CGRectMake(facebookButton.frame.origin.x,logo.frame.origin.y+220,facebookButton.frame.size.width,facebookButton.frame.size.height);
+                         CGRect gButtonF = CGRectMake(guestButton.frame.origin.x,logo.frame.origin.y+300,guestButton.frame.size.width,guestButton.frame.size.height);
+                         
+                         
+                         [UIView animateWithDuration: 1.0f
+                                               delay: 1.0f
+                                             options: UIViewAnimationOptionCurveEaseIn
+                                          animations:^{
+                                              logo.alpha = 1.0;
+                                          }
+                                          completion:^(BOOL finished){
+                                              [UIView animateWithDuration:1 animations:^{
+                                                  logo.frame = logoF2;
+                                                  guestButton.frame = gButtonF;
+                                                  facebookButton.frame = fButtonF;
+                                                  twitterButton.frame = tbuttonF;
+                                              }];
+                                              
+                                          }
+                          ];
                      }
      ];
-    
-    CGRect logoF = CGRectMake(logo.frame.origin.x,logo.frame.origin.y-100,logo.frame.size.width-60,logo.frame.size.height-60);
-    CGRect tbuttonF = CGRectMake(twitterButton.frame.origin.x,twitterButton.frame.origin.y-240,twitterButton.frame.size.width,twitterButton.frame.size.height);
-    CGRect fButtonF = CGRectMake(facebookButton.frame.origin.x,facebookButton.frame.origin.y-170,facebookButton.frame.size.width,facebookButton.frame.size.height);
-    CGRect gButtonF = CGRectMake(guestButton.frame.origin.x,guestButton.frame.origin.y-100,guestButton.frame.size.width,guestButton.frame.size.height);
-
-
-    [UIView animateWithDuration: 1.0f
-                          delay: 2.0f
-                        options: UIViewAnimationOptionCurveEaseIn
-                     animations:^{
-                         logo.alpha = 1.0;
-                     }
-                     completion:^(BOOL finished){
-                         [UIView animateWithDuration:1 animations:^{
-                             logo.frame = logoF;
-                             guestButton.frame = gButtonF;
-                             facebookButton.frame = fButtonF;
-                             twitterButton.frame = tbuttonF;
-                         }];
-
-                     }
-     ];
-    
 }
 
 -(void)loginTwitter{
@@ -351,6 +358,11 @@
     //2. When logo starts to fade out, fade in "Have a good time, <name>" on top of the image (logo still fading out).
     //3. After text fades in, dismiss the view.
     
+    
+    
+
+                         
+                         
     [self dismissModalViewControllerAnimated:YES];
     
 }

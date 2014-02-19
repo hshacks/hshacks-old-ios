@@ -31,14 +31,14 @@
     [super viewDidLoad];
     self.tableView.separatorInset = UIEdgeInsetsZero;
     
-    bodyArray = [[NSMutableArray alloc]init];
-    PFQuery *queryBody = [PFQuery queryWithClassName:@"Event"];
-    [queryBody selectKeys:@[@"description"]];
-    NSArray *objects = [queryBody findObjects];
-    for (int i = 0; i < objects.count;i++) {
-        [bodyArray insertObject:[objects[i] objectForKey:@"description"] atIndex:0];
-    }
-    NSLog(@"bodyarray: %@", bodyArray);
+//    bodyArray = [[NSMutableArray alloc]init];
+//    PFQuery *queryBody = [PFQuery queryWithClassName:@"Event"];
+//    [queryBody selectKeys:@[@"description"]];
+//    NSArray *objects = [queryBody findObjects];
+//    for (int i = 0; i < objects.count;i++) {
+//        [bodyArray insertObject:[objects[i] objectForKey:@"description"] atIndex:0];
+//    }
+//    NSLog(@"bodyarray: %@", bodyArray);
     
     PFQuery *query = [PFQuery queryWithClassName:@"Event"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -172,7 +172,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    NSString *day= [self dayForSection:section];
+    NSString *day= [NSString stringWithFormat:@"   %@",[self dayForSection:section]];
     return day;
 }
 
@@ -221,9 +221,9 @@
     CGSize constraint = CGSizeMake(295, MAXFLOAT);
     NSDictionary *attributes = [NSDictionary dictionaryWithObject:[UIFont systemFontOfSize:13.0] forKey:NSFontAttributeName];
     CGRect newFrame = [detailsString boundingRectWithSize:constraint options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
-    detailsLabel.frame = CGRectMake(16,25,newFrame.size.width, newFrame.size.height);
-    NSLog(@"frame height: %f", newFrame.size.height);
-    NSLog(@"details string = %@", detailsString);
+    detailsLabel.frame = CGRectMake(16,28,newFrame.size.width, newFrame.size.height);
+ 
+
     detailsLabel.text = detailsString;
     [detailsLabel sizeToFit];
     
