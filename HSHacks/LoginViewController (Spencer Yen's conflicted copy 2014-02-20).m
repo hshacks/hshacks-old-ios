@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-#import "LoggedInViewController.h"
+
 
 @interface LoginViewController ()
 
@@ -58,20 +58,20 @@
                          statusLabel.alpha = 1.0;
                      }
                      completion:^(BOOL finished){
-                         [UIView animateWithDuration: 1.0f
-                                               delay: 2.0f
+                         [UIView animateWithDuration: 0.7f
+                                               delay: 1.0f
                                              options: UIViewAnimationOptionCurveEaseIn
                                           animations:^{
-                                             statusLabel.alpha = 0.0;
+                                              statusLabel.alpha = 0.0;
                                           }
                                           completion:^(BOOL finished){
                                               CGRect logoF2 = CGRectMake(logo.frame.origin.x+30,logo.frame.origin.y-70+30,logo.frame.size.width-60,logo.frame.size.height-60);
                                               CGRect tbuttonF = CGRectMake(twitterButton.frame.origin.x,logo.frame.origin.y+140,twitterButton.frame.size.width,twitterButton.frame.size.height);
-                                              CGRect fButtonF = CGRectMake(facebookButton.frame.origin.x,logo.frame.origin.y+200,facebookButton.frame.size.width,facebookButton.frame.size.height);
-                                              CGRect gButtonF = CGRectMake(guestButton.frame.origin.x,logo.frame.origin.y+260,guestButton.frame.size.width,guestButton.frame.size.height);
+                                              CGRect fButtonF = CGRectMake(facebookButton.frame.origin.x,logo.frame.origin.y+220,facebookButton.frame.size.width,facebookButton.frame.size.height);
+                                              CGRect gButtonF = CGRectMake(guestButton.frame.origin.x,logo.frame.origin.y+300,guestButton.frame.size.width,guestButton.frame.size.height);
                                               
                                               
-                                              [UIView animateWithDuration: 1.0f
+                                              [UIView animateWithDuration: 0.7f
                                                                     delay: 1.0f
                                                                   options: UIViewAnimationOptionCurveEaseIn
                                                                animations:^{
@@ -85,16 +85,15 @@
                                                                        twitterButton.frame = tbuttonF;
                                                                    }];
                                                                    
-                                                               }
-                                               ];
+                                                               }];
 
-                                          }
-                          ];
-
-                    }
-     ];
+                                          }];
+                         
+                    }];
     
-
+    
+    
+    
     
 }
 
@@ -134,131 +133,72 @@
     }
 
 }
-
-
 - (void) getTInfo
 {
-    
-    // Request access to the Twitter accounts
-
-    
-    
     ACAccountStore *accountStore = [[ACAccountStore alloc] init];
     ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
-    
-    [accountStore requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error){
-        if (granted) {
-            
-            NSArray *accountsArray = [accountStore accountsWithAccountType:accountType];
-            
-            
-            
-            // Check if the users has setup at least one Twitter account
-            
-            if ([accountsArray count] > 0)
-            {
-                
-                ACAccount *twitterAccount = [accountsArray objectAtIndex:0];
-                NSLog(@"The following person is absolute poo: %@",twitterAccount.username);
-      
-                // Creating a request to get the info about a user on Twitter
-                
-                SLRequest *twitterInfoRequest = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodGET URL:[NSURL URLWithString:@"https://api.twitter.com/1.1/users/show.json"] parameters:[NSDictionary dictionaryWithObject:twitterAccount.username forKey:@"screen_name"]];
-                
-                TWRequest *request = [[TWRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.twitter.com/1.1/users/show.json"]
-                                                         parameters:[NSDictionary dictionaryWithObject:twitterAccount.username forKey:@"screen_name"]
-                                                      requestMethod:TWRequestMethodGET];
+    [accountStore requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error) {
         
-                // Making the request
-   
-                [request performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        
-                        // Check if we reached the reate limit
-                        
-                        if ([urlResponse statusCode] == 429) {
-                            NSLog(@"Rate limit reached");
-                            return;
-                        }
-                        
-                        // Check if there was an error
-                        
-                        if (error) {
-                            NSLog(@"Error: %@", error.localizedDescription);
-                            return;
-                        }
-                        
-                        // Check if there is some response data
-                        
-                        if (responseData) {
-                            
-                            NSError *error = nil;
-                            NSDictionary *TWData = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&error];
-                           
-                            
-                            NSDictionary *user =
-                            [NSJSONSerialization JSONObjectWithData:responseData
-                                                            options:NSJSONReadingAllowFragments
-                                                              error:NULL];
-                            
-                            NSString *name = [user objectForKey:@"name"];
-                            NSString *profileImageStringURL = [user objectForKey:@"profile_image_url"];
-                            NSLog(@"twitter image: %@", profileImageStringURL);
-                            
-                            UserData *userData = [UserData sharedManager];
-                            userData.userName = name;
-                            NSLog(@"userdata.username: %@",userData.userName);
+        NSArray *accountsArray = [accountStore accountsWithAccountType:accountType];
 
-                            userData.userPhoto = profileImageStringURL;
-                            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        ACAccount *twitterAccount = [accountsArray objectAtIndex:0];
+        
+        
+        NSDictionary *tempDict = [[NSMutableDictionary alloc] initWithDictionary:
+                                  [twitterAccount dictionaryWithValuesForKeys:[NSArray arrayWithObject:@"properties"]]];
+        NSString *tempUserID = [[tempDict objectForKey:@"properties"] objectForKey:@"user_id"];
 
-                            [defaults setObject:userData.userName forKey:@"name"];
-                            [defaults setObject:userData.userPhoto forKey:@"photo"];
-                            
-                            [defaults synchronize];
-          
+        NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/users/show.json"];
+        NSMutableDictionary *params = [NSMutableDictionary new];
+        [params setObject:tempUserID forKey:@"user_id"];
+        [params setObject:@"0" forKey:@"include_rts"]; // don't include retweets
+        [params setObject:@"1" forKey:@"trim_user"]; // trim the user information
+        [params setObject:@"1" forKey:@"count"]; // i don't even know what this does but it does something useful
+        
+        TWRequest *request = [[TWRequest alloc] initWithURL:url parameters:params requestMethod:TWRequestMethodGET];
+        //  Attach an account to the request
+        [request setAccount:twitterAccount]; // this can be any Twitter account obtained from the Account store
+        
+        [request performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+            if (responseData) {
+                NSDictionary *twitterData = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:NULL];
+                
+                // to do something useful with this data:
+                NSString *name = [twitterData objectForKey:@"name"];
+                NSLog(@"%@", name);
+        
+                // A handy bonus tip: twitter display picture
+                NSString *profileImageUrl = [twitterData objectForKey:@"profile_image_url"];
+                
+                UserData *userData = [UserData sharedManager];
+                userData.userName = name;
+                userData.userPhoto = profileImageUrl;
+                NSLog(@"%@", userData.userPhoto);
+                
+                NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                
+                [defaults setObject:userData.userName forKey:@"name"];
+                [defaults setObject:userData.userPhoto forKey:@"photo"];
+                
+                [defaults synchronize];
 
-                           [self doneWithLogin];
-  
-                            
-
-                    
-                        }
-                    });
-                }];
+               
+            }else{
+                NSLog(@"Error while downloading Twitter user data: %@", error);
             }
-        } else {
-            NSLog(@"No access granted");
-        }
-    }];
+        }];
+        
+            
+            
+    }
+     ];
+    
+  
+    [self doneWithLogin];
 }
 
 
--(void)testTwittter{
-    NSURL *url =
-    [NSURL URLWithString:@"http://api.twitter.com/1/users/show.json"];
-    
-    NSDictionary *params = [NSDictionary dictionaryWithObject:@"spenciefy"
-                                                       forKey:@"screen_name"];
-    
-    TWRequest *request = [[TWRequest alloc] initWithURL:url
-                                             parameters:params
-                                          requestMethod:TWRequestMethodGET];
-    
-    [request performRequestWithHandler:
-     ^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
-         if (responseData) {
-             NSDictionary *user =
-             [NSJSONSerialization JSONObjectWithData:responseData
-                                             options:NSJSONReadingAllowFragments
-                                               error:NULL];
-             
-             NSString *profileImageUrl = [user objectForKey:@"profile_image_url"];
-             
-             NSLog(@"url: %@", profileImageUrl);
-         }
-     }];
-}
+
 -(void)loginFacebook{
     //Login to Facebook to get name, photo
     
@@ -349,6 +289,8 @@
 }
 
 -(void)doneWithLogin{
+    UserData *userData = [UserData sharedManager];
+
     //Method to push controller to updates
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
@@ -363,9 +305,38 @@
     //3. After text fades in, dismiss the view.
     
     
-    [self dismissModalViewControllerAnimated:YES];
+    
+    [UIView animateWithDuration: 1.0f
+                          delay: 0.0f
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         logo.alpha = 0.0;
+                         facebookButton.alpha = 0.0;
+                         twitterButton.alpha = 0.0;
+                         guestButton.alpha = 0.0;
+                     }
+                     completion:^(BOOL finished){
+                         statusLabel.numberOfLines = 2;
+                         statusLabel.lineBreakMode = NSLineBreakByWordWrapping;
+                         statusLabel.text = [NSString stringWithFormat:@"Have a good time, %@", userData.userName];
+                         [UIView animateWithDuration: 0.7f
+                                                delay: 0.0f
+                                              options: UIViewAnimationOptionCurveEaseIn
+                                           animations:^{
+                                    
+                                               statusLabel.alpha = 1.0;
+                                           }
+                                           completion:^(BOOL finished){
+                                               [self performSelector:@selector(dismissView:) withObject:self afterDelay:1];
+                                             
+                                           }
+                                    ];
+                     }];
     
 }
 
+-(void)dismissView:(id)sender {
+[self dismissModalViewControllerAnimated:YES];
+}
 
 @end

@@ -9,9 +9,17 @@
 #import "GuestLoginViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "UpdatesViewController.h"
+#import "AVCamCaptureManager.h"
+#import "AVCamRecorder.h"
+#import "UIView+Utilities.h"
+#import "UIView+ShowAnimations.h"
+#import "UIImage+Dimensions.h"
+#import <QuartzCore/QuartzCore.h>
 
-#define DegreesToRadians(x) ((x) * M_PI / 180.0)
-@interface GuestLoginViewController ()
+@interface GuestLoginViewController ()  <AVCamCaptureManagerDelegate>
+
+@property (nonatomic,retain) AVCamCaptureManager *captureManager;
+@property (nonatomic,retain) AVCaptureVideoPreviewLayer *captureVideoPreviewLayer;
 
 @end
 
@@ -29,9 +37,37 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    FrontCamera = YES;
-   
-    captureImage.hidden = YES;
+    
+    AVCamCaptureManager *manager = [[AVCamCaptureManager alloc] init];
+    self.captureManager = manager;
+    manager.delegate = self;
+    
+    if ([self.captureManager setupSession]) {
+        
+        // Create video preview layer and add it to the UI
+        AVCaptureVideoPreviewLayer *newCaptureVideoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:[[self captureManager] session]];
+        
+        CALayer *viewLayer = [imagePreview layer];
+        [viewLayer setFrame:CGRectMake(60, 48, 200, 200)];
+    
+        
+        CGRect bounds = CGRectMake(60, 48, 200, 200);
+        [newCaptureVideoPreviewLayer setFrame:bounds];
+        
+        [newCaptureVideoPreviewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
+        
+        [viewLayer insertSublayer:newCaptureVideoPreviewLayer below:[[viewLayer sublayers] objectAtIndex:0]];
+       
+        viewLayer.cornerRadius = viewLayer.frame.size.width / 2;
+        
+        [self setCaptureVideoPreviewLayer:newCaptureVideoPreviewLayer];
+        
+        // Start the session. This is done asychronously since -startRunning doesn't return until the session is running.
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [[[self captureManager] session] startRunning];
+        });
+    }
+
 	// Do any additional setup after loading the view.
 }
 
@@ -42,68 +78,32 @@
 }
 
 
-- (void) initializeCamera {
-    AVCaptureSession *session = [[AVCaptureSession alloc] init];
-	session.sessionPreset = AVCaptureSessionPresetPhoto;
-    
-	AVCaptureVideoPreviewLayer *captureVideoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
-    [captureVideoPreviewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
-    
-	captureVideoPreviewLayer.frame = self.imagePreview.bounds;
-	[self.imagePreview.layer addSublayer:captureVideoPreviewLayer];
-    
-    UIView *view = [self imagePreview];
-    CALayer *viewLayer = [view layer];
-    [viewLayer setMasksToBounds:YES];
-    
-    CGRect bounds = [view bounds];
-    [captureVideoPreviewLayer setFrame:bounds];
-    
-    NSArray *devices = [AVCaptureDevice devices];
-    AVCaptureDevice *frontCamera;
-    
-    
-    for (AVCaptureDevice *device in devices) {
-        
-        NSLog(@"Device name: %@", [device localizedName]);
-        
-        if ([device hasMediaType:AVMediaTypeVideo]) {
-            
-                NSLog(@"Device position : front");
-                frontCamera = device;
-            }
-        }
-
-    if (FrontCamera) {
-        NSError *error = nil;
-        AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:frontCamera error:nil];
-        if (!input) {
-            NSLog(@"ERROR: trying to open camera: %@", error);
-        }
-        [session addInput:input];
-    }
-    
-    stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
-    NSDictionary *outputSettings = [[NSDictionary alloc] initWithObjectsAndKeys: AVVideoCodecJPEG, AVVideoCodecKey, nil];
-    [stillImageOutput setOutputSettings:outputSettings];
-    
-    [session addOutput:stillImageOutput];
-    
-	[session startRunning];
-}
-
 - (IBAction)snapImage:(id)sender {
-    if (!haveImage) {
-        captureImage.image = nil; //remove old image from view
-        captureImage.hidden = NO; //show the captured image view
-        imagePreview.hidden = YES; //hide the live video feed
-        [self capImage];
-    }
-    else {
-        captureImage.hidden = YES;
-        imagePreview.hidden = NO;
-        haveImage = NO;
-    }
+    // Flash the screen white and fade it out to give UI feedback that a still image was taken
+    UIView *flashView = [[UIView alloc] initWithFrame:[self.view bounds]];
+    [flashView setBackgroundColor:[UIColor whiteColor]];
+    [[imagePreview window] addSubview:flashView];
+    
+    [UIView animateWithDuration:.4f
+                     animations:^{
+                         [flashView setAlpha:0.f];
+                     }
+                     completion:^(BOOL finished){
+                         [flashView removeFromSuperview];
+                     }];
+    
+    [self.captureManager captureStillImageWithCompletion:^(UIImage *image){
+        if (image) {
+            //Gotta flip the image cuz it comes out flipped
+            image = [UIImage flipImageLeftRight:image];
+            captureImage.clipsToBounds = YES;
+            captureImage.layer.cornerRadius = captureImage.frame.size.width / 2;
+            captureImage.image = image;
+            } else {
+                //error taking picture
+            }
+    }];
+
 }
 
 - (IBAction)doneTapped:(id)sender {
@@ -114,52 +114,7 @@
     
 }
 
-- (void) capImage { //method to capture image from AVCaptureSession video feed
-    AVCaptureConnection *videoConnection = nil;
-    for (AVCaptureConnection *connection in stillImageOutput.connections) {
-        
-        for (AVCaptureInputPort *port in [connection inputPorts]) {
-            
-            if ([[port mediaType] isEqual:AVMediaTypeVideo] ) {
-                videoConnection = connection;
-                break;
-            }
-        }
-        
-        if (videoConnection) {
-            break;
-        }
-    }
-    
-    NSLog(@"about to request a capture from: %@", stillImageOutput);
-    [stillImageOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler: ^(CMSampleBufferRef imageSampleBuffer, NSError *error) {
-        
-        if (imageSampleBuffer != NULL) {
-            NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageSampleBuffer];
-            [self processImage:[UIImage imageWithData:imageData]];
-        }
-    }];
-}
 
-
-- (void) processImage:(UIImage *)image { //process captured image, crop, resize and rotate
-    haveImage = YES;
-    
-   //Device is iphone
-        // Resize image
-        UIGraphicsBeginImageContext(CGSizeMake(320, 426));
-        [image drawInRect: CGRectMake(0, 0, 320, 426)];
-        UIImage *smallImage = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        
-        CGRect cropRect = CGRectMake(0, 55, 320, 320);
-        CGImageRef imageRef = CGImageCreateWithImageInRect([smallImage CGImage], cropRect);
-        
-        [captureImage setImage:[UIImage imageWithCGImage:imageRef]];
-        
-        CGImageRelease(imageRef);
-    
-}
 
 
 

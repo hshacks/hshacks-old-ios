@@ -64,8 +64,9 @@ cCreateUniversalBinary /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-ip
 cCpResource HSHacks/hshacksLOGO.png build/Debug-iphonesimulator/HSHacks.app/hshacksLOGO.png
 cCpResource HSHacks/placeholderIcon.png build/Debug-iphonesimulator/HSHacks.app/placeholderIcon.png
 cCopyStringsFile /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app/en.lproj/InfoPlist.strings HSHacks/en.lproj/InfoPlist.strings
-cCompileStoryboard /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/Base.lproj/Main.storyboard
 cCompileAssetCatalog /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/Images.xcassets
+cCpResource HSHacks/clock.gif build/Debug-iphonesimulator/HSHacks.app/clock.gif
+cCompileStoryboard /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/Base.lproj/Main.storyboard
 cProcessInfoPlistFile /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app/Info.plist /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/HSHacks-Info.plist
 cGenerateDSYMFile /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app.dSYM /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app/HSHacks
 cTouch /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app
@@ -631,9 +632,9 @@ t1392794163
 s4369
 
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/Base.lproj/Main.storyboard
-c000000005304761B000000000001CEA8
-t1392801307
-s118440
+c00000000530526CF000000000001CE7D
+t1392846543
+s118397
 
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/ChatViewController.h
 c000000005302B3AC0000000000000273
@@ -890,6 +891,11 @@ c000000005303160A00000000000002A1
 t1392711178
 s673
 
+N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/clock.gif
+c000000005305259100000000000171CC
+t1392846225
+s94668
+
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/en.lproj/InfoPlist.strings
 c0000000052F42593000000000000002D
 t1391732115
@@ -1071,15 +1077,15 @@ t1388779594
 s30240500
 
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app
-t1392843200
-s612
+t1392850763
+s646
 
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app.dSYM
 t1392843206
 s102
 
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app/Base.lproj/Main.storyboardc
-t1392842232
+t1392850960
 s782
 
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app/HSHacks
@@ -1093,6 +1099,10 @@ s1393
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app/PkgInfo
 t1392715674
 s8
+
+N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app/clock.gif
+t1392850764
+s94668
 
 N/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app/en.lproj/InfoPlist.strings
 t1392639483
@@ -1611,7 +1621,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies651770f557b5b841^31b397f857b5b841^---0#1#1#--18"Check dependencies36"6DCE0B39-EFED-454F-B406-9A28A5479A25-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesc5c8dac86eb5b841^05a2afcb6eb5b841^---0#1#1#--18"Check dependencies36"D7F182D1-5836-429E-A394-7EDE2DEA436D-
 
 CCompileAssetCatalog /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/Images.xcassets
 s414408326.869044
@@ -3890,13 +3900,13 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Compile
 bD024C1DE-DF97-4DF8-A1B9-40E414E3830A
 
 CCompileStoryboard /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/Base.lproj/Main.storyboard
-s414534874.209681
-e414535033.008080
+s414543563.392904
+e414543760.905890
 r1
 xCompileStoryboard
 x/Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/Base.lproj/Main.storyboard
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection52"CompileStoryboard HSHacks/Base.lproj/Main.storyboard52"CompileStoryboard HSHacks/Base.lproj/Main.storyboard54c835da4cb5b841^c32ac2784db5b841^---0#0#1#-19%DVTDocumentLocation2@84"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/Base.lproj/Main.storyboard0000000000000000^842"CompileStoryboard HSHacks/Base.lproj/Main.storyboard    cd /Users/alexyeh/Dropbox/Spencer/hshacks-ios    setenv IBSC_MINIMUM_COMPATIBILITY_VERSION 7.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 7.0 --output-format human-readable-text --compile /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app/Base.lproj/Main.storyboardc /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/Base.lproj/Main.storyboard36"54A7B652-98A9-4454-B7FA-AD7B2A375A66-
-bE5404E78-8E00-457B-A658-2E94868D2ED1
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection52"CompileStoryboard HSHacks/Base.lproj/Main.storyboard52"CompileStoryboard HSHacks/Base.lproj/Main.storyboard310b65cb6eb5b841^4be7e7906fb5b841^---0#0#1#-19%DVTDocumentLocation2@84"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/Base.lproj/Main.storyboard0000000000000000^842"CompileStoryboard HSHacks/Base.lproj/Main.storyboard    cd /Users/alexyeh/Dropbox/Spencer/hshacks-ios    setenv IBSC_MINIMUM_COMPATIBILITY_VERSION 7.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 7.0 --output-format human-readable-text --compile /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app/Base.lproj/Main.storyboardc /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/Base.lproj/Main.storyboard36"32EC74E8-F99B-460D-8C64-D78567819E14-
+b2EEF84E3-68B0-4ACC-AD09-99DC6786F3B1
 
 CCopyStringsFile /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app/en.lproj/InfoPlist.strings HSHacks/en.lproj/InfoPlist.strings
 s414332283.871211
@@ -3907,6 +3917,16 @@ x/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.
 xHSHacks/en.lproj/InfoPlist.strings
 lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Copy HSHacks/en.lproj/InfoPlist.strings117"CopyStringsFile build/Debug-iphonesimulator/HSHacks.app/en.lproj/InfoPlist.strings HSHacks/en.lproj/InfoPlist.stringsb918df7b35b2b841^8d29e87b35b2b841^---0#0#1#-19%DVTDocumentLocation2@84"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/en.lproj/InfoPlist.strings0000000000000000^583"CopyStringsFile build/Debug-iphonesimulator/HSHacks.app/en.lproj/InfoPlist.strings HSHacks/en.lproj/InfoPlist.strings    cd /Users/alexyeh/Dropbox/Spencer/hshacks-ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app/en.lproj -- HSHacks/en.lproj/InfoPlist.strings36"8EBA0BB5-80DE-4BF7-82DC-E56A956BE053-
 bB8C8B2DE-0A0D-4A76-90DA-319D345C6A24
+
+CCpResource HSHacks/clock.gif build/Debug-iphonesimulator/HSHacks.app/clock.gif
+s414543563.392881
+e414543564.312426
+r1
+xCpResource
+xHSHacks/clock.gif
+xbuild/Debug-iphonesimulator/HSHacks.app/clock.gif
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection54"Copy build/Debug-iphonesimulator/HSHacks.app/clock.gif78"CpResource HSHacks/clock.gif build/Debug-iphonesimulator/HSHacks.app/clock.gif1101e3cb6eb5b841^a0a414cd6eb5b841^---0#0#1#-19%DVTDocumentLocation2@99"file:///Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app/clock.gif0034f01bdfffdf42^580"CpResource HSHacks/clock.gif build/Debug-iphonesimulator/HSHacks.app/clock.gif    cd /Users/alexyeh/Dropbox/Spencer/hshacks-ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/alexyeh/Dropbox/Spencer/hshacks-ios/HSHacks/clock.gif /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app36"D837357F-1339-448D-8087-46B0B928600C-
+b2EEF84E3-68B0-4ACC-AD09-99DC6786F3B1
 
 CCpResource HSHacks/hshacksLOGO.png build/Debug-iphonesimulator/HSHacks.app/hshacksLOGO.png
 s414408326.867940
@@ -4397,11 +4417,11 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Precomp
 b2449CC8B-5EA6-46B0-91E1-CEC8C437DFC6
 
 CTouch /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app
-s414535049.617710
-e414535049.813557
+s414543760.984143
+e414543761.234057
 r1
 xTouch
 x/Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Touch /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app45"Touch build/Debug-iphonesimulator/HSHacks.app96409e894db5b841^1e8be9894db5b841^---0#0#1#--396"Touch build/Debug-iphonesimulator/HSHacks.app    cd /Users/alexyeh/Dropbox/Spencer/hshacks-ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app36"9A37860C-99A9-4266-A9DA-D6B349FCB104-
-bE5404E78-8E00-457B-A658-2E94868D2ED1
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Touch /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app45"Touch build/Debug-iphonesimulator/HSHacks.appe10afc906fb5b841^5a2a1f926fb5b841^---0#0#1#--396"Touch build/Debug-iphonesimulator/HSHacks.app    cd /Users/alexyeh/Dropbox/Spencer/hshacks-ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/alexyeh/Dropbox/Spencer/hshacks-ios/build/Debug-iphonesimulator/HSHacks.app36"5202A3AB-173A-4913-BF6C-05610C8C43DD-
+b2EEF84E3-68B0-4ACC-AD09-99DC6786F3B1
 

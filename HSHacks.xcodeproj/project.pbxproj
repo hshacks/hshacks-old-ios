@@ -20,6 +20,18 @@
 		6CC2247C18A4770A00262706 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2247A18A4770A00262706 /* ChatViewController.m */; };
 		6CC2247F18A4771600262706 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2247E18A4771600262706 /* GuideViewController.m */; };
 		6CC2248018A4771600262706 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2247E18A4771600262706 /* GuideViewController.m */; };
+		6CC6F09618B56EDF0036ADD1 /* AVCamCaptureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6F09318B56EDF0036ADD1 /* AVCamCaptureManager.m */; };
+		6CC6F09718B56EDF0036ADD1 /* AVCamRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6F09518B56EDF0036ADD1 /* AVCamRecorder.m */; };
+		6CC6F0A218B571470036ADD1 /* UIView+NibLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6F09918B571470036ADD1 /* UIView+NibLoading.m */; };
+		6CC6F0A318B571470036ADD1 /* UIView+Positioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6F09B18B571470036ADD1 /* UIView+Positioning.m */; };
+		6CC6F0A418B571470036ADD1 /* UIView+ShowAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6F09D18B571470036ADD1 /* UIView+ShowAnimations.m */; };
+		6CC6F0A518B571470036ADD1 /* UIView+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6F09F18B571470036ADD1 /* UIView+Utilities.m */; };
+		6CC6F0A618B571470036ADD1 /* UIViewController+EMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6F0A118B571470036ADD1 /* UIViewController+EMAdditions.m */; };
+		6CC6F0AA18B571940036ADD1 /* UIImage+Dimensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6F0A918B571940036ADD1 /* UIImage+Dimensions.m */; };
+		6CC6F0B118B5EA480036ADD1 /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC6F0AF18B5EA480036ADD1 /* logout.png */; };
+		6CC6F0B218B5EA480036ADD1 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC6F0B018B5EA480036ADD1 /* share.png */; };
+		6CC6F0B518B5EAF60036ADD1 /* UpdatesNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6F0B418B5EAF60036ADD1 /* UpdatesNavViewController.m */; };
+		6CC6F0B818B5EB860036ADD1 /* ConciergeNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6F0B718B5EB860036ADD1 /* ConciergeNavViewController.m */; };
 		6CCB63CE18A60324004E80B4 /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCB63CD18A60324004E80B4 /* UserData.m */; };
 		6CCB63D318A613A7004E80B4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCB63D218A613A7004E80B4 /* LoginViewController.m */; };
 		6CCB63D718A621BF004E80B4 /* hshacksLOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CCB63D618A621BF004E80B4 /* hshacksLOGO.png */; };
@@ -49,7 +61,6 @@
 		6CF15AC518B1E4E200AE5A04 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF15AC218B1E4E200AE5A04 /* Parse.framework */; };
 		6CF15AC918B1FA3800AE5A04 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF15AC718B1FA3800AE5A04 /* ScheduleViewController.m */; };
 		6CF15AD618B1FACC00AE5A04 /* AwardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF15AD518B1FACC00AE5A04 /* AwardsViewController.m */; };
-		6CF15ADC18B1FDBD00AE5A04 /* LoggedInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF15ADB18B1FDBD00AE5A04 /* LoggedInViewController.m */; };
 		6CF15ADF18B1FE3000AE5A04 /* GuestLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF15ADE18B1FE3000AE5A04 /* GuestLoginViewController.m */; };
 		6CF15AE718B2309A00AE5A04 /* CountdownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF15AE618B2309A00AE5A04 /* CountdownViewController.m */; };
 		E73B8D1C18B541F300CEB072 /* clock.gif in Resources */ = {isa = PBXBuildFile; fileRef = E73B8D1B18B541F300CEB072 /* clock.gif */; };
@@ -96,6 +107,28 @@
 		6CC2247A18A4770A00262706 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		6CC2247D18A4771600262706 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
 		6CC2247E18A4771600262706 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
+		6CC6F09218B56EDF0036ADD1 /* AVCamCaptureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamCaptureManager.h; sourceTree = "<group>"; };
+		6CC6F09318B56EDF0036ADD1 /* AVCamCaptureManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamCaptureManager.m; sourceTree = "<group>"; };
+		6CC6F09418B56EDF0036ADD1 /* AVCamRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamRecorder.h; sourceTree = "<group>"; };
+		6CC6F09518B56EDF0036ADD1 /* AVCamRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamRecorder.m; sourceTree = "<group>"; };
+		6CC6F09818B571470036ADD1 /* UIView+NibLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NibLoading.h"; sourceTree = "<group>"; };
+		6CC6F09918B571470036ADD1 /* UIView+NibLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NibLoading.m"; sourceTree = "<group>"; };
+		6CC6F09A18B571470036ADD1 /* UIView+Positioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Positioning.h"; sourceTree = "<group>"; };
+		6CC6F09B18B571470036ADD1 /* UIView+Positioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Positioning.m"; sourceTree = "<group>"; };
+		6CC6F09C18B571470036ADD1 /* UIView+ShowAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ShowAnimations.h"; sourceTree = "<group>"; };
+		6CC6F09D18B571470036ADD1 /* UIView+ShowAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ShowAnimations.m"; sourceTree = "<group>"; };
+		6CC6F09E18B571470036ADD1 /* UIView+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utilities.h"; sourceTree = "<group>"; };
+		6CC6F09F18B571470036ADD1 /* UIView+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utilities.m"; sourceTree = "<group>"; };
+		6CC6F0A018B571470036ADD1 /* UIViewController+EMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+EMAdditions.h"; sourceTree = "<group>"; };
+		6CC6F0A118B571470036ADD1 /* UIViewController+EMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EMAdditions.m"; sourceTree = "<group>"; };
+		6CC6F0A818B571940036ADD1 /* UIImage+Dimensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Dimensions.h"; sourceTree = "<group>"; };
+		6CC6F0A918B571940036ADD1 /* UIImage+Dimensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Dimensions.m"; sourceTree = "<group>"; };
+		6CC6F0AF18B5EA480036ADD1 /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
+		6CC6F0B018B5EA480036ADD1 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		6CC6F0B318B5EAF60036ADD1 /* UpdatesNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdatesNavViewController.h; sourceTree = "<group>"; };
+		6CC6F0B418B5EAF60036ADD1 /* UpdatesNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdatesNavViewController.m; sourceTree = "<group>"; };
+		6CC6F0B618B5EB860036ADD1 /* ConciergeNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConciergeNavViewController.h; sourceTree = "<group>"; };
+		6CC6F0B718B5EB860036ADD1 /* ConciergeNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConciergeNavViewController.m; sourceTree = "<group>"; };
 		6CCB63CC18A60324004E80B4 /* UserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserData.h; sourceTree = "<group>"; };
 		6CCB63CD18A60324004E80B4 /* UserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserData.m; sourceTree = "<group>"; };
 		6CCB63D118A613A7004E80B4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -143,8 +176,6 @@
 		6CF15AC718B1FA3800AE5A04 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
 		6CF15AD418B1FACC00AE5A04 /* AwardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwardsViewController.h; sourceTree = "<group>"; };
 		6CF15AD518B1FACC00AE5A04 /* AwardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwardsViewController.m; sourceTree = "<group>"; };
-		6CF15ADA18B1FDBD00AE5A04 /* LoggedInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggedInViewController.h; sourceTree = "<group>"; };
-		6CF15ADB18B1FDBD00AE5A04 /* LoggedInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoggedInViewController.m; sourceTree = "<group>"; };
 		6CF15ADD18B1FE3000AE5A04 /* GuestLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuestLoginViewController.h; sourceTree = "<group>"; };
 		6CF15ADE18B1FE3000AE5A04 /* GuestLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuestLoginViewController.m; sourceTree = "<group>"; };
 		6CF15AE518B2309900AE5A04 /* CountdownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownViewController.h; sourceTree = "<group>"; };
@@ -216,6 +247,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6CC6F0A718B5714F0036ADD1 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				6CC6F0A818B571940036ADD1 /* UIImage+Dimensions.h */,
+				6CC6F0A918B571940036ADD1 /* UIImage+Dimensions.m */,
+				6CC6F09818B571470036ADD1 /* UIView+NibLoading.h */,
+				6CC6F09918B571470036ADD1 /* UIView+NibLoading.m */,
+				6CC6F09A18B571470036ADD1 /* UIView+Positioning.h */,
+				6CC6F09B18B571470036ADD1 /* UIView+Positioning.m */,
+				6CC6F09C18B571470036ADD1 /* UIView+ShowAnimations.h */,
+				6CC6F09D18B571470036ADD1 /* UIView+ShowAnimations.m */,
+				6CC6F09E18B571470036ADD1 /* UIView+Utilities.h */,
+				6CC6F09F18B571470036ADD1 /* UIView+Utilities.m */,
+				6CC6F0A018B571470036ADD1 /* UIViewController+EMAdditions.h */,
+				6CC6F0A118B571470036ADD1 /* UIViewController+EMAdditions.m */,
+			);
+			name = UIView;
+			sourceTree = "<group>";
+		};
 		6CE2CAE018B01F17007AC3AA /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +305,8 @@
 		6CE2CB0E18B02053007AC3AA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6CC6F0AF18B5EA480036ADD1 /* logout.png */,
+				6CC6F0B018B5EA480036ADD1 /* share.png */,
 				E73B8D1B18B541F300CEB072 /* clock.gif */,
 				6CCB63D618A621BF004E80B4 /* hshacksLOGO.png */,
 				6CE2CB0C18B02047007AC3AA /* placeholderIcon.png */,
@@ -269,8 +321,10 @@
 				6CCB63D218A613A7004E80B4 /* LoginViewController.m */,
 				6CF15ADD18B1FE3000AE5A04 /* GuestLoginViewController.h */,
 				6CF15ADE18B1FE3000AE5A04 /* GuestLoginViewController.m */,
-				6CF15ADA18B1FDBD00AE5A04 /* LoggedInViewController.h */,
-				6CF15ADB18B1FDBD00AE5A04 /* LoggedInViewController.m */,
+				6CC6F09218B56EDF0036ADD1 /* AVCamCaptureManager.h */,
+				6CC6F09318B56EDF0036ADD1 /* AVCamCaptureManager.m */,
+				6CC6F09418B56EDF0036ADD1 /* AVCamRecorder.h */,
+				6CC6F09518B56EDF0036ADD1 /* AVCamRecorder.m */,
 			);
 			name = "Login Views";
 			sourceTree = "<group>";
@@ -341,12 +395,17 @@
 		E770466618891A7700BE6FC4 /* HSHacks */ = {
 			isa = PBXGroup;
 			children = (
+				6CC6F0A718B5714F0036ADD1 /* UIView */,
 				6CE2CB0E18B02053007AC3AA /* Images */,
 				6CE2CAE018B01F17007AC3AA /* SDWebImage */,
 				E770466F18891A7700BE6FC4 /* AppDelegate.h */,
 				E770467018891A7700BE6FC4 /* AppDelegate.m */,
 				6CF15AE018B1FE4300AE5A04 /* Login Views */,
 				E770467218891A7700BE6FC4 /* Main.storyboard */,
+				6CC6F0B318B5EAF60036ADD1 /* UpdatesNavViewController.h */,
+				6CC6F0B418B5EAF60036ADD1 /* UpdatesNavViewController.m */,
+				6CC6F0B618B5EB860036ADD1 /* ConciergeNavViewController.h */,
+				6CC6F0B718B5EB860036ADD1 /* ConciergeNavViewController.m */,
 				6CC2247118A476D000262706 /* UpdatesViewController.h */,
 				6CC2247218A476D000262706 /* UpdatesViewController.m */,
 				6CC2247518A476FA00262706 /* ConciergeViewController.h */,
@@ -439,7 +498,7 @@
 				ORGANIZATIONNAME = hshacks.com;
 				TargetAttributes = {
 					E770465C18891A7700BE6FC4 = {
-						DevelopmentTeam = 3779WUCD3T;
+						DevelopmentTeam = 6K2U3WGB8U;
 					};
 					E770468018891A7700BE6FC4 = {
 						TestTargetID = E770465C18891A7700BE6FC4;
@@ -474,8 +533,10 @@
 				E770467C18891A7700BE6FC4 /* Images.xcassets in Resources */,
 				6CE2CB0D18B02047007AC3AA /* placeholderIcon.png in Resources */,
 				E73B8D1C18B541F300CEB072 /* clock.gif in Resources */,
+				6CC6F0B118B5EA480036ADD1 /* logout.png in Resources */,
 				E770466B18891A7700BE6FC4 /* InfoPlist.strings in Resources */,
 				E770467418891A7700BE6FC4 /* Main.storyboard in Resources */,
+				6CC6F0B218B5EA480036ADD1 /* share.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,25 +556,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CE2CB0B18B01F17007AC3AA /* UIImageView+WebCache.m in Sources */,
-				6CF15ADC18B1FDBD00AE5A04 /* LoggedInViewController.m in Sources */,
 				6CE2CB0218B01F17007AC3AA /* SDWebImageDecoder.m in Sources */,
 				6CF15AD618B1FACC00AE5A04 /* AwardsViewController.m in Sources */,
 				6CE2CB0518B01F17007AC3AA /* SDWebImageManager.m in Sources */,
+				6CC6F0A318B571470036ADD1 /* UIView+Positioning.m in Sources */,
 				6CE2CAFF18B01F17007AC3AA /* NSData+ImageContentType.m in Sources */,
 				6CE2CB0118B01F17007AC3AA /* SDWebImageCompat.m in Sources */,
 				6CF15AE718B2309A00AE5A04 /* CountdownViewController.m in Sources */,
+				6CC6F0A218B571470036ADD1 /* UIView+NibLoading.m in Sources */,
 				6CE2CB0A18B01F17007AC3AA /* UIImage+WebP.m in Sources */,
 				6CCB63D318A613A7004E80B4 /* LoginViewController.m in Sources */,
 				6CC2247318A476D000262706 /* UpdatesViewController.m in Sources */,
 				E770467118891A7700BE6FC4 /* AppDelegate.m in Sources */,
+				6CC6F0A518B571470036ADD1 /* UIView+Utilities.m in Sources */,
 				6CE2CB0718B01F17007AC3AA /* UIButton+WebCache.m in Sources */,
+				6CC6F0A418B571470036ADD1 /* UIView+ShowAnimations.m in Sources */,
 				6CE2CB0618B01F17007AC3AA /* SDWebImagePrefetcher.m in Sources */,
+				6CC6F0A618B571470036ADD1 /* UIViewController+EMAdditions.m in Sources */,
 				6CE2CB0418B01F17007AC3AA /* SDWebImageDownloaderOperation.m in Sources */,
+				6CC6F09618B56EDF0036ADD1 /* AVCamCaptureManager.m in Sources */,
 				6CCB63CE18A60324004E80B4 /* UserData.m in Sources */,
 				6CC2247B18A4770A00262706 /* ChatViewController.m in Sources */,
+				6CC6F0B518B5EAF60036ADD1 /* UpdatesNavViewController.m in Sources */,
 				6CE2CB0918B01F17007AC3AA /* UIImage+MultiFormat.m in Sources */,
 				6CC2247718A476FA00262706 /* ConciergeViewController.m in Sources */,
+				6CC6F0AA18B571940036ADD1 /* UIImage+Dimensions.m in Sources */,
+				6CC6F0B818B5EB860036ADD1 /* ConciergeNavViewController.m in Sources */,
 				6CE2CB0018B01F17007AC3AA /* SDImageCache.m in Sources */,
+				6CC6F09718B56EDF0036ADD1 /* AVCamRecorder.m in Sources */,
 				E770466D18891A7700BE6FC4 /* main.m in Sources */,
 				6CC2247F18A4771600262706 /* GuideViewController.m in Sources */,
 				6CF15ADF18B1FE3000AE5A04 /* GuestLoginViewController.m in Sources */,
