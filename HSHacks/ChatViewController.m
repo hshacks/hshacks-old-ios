@@ -37,6 +37,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSString *connected = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"https://twitter.com/getibox"] encoding:NSUTF8StringEncoding error:nil];
+    if (connected == NULL) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Oops." message: @"I don't think you are connected to the internet." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    } else {
+    
+        
      self.chatTextField.userInteractionEnabled = NO;
  
     
@@ -78,6 +85,7 @@
     }];
 
 }
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -95,10 +103,16 @@
     
     // This will also add the message to our local array self.chat because
     // the FEventTypeChildAdded event will be immediately fired.
-
+    NSString *connected = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"https://twitter.com/getibox"] encoding:NSUTF8StringEncoding error:nil];
+    if (connected == NULL) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Oops." message: @"I don't think you are connected to the internet." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    } else {
+        
     [[self.firebase childByAutoId] setValue:@{@"user" : self.name, @"message": aTextField.text, @"image" : self.photoURL}];
- 
+    
     [aTextField setText:@""];
+    }
     return NO;
 }
 

@@ -27,7 +27,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     [self checkDate];
+    [self setStuff];
     formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat: @"MM/dd/yyyy HH:mm:ss"];
     
@@ -112,7 +114,7 @@
         s = [s stringByAppendingString:@" seconds "];
         
         countdown.text = s;
-        NSLog(@"%@",s);
+       
 
     }
     else if (hasEnded){
@@ -120,6 +122,59 @@
     }
 }
 
+-(void)setStuff{
+    today = [NSDate date];
+    [self checkDate];
+    NSUInteger unitFlags = NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit|NSHourCalendarUnit|NSMinuteCalendarUnit|NSSecondCalendarUnit;
+    if(isStarting){
+        
+        NSDateComponents *dateComponents = [gregorianCalendar components:unitFlags fromDate:today toDate:HShacksBegin options:0];
+        
+        NSNumber *days = [NSNumber numberWithInteger:[dateComponents day]];
+        NSNumber *hours = [NSNumber numberWithInteger:[dateComponents hour]];
+        NSNumber *mins = [NSNumber numberWithInteger:[dateComponents minute]];
+        NSNumber *secs = [NSNumber numberWithInteger:[dateComponents second]];
+        
+        NSString *s = [days stringValue];
+        s = [s stringByAppendingString:@" days  "];
+        s = [s stringByAppendingString:[hours stringValue]];
+        s = [s stringByAppendingString:@" hours  "];
+        s = [s stringByAppendingString:[mins stringValue]];
+        s = [s stringByAppendingString:@" minutes  "];
+        s = [s stringByAppendingString:[secs stringValue]];
+        s = [s stringByAppendingString:@" seconds  "];
+        
+        countdown.text = s;
+        
+        
+    }
+    else if (hasStarted){
+        NSDateComponents *dateComponents = [gregorianCalendar components:unitFlags fromDate:HShacksBegin toDate:HShacksEnd options:0];
+        
+        NSNumber *days = [NSNumber numberWithInteger:[dateComponents day]];
+        NSNumber *hours = [NSNumber numberWithInteger:[dateComponents hour]];
+        NSNumber *mins = [NSNumber numberWithInteger:[dateComponents minute]];
+        NSNumber *secs = [NSNumber numberWithInteger:[dateComponents second]];
+        
+        NSString *s = [days stringValue];
+        s = [s stringByAppendingString:@" days "];
+        s = [s stringByAppendingString:[hours stringValue]];
+        s = [s stringByAppendingString:@" hours "];
+        s = [s stringByAppendingString:[mins stringValue]];
+        s = [s stringByAppendingString:@" minutes "];
+        s = [s stringByAppendingString:[secs stringValue]];
+        s = [s stringByAppendingString:@" seconds "];
+        
+        countdown.text = s;
+        
+        
+    }
+    else if (hasEnded){
+        countdown.text = @"We hope you enjoyed HSHacks!";
+    }
+
+
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -63,10 +63,10 @@
     else
     {
     
-        logoF2 = CGRectMake(logo.frame.origin.x+30,logo.frame.origin.y-90+30,logo.frame.size.width-60,logo.frame.size.height-60);
-        tbuttonF = CGRectMake(twitterButton.frame.origin.x,logo.frame.origin.y+110,twitterButton.frame.size.width,twitterButton.frame.size.height);
-        fButtonF = CGRectMake(facebookButton.frame.origin.x,logo.frame.origin.y+190,facebookButton.frame.size.width,facebookButton.frame.size.height);
-        gButtonF = CGRectMake(guestButton.frame.origin.x,logo.frame.origin.y+270,guestButton.frame.size.width,guestButton.frame.size.height);
+        logoF2 = CGRectMake(logo.frame.origin.x+30,logo.frame.origin.y-110+30,logo.frame.size.width-60,logo.frame.size.height-60);
+        tbuttonF = CGRectMake(twitterButton.frame.origin.x,logo.frame.origin.y+115,twitterButton.frame.size.width,twitterButton.frame.size.height);
+        fButtonF = CGRectMake(facebookButton.frame.origin.x,logo.frame.origin.y+195,facebookButton.frame.size.width,facebookButton.frame.size.height);
+        gButtonF = CGRectMake(guestButton.frame.origin.x,logo.frame.origin.y+275,guestButton.frame.size.width,guestButton.frame.size.height);
     
     
     
@@ -118,8 +118,6 @@
 
 -(void)loginTwitter{
 
-
-    
     
     if ([TWTweetComposeViewController canSendTweet])
     {
@@ -199,7 +197,8 @@
 
                
             }else{
-                NSLog(@"Error while downloading Twitter user data: %@", error);
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Oops." message: @"Something bad happened when trying to login to Twitter. Try again?" delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
             }
         }];
         
@@ -222,7 +221,6 @@
                             @"user_status",
                             nil];
     
-    NSLog(@"called login facebook");
     
        [FBSession openActiveSessionWithReadPermissions:permissions
                                        allowLoginUI:YES
@@ -253,12 +251,11 @@
            NSDictionary<FBGraphUser> *user,
            NSError *error) {
              if (!error) {
-                 NSLog(@"facebook username %@", user.name);
                  
                  UserData *userData = [UserData sharedManager];
                  userData.userName = user.name;
                    NSString *photo = [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=square", user.username];
-                 NSLog(@"facebook pic: %@", photo);
+                
                  userData.userPhoto = photo;
                  
                  //now store data in nsuserdefault
@@ -275,8 +272,7 @@
                  
              }
              if(error){
-                 NSLog(@"Error in FB API request: %@", error.localizedDescription);
-                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Oops." message: @"Something went wrong with Facebook." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Oops." message: @"Something went wrong with Facebook." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                  [alert show];
                  
              }

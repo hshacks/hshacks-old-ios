@@ -98,18 +98,18 @@
        
 
     // Flash the screen white and fade it out to give UI feedback that a still image was taken
-    NSLog(@"image x : %f y %f ", captureImage.bounds.origin.x, captureImage.bounds.origin.y);
-    UIView *flashView = [[UIView alloc] initWithFrame:[captureImage bounds]];
-    [flashView setBackgroundColor:[UIColor whiteColor]];
-    [self.view addSubview:flashView];
-    
-    [UIView animateWithDuration:.4f
-                     animations:^{
-                         [flashView setAlpha:0.f];
-                     }
-                     completion:^(BOOL finished){
-                         [flashView removeFromSuperview];
-                     }];
+//    NSLog(@"image x : %f y %f ", captureImage.bounds.origin.x, captureImage.bounds.origin.y);
+//    UIView *flashView = [[UIView alloc] initWithFrame:[captureImage bounds]];
+//    [flashView setBackgroundColor:[UIColor whiteColor]];
+//    [self.view addSubview:flashView];
+//    
+//    [UIView animateWithDuration:.4f
+//                     animations:^{
+//                         [flashView setAlpha:0.f];
+//                     }
+//                     completion:^(BOOL finished){
+//                         [flashView removeFromSuperview];
+//                     }];
     
 
     

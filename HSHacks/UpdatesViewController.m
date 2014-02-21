@@ -31,6 +31,12 @@
     [super viewDidLoad];
     
     self.tableView.separatorInset = UIEdgeInsetsZero;
+    NSString *connected = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"https://twitter.com/getibox"] encoding:NSUTF8StringEncoding error:nil];
+    if (connected == NULL) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Oops." message: @"I don't think you are connected to the internet." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    } else {
+    
     bodyArray = [[NSMutableArray alloc]init];
     PFQuery *query = [PFQuery queryWithClassName:@"Announcements"];
     [query selectKeys:@[@"body"]];
@@ -38,7 +44,7 @@
     for (int i = 0; i < objects.count;i++) {
         [bodyArray insertObject:[objects[i] objectForKey:@"body"] atIndex:0];
     }
-
+    }
     
 }
 

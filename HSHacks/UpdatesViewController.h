@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
+
 @interface UpdatesViewController : PFQueryTableViewController
 
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, retain) NSMutableArray *bodyArray;
+
 @end

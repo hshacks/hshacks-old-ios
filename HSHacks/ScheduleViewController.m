@@ -30,7 +30,11 @@
 {
     [super viewDidLoad];
     self.tableView.separatorInset = UIEdgeInsetsZero;
-    
+    NSString *connected = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"https://twitter.com/getibox"] encoding:NSUTF8StringEncoding error:nil];
+    if (connected == NULL) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Oops." message: @"I don't think you are connected to the internet." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    } else {
     PFQuery *query = [PFQuery queryWithClassName:@"Event"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
@@ -43,7 +47,7 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
-    
+    }
 	// Do any additional setup after loading the view.
 }
 - (void)viewWillAppear:(BOOL)animated
