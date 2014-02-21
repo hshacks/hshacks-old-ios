@@ -51,15 +51,15 @@
     logo.alpha = 0.0;
     statusLabel.alpha = 0.0;
     
-    [UIView animateWithDuration: 1.0f
+    [UIView animateWithDuration: 0.7f
                           delay: 0.0f
                         options: UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          statusLabel.alpha = 1.0;
                      }
                      completion:^(BOOL finished){
-                         [UIView animateWithDuration: 0.7f
-                                               delay: 1.0f
+                         [UIView animateWithDuration: 0.5f
+                                               delay: 0.3f
                                              options: UIViewAnimationOptionCurveEaseIn
                                           animations:^{
                                               statusLabel.alpha = 0.0;
@@ -71,8 +71,8 @@
                                               CGRect gButtonF = CGRectMake(guestButton.frame.origin.x,logo.frame.origin.y+300,guestButton.frame.size.width,guestButton.frame.size.height);
                                               
                                               
-                                              [UIView animateWithDuration: 0.7f
-                                                                    delay: 0.7f
+                                              [UIView animateWithDuration: 0.5f
+                                                                    delay: 0.0f
                                                                   options: UIViewAnimationOptionCurveEaseIn
                                                                animations:^{
                                                                    logo.alpha = 1.0;
@@ -91,18 +91,10 @@
                          
                     }];
     
-    
-    
-    
-    
 }
 
 -(void)loginTwitter{
-    
-    NSArray *permissions = [[NSArray alloc] initWithObjects:
-                            @"user_photos",
-                            @"user_status",
-                            nil];
+
 
     
     
@@ -165,7 +157,7 @@
                 
                 // to do something useful with this data:
                 NSString *name = [twitterData objectForKey:@"name"];
-                NSLog(@"%@", name);
+           
         
                 // A handy bonus tip: twitter display picture
                 NSString *profileImageUrl = [twitterData objectForKey:@"profile_image_url"];
@@ -173,7 +165,7 @@
                 UserData *userData = [UserData sharedManager];
                 userData.userName = name;
                 userData.userPhoto = profileImageUrl;
-                NSLog(@"%@", userData.userPhoto);
+ 
                 
                 NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
                 
@@ -298,13 +290,7 @@
     [defaults setObject:@"YES" forKey:@"loggedIn"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 
-    //show "Have a good time, <name>"
-    
-    //1. shift logo to center of screen, start to fade out
-    //2. When logo starts to fade out, fade in "Have a good time, <name>" on top of the image (logo still fading out).
-    //3. After text fades in, dismiss the view.
-    
-    
+
     
     [UIView animateWithDuration: 1.0f
                           delay: 0.0f

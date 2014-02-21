@@ -304,7 +304,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">
             <objects>
-                <tabBarController id="8YX-ce-x5E" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBar" id="8YX-ce-x5E" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
@@ -971,37 +971,40 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="NWf-MJ-kQ1">
-                                <rect key="frame" x="60" y="48" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <rect key="frame" x="60" y="130" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="n6h-6F-wcg">
-                                <rect key="frame" x="60" y="48" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <rect key="frame" x="60" y="130" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xBN-Nq-k3j">
-                                <rect key="frame" x="145" y="270" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="145" y="348" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" title="take"/>
                                 <connections>
                                     <action selector="snapImage:" destination="J9F-kv-YAZ" eventType="touchUpInside" id="8jh-Ac-2An"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Your Name" minimumFontSize="17" clearButtonMode="whileEditing" id="FP0-Gl-xcp">
-                                <rect key="frame" x="37" y="328" width="247" height="47"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Name" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" id="FP0-Gl-xcp">
+                                <rect key="frame" x="37" y="59" width="247" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.87450980389999999" green="0.87450980389999999" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WL5-gA-ckM">
-                                <rect key="frame" x="125" y="410" width="70" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cGC-3R-mon">
+                                <rect key="frame" x="36" y="406" width="247" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Go!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="doneTapped:" destination="J9F-kv-YAZ" eventType="touchUpInside" id="qYq-yZ-PtQ"/>
+                                    <action selector="doneTapped:" destination="J9F-kv-YAZ" eventType="touchUpInside" id="Pdw-dC-W3t"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1011,7 +1014,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="captureImage" destination="n6h-6F-wcg" id="mUf-6H-AQF"/>
-                        <outlet property="doneOutlet" destination="WL5-gA-ckM" id="Oeq-T4-m7G"/>
+                        <outlet property="doneOutlet" destination="cGC-3R-mon" id="kJs-gH-ymC"/>
                         <outlet property="imagePreview" destination="NWf-MJ-kQ1" id="tAS-Ee-StB"/>
                         <outlet property="nameField" destination="FP0-Gl-xcp" id="5df-Ot-JeF"/>
                     </connections>
@@ -1185,9 +1188,9 @@
         <image name="chat.png" width="30" height="30"/>
         <image name="clock.gif" width="200" height="200"/>
         <image name="hshacksLOGO.png" width="1000" height="1000"/>
-        <image name="logout.png" width="40" height="40"/>
+        <image name="logout.png" width="32" height="32"/>
         <image name="mentors.png" width="30" height="30"/>
-        <image name="share.png" width="40" height="40"/>
+        <image name="share.png" width="32" height="32"/>
         <image name="updates.png" width="77" height="77"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

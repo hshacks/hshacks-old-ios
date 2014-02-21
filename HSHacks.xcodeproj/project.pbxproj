@@ -28,10 +28,11 @@
 		6CC6F0A518B571470036ADD1 /* UIView+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6F09F18B571470036ADD1 /* UIView+Utilities.m */; };
 		6CC6F0A618B571470036ADD1 /* UIViewController+EMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6F0A118B571470036ADD1 /* UIViewController+EMAdditions.m */; };
 		6CC6F0AA18B571940036ADD1 /* UIImage+Dimensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6F0A918B571940036ADD1 /* UIImage+Dimensions.m */; };
-		6CC6F0B118B5EA480036ADD1 /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC6F0AF18B5EA480036ADD1 /* logout.png */; };
-		6CC6F0B218B5EA480036ADD1 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC6F0B018B5EA480036ADD1 /* share.png */; };
 		6CC6F0B518B5EAF60036ADD1 /* UpdatesNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6F0B418B5EAF60036ADD1 /* UpdatesNavViewController.m */; };
 		6CC6F0B818B5EB860036ADD1 /* ConciergeNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6F0B718B5EB860036ADD1 /* ConciergeNavViewController.m */; };
+		6CC6F0BF18B5FA7B0036ADD1 /* logout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC6F0BD18B5FA7B0036ADD1 /* logout@2x.png */; };
+		6CC6F0C018B5FA7B0036ADD1 /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC6F0BE18B5FA7B0036ADD1 /* share@2x.png */; };
+		6CC6F0C618B714DD0036ADD1 /* AVCamUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6F0C518B714DD0036ADD1 /* AVCamUtilities.m */; };
 		6CCB63CE18A60324004E80B4 /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCB63CD18A60324004E80B4 /* UserData.m */; };
 		6CCB63D318A613A7004E80B4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCB63D218A613A7004E80B4 /* LoginViewController.m */; };
 		6CCB63D718A621BF004E80B4 /* hshacksLOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CCB63D618A621BF004E80B4 /* hshacksLOGO.png */; };
@@ -123,12 +124,14 @@
 		6CC6F0A118B571470036ADD1 /* UIViewController+EMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EMAdditions.m"; sourceTree = "<group>"; };
 		6CC6F0A818B571940036ADD1 /* UIImage+Dimensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Dimensions.h"; sourceTree = "<group>"; };
 		6CC6F0A918B571940036ADD1 /* UIImage+Dimensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Dimensions.m"; sourceTree = "<group>"; };
-		6CC6F0AF18B5EA480036ADD1 /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
-		6CC6F0B018B5EA480036ADD1 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		6CC6F0B318B5EAF60036ADD1 /* UpdatesNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdatesNavViewController.h; sourceTree = "<group>"; };
 		6CC6F0B418B5EAF60036ADD1 /* UpdatesNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdatesNavViewController.m; sourceTree = "<group>"; };
 		6CC6F0B618B5EB860036ADD1 /* ConciergeNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConciergeNavViewController.h; sourceTree = "<group>"; };
 		6CC6F0B718B5EB860036ADD1 /* ConciergeNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConciergeNavViewController.m; sourceTree = "<group>"; };
+		6CC6F0BD18B5FA7B0036ADD1 /* logout@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logout@2x.png"; sourceTree = "<group>"; };
+		6CC6F0BE18B5FA7B0036ADD1 /* share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@2x.png"; sourceTree = "<group>"; };
+		6CC6F0C418B714DD0036ADD1 /* AVCamUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamUtilities.h; sourceTree = "<group>"; };
+		6CC6F0C518B714DD0036ADD1 /* AVCamUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamUtilities.m; sourceTree = "<group>"; };
 		6CCB63CC18A60324004E80B4 /* UserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserData.h; sourceTree = "<group>"; };
 		6CCB63CD18A60324004E80B4 /* UserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserData.m; sourceTree = "<group>"; };
 		6CCB63D118A613A7004E80B4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -266,6 +269,37 @@
 			name = UIView;
 			sourceTree = "<group>";
 		};
+		6CC6F0C118B5FAEF0036ADD1 /* Updates */ = {
+			isa = PBXGroup;
+			children = (
+				6CC6F0B318B5EAF60036ADD1 /* UpdatesNavViewController.h */,
+				6CC6F0B418B5EAF60036ADD1 /* UpdatesNavViewController.m */,
+				6CC2247118A476D000262706 /* UpdatesViewController.h */,
+				6CC2247218A476D000262706 /* UpdatesViewController.m */,
+			);
+			name = Updates;
+			sourceTree = "<group>";
+		};
+		6CC6F0C218B5FB190036ADD1 /* Concierge */ = {
+			isa = PBXGroup;
+			children = (
+				6CC6F0B618B5EB860036ADD1 /* ConciergeNavViewController.h */,
+				6CC6F0B718B5EB860036ADD1 /* ConciergeNavViewController.m */,
+				6CC2247518A476FA00262706 /* ConciergeViewController.h */,
+				6CC2247618A476FA00262706 /* ConciergeViewController.m */,
+			);
+			name = Concierge;
+			sourceTree = "<group>";
+		};
+		6CC6F0C318B5FB250036ADD1 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				6CC2247918A4770A00262706 /* ChatViewController.h */,
+				6CC2247A18A4770A00262706 /* ChatViewController.m */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
 		6CE2CAE018B01F17007AC3AA /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,8 +339,8 @@
 		6CE2CB0E18B02053007AC3AA /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				6CC6F0AF18B5EA480036ADD1 /* logout.png */,
-				6CC6F0B018B5EA480036ADD1 /* share.png */,
+				6CC6F0BD18B5FA7B0036ADD1 /* logout@2x.png */,
+				6CC6F0BE18B5FA7B0036ADD1 /* share@2x.png */,
 				E73B8D1B18B541F300CEB072 /* clock.gif */,
 				6CCB63D618A621BF004E80B4 /* hshacksLOGO.png */,
 				6CE2CB0C18B02047007AC3AA /* placeholderIcon.png */,
@@ -323,6 +357,8 @@
 				6CF15ADE18B1FE3000AE5A04 /* GuestLoginViewController.m */,
 				6CC6F09218B56EDF0036ADD1 /* AVCamCaptureManager.h */,
 				6CC6F09318B56EDF0036ADD1 /* AVCamCaptureManager.m */,
+				6CC6F0C418B714DD0036ADD1 /* AVCamUtilities.h */,
+				6CC6F0C518B714DD0036ADD1 /* AVCamUtilities.m */,
 				6CC6F09418B56EDF0036ADD1 /* AVCamRecorder.h */,
 				6CC6F09518B56EDF0036ADD1 /* AVCamRecorder.m */,
 			);
@@ -402,16 +438,9 @@
 				E770467018891A7700BE6FC4 /* AppDelegate.m */,
 				6CF15AE018B1FE4300AE5A04 /* Login Views */,
 				E770467218891A7700BE6FC4 /* Main.storyboard */,
-				6CC6F0B318B5EAF60036ADD1 /* UpdatesNavViewController.h */,
-				6CC6F0B418B5EAF60036ADD1 /* UpdatesNavViewController.m */,
-				6CC6F0B618B5EB860036ADD1 /* ConciergeNavViewController.h */,
-				6CC6F0B718B5EB860036ADD1 /* ConciergeNavViewController.m */,
-				6CC2247118A476D000262706 /* UpdatesViewController.h */,
-				6CC2247218A476D000262706 /* UpdatesViewController.m */,
-				6CC2247518A476FA00262706 /* ConciergeViewController.h */,
-				6CC2247618A476FA00262706 /* ConciergeViewController.m */,
-				6CC2247918A4770A00262706 /* ChatViewController.h */,
-				6CC2247A18A4770A00262706 /* ChatViewController.m */,
+				6CC6F0C118B5FAEF0036ADD1 /* Updates */,
+				6CC6F0C218B5FB190036ADD1 /* Concierge */,
+				6CC6F0C318B5FB250036ADD1 /* Chat */,
 				6CF15AE118B1FE5A00AE5A04 /* Guide Views */,
 				6CCB63CC18A60324004E80B4 /* UserData.h */,
 				6CCB63CD18A60324004E80B4 /* UserData.m */,
@@ -530,13 +559,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CCB63D718A621BF004E80B4 /* hshacksLOGO.png in Resources */,
+				6CC6F0BF18B5FA7B0036ADD1 /* logout@2x.png in Resources */,
 				E770467C18891A7700BE6FC4 /* Images.xcassets in Resources */,
 				6CE2CB0D18B02047007AC3AA /* placeholderIcon.png in Resources */,
+				6CC6F0C018B5FA7B0036ADD1 /* share@2x.png in Resources */,
 				E73B8D1C18B541F300CEB072 /* clock.gif in Resources */,
-				6CC6F0B118B5EA480036ADD1 /* logout.png in Resources */,
 				E770466B18891A7700BE6FC4 /* InfoPlist.strings in Resources */,
 				E770467418891A7700BE6FC4 /* Main.storyboard in Resources */,
-				6CC6F0B218B5EA480036ADD1 /* share.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +586,7 @@
 			files = (
 				6CE2CB0B18B01F17007AC3AA /* UIImageView+WebCache.m in Sources */,
 				6CE2CB0218B01F17007AC3AA /* SDWebImageDecoder.m in Sources */,
+				6CC6F0C618B714DD0036ADD1 /* AVCamUtilities.m in Sources */,
 				6CF15AD618B1FACC00AE5A04 /* AwardsViewController.m in Sources */,
 				6CE2CB0518B01F17007AC3AA /* SDWebImageManager.m in Sources */,
 				6CC6F0A318B571470036ADD1 /* UIView+Positioning.m in Sources */,
@@ -734,7 +764,7 @@
 				INFOPLIST_FILE = "HSHacks/HSHacks-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "B9BE3DB7-FCA5-443F-9A08-CAB243D92876";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
