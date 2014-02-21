@@ -91,7 +91,7 @@
         s = [s stringByAppendingString:@" seconds  "];
         
         countdown.text = s;
-        NSLog(@"%@",s);
+      
         
     }
     else if (hasStarted){
@@ -116,7 +116,7 @@
 
     }
     else if (hasEnded){
-        countdown.text = @"We hope you enjoyed this experience!";
+        countdown.text = @"We hope you enjoyed HSHacks!";
     }
 }
 

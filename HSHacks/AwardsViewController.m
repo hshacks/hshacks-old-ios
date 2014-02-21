@@ -36,7 +36,10 @@
     }    
 	// Do any additional setup after loading the view.
 }
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self loadObjects];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -78,6 +81,7 @@
 
     return query;
 }
+
 
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

@@ -31,15 +31,6 @@
     [super viewDidLoad];
     self.tableView.separatorInset = UIEdgeInsetsZero;
     
-//    bodyArray = [[NSMutableArray alloc]init];
-//    PFQuery *queryBody = [PFQuery queryWithClassName:@"Event"];
-//    [queryBody selectKeys:@[@"description"]];
-//    NSArray *objects = [queryBody findObjects];
-//    for (int i = 0; i < objects.count;i++) {
-//        [bodyArray insertObject:[objects[i] objectForKey:@"description"] atIndex:0];
-//    }
-//    NSLog(@"bodyarray: %@", bodyArray);
-    
     PFQuery *query = [PFQuery queryWithClassName:@"Event"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
@@ -55,7 +46,10 @@
     
 	// Do any additional setup after loading the view.
 }
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self loadObjects];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -230,9 +224,9 @@
     
    UILabel *timeLabel = (UILabel*) [cell viewWithTag:101];
     NSDate *time = [object objectForKey:@"time"];
-    NSLog(@"time: %@", time);
+
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [NSTimeZone timeZoneWithAbbreviation:@"PDT"];
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"UTC"]];
     [dateFormatter setDateFormat:@"h:mm a"];
     timeLabel.text = [dateFormatter stringFromDate:time];
     

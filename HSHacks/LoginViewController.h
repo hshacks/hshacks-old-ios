@@ -25,6 +25,8 @@ NSString *username;
 - (IBAction)loginGuest:(id)sender;
 
 @property (nonatomic, retain) NSString *username;
+
+
 @property (retain, nonatomic) IBOutlet UIImageView *logo;
 @property (retain, nonatomic) IBOutlet UIButton *twitterButton;
 @property (retain, nonatomic) IBOutlet UIButton *facebookButton;

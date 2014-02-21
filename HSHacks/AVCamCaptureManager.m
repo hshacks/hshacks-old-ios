@@ -1,7 +1,7 @@
 /*
-     File: AVCamCaptureManager.m
+ File: AVCamCaptureManager.m
  Abstract: Uses the AVCapture classes to capture video and still images.
-  Version: 2.1
+ Version: 2.1
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -111,12 +111,12 @@
 					AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:device error:&error];
 					if ([[weakSelf session] canAddInput:input])
 						[[weakSelf session] addInput:input];
-				}				
+				}
 			}
             
 			if ([[weakSelf delegate] respondsToSelector:@selector(captureManagerDeviceConfigurationChanged:)]) {
 				[[weakSelf delegate] captureManagerDeviceConfigurationChanged:weakSelf];
-			}			
+			}
         };
         void (^deviceDisconnectedBlock)(NSNotification *) = ^(NSNotification *notification) {
 			AVCaptureDevice *device = [notification object];
@@ -132,7 +132,7 @@
 			
 			if ([[weakSelf delegate] respondsToSelector:@selector(captureManagerDeviceConfigurationChanged:)]) {
 				[[weakSelf delegate] captureManagerDeviceConfigurationChanged:weakSelf];
-			}			
+			}
         };
         
         NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
@@ -146,7 +146,17 @@
     return self;
 }
 
-
+- (void) dealloc
+{
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter removeObserver:[self deviceConnectedObserver]];
+    [notificationCenter removeObserver:[self deviceDisconnectedObserver]];
+	[notificationCenter removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
+	[[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
+    
+    [[self session] stopRunning];
+  
+}
 
 - (BOOL) setupSession
 {
@@ -181,7 +191,7 @@
                                     AVVideoCodecJPEG, AVVideoCodecKey,
                                     nil];
     [newStillImageOutput setOutputSettings:outputSettings];
- 
+   
     
     
     // Create session (use default AVCaptureSessionPresetHigh)
@@ -193,9 +203,11 @@
         [newCaptureSession addInput:newVideoInput];
     }
     /*if ([newCaptureSession canAddInput:newAudioInput]) {
-        [newCaptureSession addInput:newAudioInput];
-    }*/
-   
+     [newCaptureSession addInput:newAudioInput];
+     }*/
+    if ([newCaptureSession canAddOutput:newStillImageOutput]) {
+        [newCaptureSession addOutput:newStillImageOutput];
+    }
     
     [self setStillImageOutput:newStillImageOutput];
     [self setVideoInput:newVideoInput];
@@ -209,20 +221,22 @@
     AVCamRecorder *newRecorder = [[AVCamRecorder alloc] initWithSession:[self session] outputFileURL:outputFileURL];
     [newRecorder setDelegate:self];
 	
-//	// Send an error to the delegate if video recording is unavailable
-//	if (![newRecorder recordsVideo] && [newRecorder recordsAudio]) {
-//		NSString *localizedDescription = NSLocalizedString(@"Video recording unavailable", @"Video recording unavailable description");
-//		NSString *localizedFailureReason = NSLocalizedString(@"Movies recorded on this device will only contain audio. They will be accessible through iTunes file sharing.", @"Video recording unavailable failure reason");
-//		NSDictionary *errorDict = [NSDictionary dictionaryWithObjectsAndKeys:
-//								   localizedDescription, NSLocalizedDescriptionKey, 
-//								   localizedFailureReason, NSLocalizedFailureReasonErrorKey, 
-//								   nil];
-//	
-//		
-//	}
+	// Send an error to the delegate if video recording is unavailable
+	if (![newRecorder recordsVideo] && [newRecorder recordsAudio]) {
+		NSString *localizedDescription = NSLocalizedString(@"Video recording unavailable", @"Video recording unavailable description");
+		NSString *localizedFailureReason = NSLocalizedString(@"Movies recorded on this device will only contain audio. They will be accessible through iTunes file sharing.", @"Video recording unavailable failure reason");
+		NSDictionary *errorDict = [NSDictionary dictionaryWithObjectsAndKeys:
+								   localizedDescription, NSLocalizedDescriptionKey,
+								   localizedFailureReason, NSLocalizedFailureReasonErrorKey,
+								   nil];
+		NSError *noVideoError = [NSError errorWithDomain:@"AVCam" code:0 userInfo:errorDict];
+		if ([[self delegate] respondsToSelector:@selector(captureManager:didFailWithError:)]) {
+			[[self delegate] captureManager:self didFailWithError:noVideoError];
+		}
+	}
 	
 	[self setRecorder:newRecorder];
-
+ 
 	
     success = YES;
     
@@ -274,7 +288,7 @@
                                                                      [[self delegate] captureManager:self didFailWithError:error];
                                                                  }
                                                              }
-																 
+                                                             
 															 
 															 if ([[self delegate] respondsToSelector:@selector(captureManagerStillImageCaptured:)]) {
 																 [[self delegate] captureManagerStillImageCaptured:self];
@@ -310,8 +324,7 @@
             }
             [[self session] commitConfiguration];
             success = YES;
-          
-        } else if (error) {
+                } else if (error) {
             if ([[self delegate] respondsToSelector:@selector(captureManager:didFailWithError:)]) {
                 [[self delegate] captureManager:self didFailWithError:error];
             }
@@ -350,7 +363,7 @@ bail:
             if ([[self delegate] respondsToSelector:@selector(captureManager:didFailWithError:)]) {
                 [[self delegate] captureManager:self didFailWithError:error];
             }
-        }        
+        }
     }
 }
 
@@ -381,7 +394,7 @@ bail:
 
 // Keep track of current device orientation so it can be applied to movie recordings and still image captures
 - (void)deviceOrientationDidChange
-{	
+{
 	UIDeviceOrientation deviceOrientation = [[UIDevice currentDevice] orientation];
     
 	if (deviceOrientation == UIDeviceOrientationPortrait)
@@ -446,7 +459,7 @@ bail:
         if ([fileManager removeItemAtPath:filePath error:&error] == NO) {
             if ([[self delegate] respondsToSelector:@selector(captureManager:didFailWithError:)]) {
                 [[self delegate] captureManager:self didFailWithError:error];
-            }            
+            }
         }
     }
 }
@@ -457,14 +470,14 @@ bail:
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 	[dateFormatter setDateFormat:@"yyyy-MM-dd_HH-mm-ss"];
 	NSString *destinationPath = [documentsDirectory stringByAppendingFormat:@"/output_%@.mov", [dateFormatter stringFromDate:[NSDate date]]];
-
+	
 	NSError	*error;
 	if (![[NSFileManager defaultManager] copyItemAtURL:fileURL toURL:[NSURL fileURLWithPath:destinationPath] error:&error]) {
 		if ([[self delegate] respondsToSelector:@selector(captureManager:didFailWithError:)]) {
 			[[self delegate] captureManager:self didFailWithError:error];
 		}
 	}
-}	
+}
 
 @end
 
@@ -482,27 +495,27 @@ bail:
 -(void)recorder:(AVCamRecorder *)recorder recordingDidFinishToOutputFileURL:(NSURL *)outputFileURL error:(NSError *)error
 {
 	if ([[self recorder] recordsAudio] && ![[self recorder] recordsVideo]) {
-		// If the file was created on a device that doesn't support video recording, it can't be saved to the assets 
+		// If the file was created on a device that doesn't support video recording, it can't be saved to the assets
 		// library. Instead, save it in the app's Documents directory, whence it can be copied from the device via
 		// iTunes file sharing.
 		[self copyFileToDocuments:outputFileURL];
-
+        
 		if ([[UIDevice currentDevice] isMultitaskingSupported]) {
 			[[UIApplication sharedApplication] endBackgroundTask:[self backgroundRecordingID]];
-		}		
-
+		}
+        
 		if ([[self delegate] respondsToSelector:@selector(captureManagerRecordingFinished:)]) {
 			[[self delegate] captureManagerRecordingFinished:self];
 		}
 	}
-	else {	
+	else {
 		ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
 		[library writeVideoAtPathToSavedPhotosAlbum:outputFileURL
 									completionBlock:^(NSURL *assetURL, NSError *error) {
 										if (error) {
 											if ([[self delegate] respondsToSelector:@selector(captureManager:didFailWithError:)]) {
 												[[self delegate] captureManager:self didFailWithError:error];
-											}											
+											}
 										}
 										
 										if ([[UIDevice currentDevice] isMultitaskingSupported]) {
@@ -513,7 +526,7 @@ bail:
 											[[self delegate] captureManagerRecordingFinished:self];
 										}
 									}];
-	
+		
 	}
 }
 

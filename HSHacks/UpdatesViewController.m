@@ -38,12 +38,11 @@
     for (int i = 0; i < objects.count;i++) {
         [bodyArray insertObject:[objects[i] objectForKey:@"body"] atIndex:0];
     }
-    
-    NSLog(@"body array from 1%@", bodyArray);
+
     
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     if(![self isLoggedIn]){
@@ -52,6 +51,8 @@
         [self presentViewController:loginVC animated:NO completion:nil];
         
     }
+        [self loadObjects];
+    
 }
 
 
@@ -84,8 +85,7 @@
         self.textKey = @"createdAt";
         self.pullToRefreshEnabled = YES;
         self.paginationEnabled = NO;
-        
-        
+    
     
     }
     return self;
@@ -107,27 +107,55 @@
         }
     }
     
-    NSLog(@"body array %@", bodyArray);
-    
+   
     
     return query;
+}
+
+
+- (void)objectsDidLoad:(NSError *)error {
+    [super objectsDidLoad:error];
+    
+    // This method is called every time objects are loaded from Parse via the PFQuery
+
+    for (PFObject *object in self.objects) {
+        
+        NSString *body = [object objectForKey:@"body"];
+        if(![bodyArray containsObject:body]){
+            NSLog(@"bodobydjkadsbodybodybody  trol %@", body);
+            [bodyArray insertObject:body atIndex:0];
+        }
+    }
+    NSLog(@"body array  before releading %@", bodyArray);
+    [self.tableView reloadData];
 }
 
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //Get a reference to your string to base the cell size on.
-    NSString *bodyString = [bodyArray objectAtIndex:indexPath.row];
-    NSLog(@"bodystring : %@", bodyString);
+    NSString *bodyString;
+   
+    if(indexPath.row == bodyArray.count){
+     
+        for (PFObject *object in self.objects) {
+           NSString *body = [object objectForKey:@"body"];
+            if(![bodyArray containsObject:body]){
+                [bodyArray insertObject:body atIndex:0];
+            }
+        }
+    }
+    
+    bodyString = [bodyArray objectAtIndex:indexPath.row];
+    
     //set the desired size of your textbox
     CGSize constraint = CGSizeMake(298, MAXFLOAT);
-    //set your text attribute dictionary
+
     NSDictionary *attributes = [NSDictionary dictionaryWithObject:[UIFont systemFontOfSize:13.0] forKey:NSFontAttributeName];
-    //get the size of the text box
     CGRect textsize = [bodyString boundingRectWithSize:constraint options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
     //calculate your size
     float textHeight = textsize.size.height + 10;
-    NSLog(@"%f", textHeight + 78);
+   
     return textHeight + 78;
 }
 

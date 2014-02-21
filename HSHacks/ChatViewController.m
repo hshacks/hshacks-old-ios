@@ -61,11 +61,12 @@
     userData.userName = [defaults objectForKey:@"name"];
     userData.userPhoto = [defaults objectForKey:@"photo"];
 
+   
+    
     self.name = userData.userName;
     self.photoURL = userData.userPhoto;
     
-    NSLog(@"photo url%@", self.photoURL);
-    
+      
     [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
         // Add the chat message to the array.
         [self.chat addObject:snapshot.value];
@@ -134,9 +135,13 @@
     
     UIImageView *imageView = (UIImageView*) [cell viewWithTag:100];
     imageView.clipsToBounds = YES;
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
     imageView.layer.cornerRadius = imageView.frame.size.width / 2;
-    [imageView setImageWithURL:[NSURL URLWithString:chatMessage[@"image"]] placeholderImage:[UIImage imageNamed:@"placeholderIcon.png"]];
+  
+   
     
+    [imageView setImageWithURL:[NSURL URLWithString:chatMessage[@"image"]] placeholderImage:[UIImage imageNamed:@"placeholderIcon.png"]];
+  
     
     UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
     nameLabel.text = chatMessage[@"user"];
@@ -178,8 +183,6 @@
 // text field upwards when the keyboard shows, and downwards when it hides.
 - (void)keyboardWillShow:(NSNotification*)notification
 {
-   
-
     
     CGRect chatTextFieldFrame = CGRectMake(chatTextField.frame.origin.x,chatTextField.frame.origin.y-170,chatTextField.frame.size.width,chatTextField.frame.size.height);
     [UIView animateWithDuration:0.3 animations:^{ chatTextField.frame = chatTextFieldFrame;}];
@@ -203,9 +206,7 @@
     
     CGRect chatTableViewFrame = CGRectMake(0,65,320,chatTableView.frame.size.height+170);
     [UIView animateWithDuration:0.0 animations:^{ chatTableView.frame = chatTableViewFrame;}];
-  
-//    [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.chat.count -1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-    
+ 
     
     
 }

@@ -7,8 +7,8 @@
 //
 
 #import "LoginViewController.h"
-
-
+#import "UpdatesViewController.h"
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
 @interface LoginViewController ()
 
 
@@ -48,30 +48,53 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    CGRect logoF2;
+    CGRect tbuttonF;
+    CGRect fButtonF;
+    CGRect gButtonF;
+    
+    if(IS_IPHONE_5){
+        logoF2 = CGRectMake(logo.frame.origin.x+30,logo.frame.origin.y-90+30,logo.frame.size.width-60,logo.frame.size.height-60);
+         tbuttonF = CGRectMake(twitterButton.frame.origin.x,logo.frame.origin.y+160,twitterButton.frame.size.width,twitterButton.frame.size.height);
+        fButtonF = CGRectMake(facebookButton.frame.origin.x,logo.frame.origin.y+240,facebookButton.frame.size.width,facebookButton.frame.size.height);
+        gButtonF = CGRectMake(guestButton.frame.origin.x,logo.frame.origin.y+320,guestButton.frame.size.width,guestButton.frame.size.height);
+        
+    }
+    else
+    {
+    
+        logoF2 = CGRectMake(logo.frame.origin.x+30,logo.frame.origin.y-90+30,logo.frame.size.width-60,logo.frame.size.height-60);
+        tbuttonF = CGRectMake(twitterButton.frame.origin.x,logo.frame.origin.y+110,twitterButton.frame.size.width,twitterButton.frame.size.height);
+        fButtonF = CGRectMake(facebookButton.frame.origin.x,logo.frame.origin.y+190,facebookButton.frame.size.width,facebookButton.frame.size.height);
+        gButtonF = CGRectMake(guestButton.frame.origin.x,logo.frame.origin.y+270,guestButton.frame.size.width,guestButton.frame.size.height);
+    
+    
+    
+    
+    
+    }
+    
+    
     logo.alpha = 0.0;
     statusLabel.alpha = 0.0;
     
-    [UIView animateWithDuration: 0.7f
+    [UIView animateWithDuration: 1.0f
                           delay: 0.0f
                         options: UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          statusLabel.alpha = 1.0;
                      }
                      completion:^(BOOL finished){
-                         [UIView animateWithDuration: 0.5f
+                         [UIView animateWithDuration: 0.3f
                                                delay: 0.3f
                                              options: UIViewAnimationOptionCurveEaseIn
                                           animations:^{
                                               statusLabel.alpha = 0.0;
                                           }
                                           completion:^(BOOL finished){
-                                              CGRect logoF2 = CGRectMake(logo.frame.origin.x+30,logo.frame.origin.y-70+30,logo.frame.size.width-60,logo.frame.size.height-60);
-                                              CGRect tbuttonF = CGRectMake(twitterButton.frame.origin.x,logo.frame.origin.y+140,twitterButton.frame.size.width,twitterButton.frame.size.height);
-                                              CGRect fButtonF = CGRectMake(facebookButton.frame.origin.x,logo.frame.origin.y+220,facebookButton.frame.size.width,facebookButton.frame.size.height);
-                                              CGRect gButtonF = CGRectMake(guestButton.frame.origin.x,logo.frame.origin.y+300,guestButton.frame.size.width,guestButton.frame.size.height);
                                               
-                                              
-                                              [UIView animateWithDuration: 0.5f
+                                            
+                                              [UIView animateWithDuration: 0.4f
                                                                     delay: 0.0f
                                                                   options: UIViewAnimationOptionCurveEaseIn
                                                                animations:^{
@@ -322,7 +345,10 @@
 }
 
 -(void)dismissView:(id)sender {
-[self dismissModalViewControllerAnimated:YES];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UpdatesViewController *updatesVC = (UpdatesViewController*)[storyboard instantiateViewControllerWithIdentifier:@"MainTabBar"];
+    updatesVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:updatesVC animated:YES completion:nil];
 }
 
 @end
