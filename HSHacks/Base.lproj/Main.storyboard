@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8YX-ce-x5E">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -17,9 +17,14 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Announcements" id="KQE-F5-bdX">
-                                        <barButtonItem key="rightBarButtonItem" image="share.png" id="aWH-Gc-QGH">
+                                        <barButtonItem key="leftBarButtonItem" image="facebook.png" id="iRX-Zy-94X">
                                             <connections>
-                                                <action selector="share:" destination="CZ4-MO-1fc" id="Kc7-Jr-qM7"/>
+                                                <action selector="shareFacebook:" destination="CZ4-MO-1fc" id="IHw-gy-o3a"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="twittercopy.png" id="aWH-Gc-QGH">
+                                            <connections>
+                                                <action selector="shareTwitter:" destination="CZ4-MO-1fc" id="9W8-wg-YFZ"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -135,9 +140,14 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Concierge" id="f8I-g2-piu">
-                                        <barButtonItem key="rightBarButtonItem" image="share.png" id="Z1x-gC-lkP">
+                                        <barButtonItem key="leftBarButtonItem" image="facebook.png" id="KCz-Fi-lw4">
                                             <connections>
-                                                <action selector="share:" destination="QUy-BD-bpt" id="OWv-38-zTU"/>
+                                                <action selector="shareFacebook:" destination="QUy-BD-bpt" id="eh8-Q2-dIp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="twittercopy.png" id="xKN-ax-aZO">
+                                            <connections>
+                                                <action selector="shareTwitter:" destination="QUy-BD-bpt" id="KHt-kt-4vA"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1197,10 +1207,11 @@
         <image name="calendar.png" width="30" height="30"/>
         <image name="chat.png" width="30" height="30"/>
         <image name="clock.gif" width="200" height="200"/>
+        <image name="facebook.png" width="32" height="32"/>
         <image name="hshacksLOGO.png" width="1000" height="1000"/>
         <image name="logout.png" width="32" height="32"/>
         <image name="mentors.png" width="30" height="30"/>
-        <image name="share.png" width="32" height="32"/>
+        <image name="twittercopy.png" width="32" height="32"/>
         <image name="updates.png" width="77" height="77"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

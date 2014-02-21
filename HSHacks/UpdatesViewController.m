@@ -31,36 +31,27 @@
     [super viewDidLoad];
     
     self.tableView.separatorInset = UIEdgeInsetsZero;
-    NSString *connected = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"https://twitter.com/getibox"] encoding:NSUTF8StringEncoding error:nil];
-    if (connected == NULL) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Oops." message: @"I don't think you are connected to the internet." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
-    } else {
-    
-    bodyArray = [[NSMutableArray alloc]init];
-    PFQuery *query = [PFQuery queryWithClassName:@"Announcements"];
-    [query selectKeys:@[@"body"]];
-    NSArray *objects = [query findObjects];
-    for (int i = 0; i < objects.count;i++) {
-        [bodyArray insertObject:[objects[i] objectForKey:@"body"] atIndex:0];
-    }
-    }
+
     
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+   
+        [self loadObjects];
+    
+}
+-(void)viewDidAppear:(BOOL)animated{
     if(![self isLoggedIn]){
+
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         LoginViewController *loginVC = (LoginViewController*)[storyboard instantiateViewControllerWithIdentifier:@"loginVC"];
         [self presentViewController:loginVC animated:NO completion:nil];
         
     }
-        [self loadObjects];
-    
-}
 
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -70,9 +61,11 @@
 
 
 -(BOOL)isLoggedIn{
+ 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
-    if([defaults objectForKey:@"loggedIn"]){
+    NSLog(@"trololol %@", [defaults objectForKey:@"loggedIn"]);
+    if([[defaults objectForKey:@"loggedIn"] isEqualToString:@"YES"]){
+        NSLog(@"is logged in!!!!");
         return YES;
     }
     else{
@@ -104,15 +97,6 @@
     
     [query orderByDescending:@"createdAt"];
     
-    
-    for (PFObject *object in self.objects) {
-        
-        NSString *body = [object objectForKey:@"body"];
-        if(![bodyArray containsObject:body]){
-            [bodyArray insertObject:body atIndex:0];
-        }
-    }
-    
    
     
     return query;
@@ -122,17 +106,7 @@
 - (void)objectsDidLoad:(NSError *)error {
     [super objectsDidLoad:error];
     
-    // This method is called every time objects are loaded from Parse via the PFQuery
 
-    for (PFObject *object in self.objects) {
-        
-        NSString *body = [object objectForKey:@"body"];
-        if(![bodyArray containsObject:body]){
-            NSLog(@"bodobydjkadsbodybodybody  trol %@", body);
-            [bodyArray insertObject:body atIndex:0];
-        }
-    }
-    NSLog(@"body array  before releading %@", bodyArray);
     [self.tableView reloadData];
 }
 
@@ -141,19 +115,9 @@
 {
     //Get a reference to your string to base the cell size on.
     NSString *bodyString;
-   
-    if(indexPath.row == bodyArray.count){
-     
-        for (PFObject *object in self.objects) {
-           NSString *body = [object objectForKey:@"body"];
-            if(![bodyArray containsObject:body]){
-                [bodyArray insertObject:body atIndex:0];
-            }
-        }
-    }
-    
-    bodyString = [bodyArray objectAtIndex:indexPath.row];
-    
+
+    bodyString = [[self.objects objectAtIndex:indexPath.row]objectForKey:@"body"];
+
     //set the desired size of your textbox
     CGSize constraint = CGSizeMake(298, MAXFLOAT);
 

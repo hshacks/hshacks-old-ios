@@ -7,6 +7,7 @@
 //
 
 #import "ConciergeNavViewController.h"
+#import <Social/Social.h>
 
 @interface ConciergeNavViewController ()
 
@@ -35,29 +36,45 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)share:(id)sender {
-    NSArray *activityItems = @[@"@highschoolhacks is #stacked."];
-    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+
+- (IBAction)shareFacebook:(id)sender {
     
-    [self presentViewController:activityVC animated:YES completion:nil];
-    
-    
-    [activityVC setCompletionHandler:^(NSString *activityType, BOOL completed)
-     {
-         NSLog(@"Activity = %@",activityType);
-         NSLog(@"Completed Status = %d",completed);
-         
-         if (completed)
-         {
-             UIAlertView *objalert = [[UIAlertView alloc]initWithTitle:@"Horray!" message:@"Successfully Shared! Enjoy HSHacks!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-             [objalert show];
-             objalert = nil;
-         } else
-         {
-             UIAlertView *objalert = [[UIAlertView alloc]initWithTitle:@"Oops" message:@"Unable To Share. Try again?" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-             [objalert show];
-             objalert = nil;
-         }
-     }];
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]){
+        SLComposeViewController *composeController = [SLComposeViewController
+                                                      composeViewControllerForServiceType:SLServiceTypeFacebook];
+        
+        [composeController setInitialText:@"HighSchoolHacks is #stacked!"];
+        //Post actual selfie?
+        //[composeController addImage:postImage.image];
+        [self presentViewController:composeController
+                           animated:YES completion:nil];
+    }
+    else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Oops" message: @"Looks like you don't have a Facebook account linked to this device." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        
+        
+    }
 }
+
+- (IBAction)shareTwitter:(id)sender {
+    
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    {
+        SLComposeViewController *tweetSheet = [SLComposeViewController
+                                               composeViewControllerForServiceType:SLServiceTypeTwitter];
+        NSString *message = [NSString stringWithFormat:@"@highschoolhacks is #stacked!"];
+        [tweetSheet setInitialText:message];
+        [self presentViewController:tweetSheet animated:YES completion:nil];
+    }
+    else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Oops" message: @"Looks like you don't have a Twitter account linked to this device." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        
+        
+    }
+
+}
+
+
 @end

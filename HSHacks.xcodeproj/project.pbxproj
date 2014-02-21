@@ -10,6 +10,11 @@
 		0759E22918B2198A00E67B23 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0759E22818B2198A00E67B23 /* Twitter.framework */; };
 		0759E34518B393F500E67B23 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0759E34418B393F500E67B23 /* Accounts.framework */; };
 		6C9B48A018B75594008E81B7 /* btnRetake@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9B489F18B75594008E81B7 /* btnRetake@2x.png */; };
+		6C9B48A318B7F091008E81B7 /* facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9B48A118B7F090008E81B7 /* facebook@2x.png */; };
+		6C9B48A418B7F091008E81B7 /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9B48A218B7F090008E81B7 /* twitter@2x.png */; };
+		6C9B48AA18B7FBBC008E81B7 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6C9B48A718B7FBBC008E81B7 /* SVProgressHUD.bundle */; };
+		6C9B48AB18B7FBBC008E81B7 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B48A918B7FBBC008E81B7 /* SVProgressHUD.m */; };
+		6C9B48AD18B80433008E81B7 /* twittercopy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9B48AC18B80433008E81B7 /* twittercopy@2x.png */; };
 		6CB6738B18B08D5E00719CEB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB6738A18B08D5E00719CEB /* MessageUI.framework */; };
 		6CB6738D18B08F6A00719CEB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB6738C18B08F6A00719CEB /* CoreTelephony.framework */; };
 		6CB6738F18B093C300719CEB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB6738E18B093C300719CEB /* Social.framework */; };
@@ -102,6 +107,13 @@
 		0759E22818B2198A00E67B23 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		0759E34418B393F500E67B23 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		6C9B489F18B75594008E81B7 /* btnRetake@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnRetake@2x.png"; sourceTree = "<group>"; };
+		6C9B48A118B7F090008E81B7 /* facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook@2x.png"; sourceTree = "<group>"; };
+		6C9B48A218B7F090008E81B7 /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter@2x.png"; sourceTree = "<group>"; };
+		6C9B48A618B7FBBC008E81B7 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		6C9B48A718B7FBBC008E81B7 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		6C9B48A818B7FBBC008E81B7 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		6C9B48A918B7FBBC008E81B7 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		6C9B48AC18B80433008E81B7 /* twittercopy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twittercopy@2x.png"; sourceTree = "<group>"; };
 		6CB6738A18B08D5E00719CEB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		6CB6738C18B08F6A00719CEB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		6CB6738E18B093C300719CEB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -259,6 +271,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C9B48A518B7FBBC008E81B7 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				6C9B48A618B7FBBC008E81B7 /* SVProgressHUD-Prefix.pch */,
+				6C9B48A718B7FBBC008E81B7 /* SVProgressHUD.bundle */,
+				6C9B48A818B7FBBC008E81B7 /* SVProgressHUD.h */,
+				6C9B48A918B7FBBC008E81B7 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		6CC6F0A718B5714F0036ADD1 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +379,9 @@
 				6CC6F0CD18B74FB80036ADD1 /* btnCamera@2x.png */,
 				6CC6F0CF18B7520A0036ADD1 /* btnRestartSignature@2x.png */,
 				6C9B489F18B75594008E81B7 /* btnRetake@2x.png */,
+				6C9B48A118B7F090008E81B7 /* facebook@2x.png */,
+				6C9B48A218B7F090008E81B7 /* twitter@2x.png */,
+				6C9B48AC18B80433008E81B7 /* twittercopy@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -447,6 +473,7 @@
 			children = (
 				6CC6F0A718B5714F0036ADD1 /* UIView */,
 				6CE2CB0E18B02053007AC3AA /* Images */,
+				6C9B48A518B7FBBC008E81B7 /* SVProgressHUD */,
 				6CE2CAE018B01F17007AC3AA /* SDWebImage */,
 				E770466F18891A7700BE6FC4 /* AppDelegate.h */,
 				E770467018891A7700BE6FC4 /* AppDelegate.m */,
@@ -577,11 +604,15 @@
 				E770467C18891A7700BE6FC4 /* Images.xcassets in Resources */,
 				6C9B48A018B75594008E81B7 /* btnRetake@2x.png in Resources */,
 				6CE2CB0D18B02047007AC3AA /* placeholderIcon.png in Resources */,
+				6C9B48A418B7F091008E81B7 /* twitter@2x.png in Resources */,
 				6CC6F0C018B5FA7B0036ADD1 /* share@2x.png in Resources */,
+				6C9B48AA18B7FBBC008E81B7 /* SVProgressHUD.bundle in Resources */,
 				6CC6F0CE18B74FB80036ADD1 /* btnCamera@2x.png in Resources */,
+				6C9B48AD18B80433008E81B7 /* twittercopy@2x.png in Resources */,
 				6CC6F0D018B7520A0036ADD1 /* btnRestartSignature@2x.png in Resources */,
 				E73B8D1C18B541F300CEB072 /* clock.gif in Resources */,
 				E770466B18891A7700BE6FC4 /* InfoPlist.strings in Resources */,
+				6C9B48A318B7F091008E81B7 /* facebook@2x.png in Resources */,
 				E770467418891A7700BE6FC4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,6 +667,7 @@
 				6CC2247F18A4771600262706 /* GuideViewController.m in Sources */,
 				6CF15ADF18B1FE3000AE5A04 /* GuestLoginViewController.m in Sources */,
 				6CE2CB0818B01F17007AC3AA /* UIImage+GIF.m in Sources */,
+				6C9B48AB18B7FBBC008E81B7 /* SVProgressHUD.m in Sources */,
 				6CF15AC918B1FA3800AE5A04 /* ScheduleViewController.m in Sources */,
 				6CE2CB0318B01F17007AC3AA /* SDWebImageDownloader.m in Sources */,
 				6CE2CAFE18B01F17007AC3AA /* MKAnnotationView+WebCache.m in Sources */,

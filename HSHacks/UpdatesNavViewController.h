@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface UpdatesNavViewController : UIViewController
-- (IBAction)share:(id)sender;
+
+- (IBAction)shareFacebook:(id)sender;
+
+- (IBAction)shareTwitter:(id)sender;
 
 @end

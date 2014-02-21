@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ConciergeNavViewController : UIViewController
-- (IBAction)share:(id)sender;
+
+- (IBAction)shareTwitter:(id)sender;
+- (IBAction)shareFacebook:(id)sender;
 
 @end

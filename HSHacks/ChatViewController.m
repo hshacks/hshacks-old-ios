@@ -11,7 +11,7 @@
 #import "UserData.h"
 #import <QuartzCore/QuartzCore.h>
 #import "SDWebImage/UIImageView+WebCache.h"
-
+#import "SVProgressHUD/SVProgressHUD.h"
 //Firebase chat server
 #define kFirechatNS @"https://hshacks.firebaseio.com/"
 
@@ -37,13 +37,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString *connected = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"https://twitter.com/getibox"] encoding:NSUTF8StringEncoding error:nil];
-    if (connected == NULL) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Oops." message: @"I don't think you are connected to the internet." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
-    } else {
     
-        
+    NSString *connected = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"https://twitter.com/getibox"] encoding:NSUTF8StringEncoding error:nil];
+    if (connected != NULL) {
+    
+          [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
      self.chatTextField.userInteractionEnabled = NO;
  
     
@@ -78,7 +76,7 @@
         // Add the chat message to the array.
         [self.chat addObject:snapshot.value];
         // Reload the table view so the new message will show up.
-        
+         [SVProgressHUD dismiss];
         [self.chatTableView reloadData];
         self.chatTextField.userInteractionEnabled = TRUE;
          [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.chat.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
@@ -86,6 +84,7 @@
 
 }
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -103,12 +102,7 @@
     
     // This will also add the message to our local array self.chat because
     // the FEventTypeChildAdded event will be immediately fired.
-    NSString *connected = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"https://twitter.com/getibox"] encoding:NSUTF8StringEncoding error:nil];
-    if (connected == NULL) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Oops." message: @"I don't think you are connected to the internet." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
-    } else {
-        
+    if(self.chat.count > 0){
     [[self.firebase childByAutoId] setValue:@{@"user" : self.name, @"message": aTextField.text, @"image" : self.photoURL}];
     
     [aTextField setText:@""];
@@ -120,7 +114,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView
 {
-    // We only have one section in our table view.
     return 1;
 }
 
@@ -144,7 +137,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    
+
     NSDictionary* chatMessage = [self.chat objectAtIndex:indexPath.row];
     
     UIImageView *imageView = (UIImageView*) [cell viewWithTag:100];
@@ -173,6 +166,17 @@
 // Subscribe to keyboard show/hide notifications.
 - (void)viewWillAppear:(BOOL)animated
 {
+    
+    NSString *connected = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"https://twitter.com/getibox"] encoding:NSUTF8StringEncoding error:nil];
+    if (connected == NULL) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Oops." message: @"I don't think you are connected to the internet." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        self.chatTextField.userInteractionEnabled = NO;
+    }
+    else{
+        self.chatTextField.userInteractionEnabled = YES;
+    }
+    
     [[NSNotificationCenter defaultCenter]
      addObserver:self selector:@selector(keyboardWillShow:)
      name:UIKeyboardWillShowNotification object:nil];
@@ -180,6 +184,8 @@
     [[NSNotificationCenter defaultCenter]
      addObserver:self selector:@selector(keyboardWillHide:)
      name:UIKeyboardWillHideNotification object:nil];
+    
+    
 }
 
 // Unsubscribe from keyboard show/hide notifications.

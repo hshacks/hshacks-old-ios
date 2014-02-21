@@ -18,6 +18,7 @@
 #import "UserData.h"
 #import <ImageIO/CGImageProperties.h>
 #import "MLIMGURUploader.h"
+#import "SVProgressHUD/SVProgressHUD.h"
 
 #define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
 
@@ -143,19 +144,22 @@
     NSString *description = @"";
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+    NSString *connected = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"https://twitter.com/getibox"] encoding:NSUTF8StringEncoding error:nil];
+    if (connected == NULL) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Oops." message: @"I don't think you are connected to the internet." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        [SVProgressHUD dismiss];
+    }
+    else{
     
-  
-    // Load the image data up in the background so we don't block the UI
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-      
         [MLIMGURUploader uploadPhoto:imageDataImgur
                                title:title
                          description:description
                        imgurClientID:clientID completionBlock:^(NSString *result) {
-                           dispatch_async(dispatch_get_main_queue(), ^{
-                               [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+                         
                                //Upload to imgur
-                               NSLog(@"result url : %@", result);
+                               NSLog(@"result url for imgur : %@", result);
                                
                                UserData *userData = [UserData sharedManager];
                                userData.userPhoto = result;
@@ -164,19 +168,23 @@
                                NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
                                [defaults setObject:userData.userPhoto forKey:@"photo"];
                                [defaults synchronize];
-                           });
+                               [SVProgressHUD dismiss];
+                                [self animateOut];
+
+                         
                        } failureBlock:^(NSURLResponse *response, NSError *error, NSInteger status) {
-                           dispatch_async(dispatch_get_main_queue(), ^{
-                               [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+                           
                                [[[UIAlertView alloc] initWithTitle:@"Upload Failed"
                                                            message:@"Something bad happened. Really bad. Try again."
                                                           delegate:nil
                                                  cancelButtonTitle:nil
                                                  otherButtonTitles:@"OK", nil] show];
-                           });
                        }];
         
-    });
+    }
+    
+    
+
 
 
 }
@@ -191,50 +199,61 @@
         
     }
     else{
+        if(!imageData){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Oops." message: @"Take a picture of yourself so we know who you are." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
         
+        }
+        else{
         [self uploadToImgur:imageData:userData.userName];
-        
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        
-        
-        [defaults setObject:@"YES" forKey:@"loggedIn"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        
-       NSArray* sublayers = [NSArray arrayWithArray:self.view.layer.sublayers];
-        
-        //remove the avcam view
-        [[sublayers objectAtIndex:(sublayers.count-2)] removeFromSuperlayer];
-        
-        [UIView animateWithDuration: 1.0f
-                              delay: 0.0f
-                            options: UIViewAnimationOptionCurveEaseIn
-                         animations:^{
-                             captureImage.alpha = 0.0;
-                             imagePreview.alpha = 0.0;
-                             doneOutlet.alpha = 0.0;
-                             nameField.alpha = 0.0;
-                             imgBtn.alpha = 0.0;
-                         }
-                         completion:^(BOOL finished){
-                             statusLabel.numberOfLines = 2;
-                             statusLabel.lineBreakMode = NSLineBreakByWordWrapping;
-                             statusLabel.text = [NSString stringWithFormat:@"Have a good time, %@", userData.userName];
-                             [UIView animateWithDuration: 0.7f
-                                                   delay: 0.0f
-                                                 options: UIViewAnimationOptionCurveEaseIn
-                                              animations:^{
-                                                  
-                                                  statusLabel.alpha = 1.0;
-                                              }
-                                              completion:^(BOOL finished){
-                                                  [self performSelector:@selector(dismissView:) withObject:self afterDelay:1];
-                                                  
-                                              }
-                              ];
-                         }];
+        }
+
     }
 }
+-(void) animateOut{
+    UserData *userData = [UserData sharedManager];
+    
 
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    
+    [defaults setObject:@"YES" forKey:@"loggedIn"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    NSArray* sublayers = [NSArray arrayWithArray:self.view.layer.sublayers];
+    
+    //remove the avcam view
+    [[sublayers objectAtIndex:(sublayers.count-2)] removeFromSuperlayer];
+    
+    [UIView animateWithDuration: 1.0f
+                          delay: 0.0f
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         captureImage.alpha = 0.0;
+                         imagePreview.alpha = 0.0;
+                         doneOutlet.alpha = 0.0;
+                         nameField.alpha = 0.0;
+                         imgBtn.alpha = 0.0;
+                     }
+                     completion:^(BOOL finished){
+                         statusLabel.numberOfLines = 2;
+                         statusLabel.lineBreakMode = NSLineBreakByWordWrapping;
+                         statusLabel.text = [NSString stringWithFormat:@"Have a good time, %@", userData.userName];
+                         [UIView animateWithDuration: 0.7f
+                                               delay: 0.0f
+                                             options: UIViewAnimationOptionCurveEaseIn
+                                          animations:^{
+                                              
+                                              statusLabel.alpha = 1.0;
+                                          }
+                                          completion:^(BOOL finished){
+                                              [self performSelector:@selector(dismissView:) withObject:self afterDelay:1];
+                                              
+                                          }
+                          ];
+                     }];
+
+}
 -(void)dismissView:(id)sender {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UpdatesViewController *updatesVC = (UpdatesViewController*)[storyboard instantiateViewControllerWithIdentifier:@"MainTabBar"];

@@ -141,7 +141,6 @@
         //hide the keyboard
         [viewController.view endEditing:YES];
         
-        [self getTInfo];
 
     }
 
@@ -194,6 +193,8 @@
                 [defaults setObject:userData.userPhoto forKey:@"photo"];
                 
                 [defaults synchronize];
+                
+                 [self doneWithLogin];
 
                
             }else{
@@ -208,7 +209,7 @@
      ];
     
   
-    [self doneWithLogin];
+   
 }
 
 
@@ -229,12 +230,11 @@
                                                       NSError *error) {
                                       
                                       if(!error){
-                                          NSLog(@"Facebook connected");
+                                    
                                           [self getFacebookData];
                                       }
                                       if(error){
-                                          
-                                          NSLog(@"Error in fb auth request: %@", error.localizedDescription);
+                                        
                                           UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Oops." message: @"Something went wrong with Facebook." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                                           [alert show];
                                           

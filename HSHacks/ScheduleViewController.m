@@ -30,25 +30,7 @@
 {
     [super viewDidLoad];
     self.tableView.separatorInset = UIEdgeInsetsZero;
-    NSString *connected = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"https://twitter.com/getibox"] encoding:NSUTF8StringEncoding error:nil];
-    if (connected == NULL) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Oops." message: @"I don't think you are connected to the internet." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
-    } else {
-    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            for(int i = 0; i < objects.count; i++){
-                [objects[i] objectForKey:@"description"];
-                
-            }
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
-    }
-	// Do any additional setup after loading the view.
+    
 }
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -94,13 +76,7 @@
     if (self.objects.count == 0) {
         query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     }
-    for (PFObject *object in self.objects) {
-        
-        NSString *description = [object objectForKey:@"description"];
-        if(![bodyArray containsObject:description]){
-            [bodyArray insertObject:description atIndex:0];
-        }
-    }
+   
     
     // Order by Day
     [query orderByAscending:@"time"];
@@ -181,9 +157,8 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //Get a reference to your string to base the cell size on.
-    NSString *bodyString = [[self.objects objectAtIndex:indexPath.row] objectForKey:@"description"];
-    NSLog(@"bodystring : %@", bodyString);
+    
+    NSString *bodyString = [[self.objects objectAtIndex:indexPath.row]objectForKey:@"description"];
     //set the desired size of your textbox
     CGSize constraint = CGSizeMake(295, MAXFLOAT);
     //set your text attribute dictionary
