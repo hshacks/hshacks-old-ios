@@ -125,7 +125,7 @@
             captureImage.hidden = NO;
             captureImage.image = image;
             [self.view bringSubviewToFront:captureImage];
-            
+            NSLog(@"image: %@", image);
            imageData = UIImageJPEGRepresentation(image, 1.0f);
         
         
@@ -169,8 +169,18 @@
                                [defaults setObject:userData.userPhoto forKey:@"photo"];
                                [defaults synchronize];
                                [SVProgressHUD dismiss];
-                                [self animateOut];
+                           if(!result){
+                               
+                               [[[UIAlertView alloc] initWithTitle:@"Upload Failed"
+                                                           message:@"Something bad happened. Really bad. Try again."
+                                                          delegate:nil
+                                                 cancelButtonTitle:nil
+                                                 otherButtonTitles:@"OK", nil] show];
 
+                           }
+                           else{
+                                [self animateOut];
+                           }
                          
                        } failureBlock:^(NSURLResponse *response, NSError *error, NSInteger status) {
                            

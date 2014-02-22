@@ -831,7 +831,7 @@
 				GCC_PREFIX_HEADER = "HSHacks/HSHacks-Prefix.pch";
 				INFOPLIST_FILE = "HSHacks/HSHacks-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "829F4D8C-E46C-4619-9AAB-B88203782053";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

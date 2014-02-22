@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "UpdatesViewController.h"
+#import "SVProgressHUD/SVProgressHUD.h"
 #define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
 @interface LoginViewController ()
 
@@ -85,8 +86,8 @@
                          statusLabel.alpha = 1.0;
                      }
                      completion:^(BOOL finished){
-                         [UIView animateWithDuration: 0.3f
-                                               delay: 0.3f
+                         [UIView animateWithDuration: 0.5f
+                                               delay: 0.4f
                                              options: UIViewAnimationOptionCurveEaseIn
                                           animations:^{
                                               statusLabel.alpha = 0.0;
@@ -94,7 +95,7 @@
                                           completion:^(BOOL finished){
                                               
                                             
-                                              [UIView animateWithDuration: 0.4f
+                                              [UIView animateWithDuration: 0.5f
                                                                     delay: 0.0f
                                                                   options: UIViewAnimationOptionCurveEaseIn
                                                                animations:^{
@@ -121,6 +122,7 @@
     
     if ([TWTweetComposeViewController canSendTweet])
     {
+        //[SVProgressHUD showWithStatus:@"Logging into Twitter..." maskType:SVProgressHUDMaskTypeGradient];
         [self getTInfo];
     }
     else{
@@ -140,6 +142,7 @@
         
         //hide the keyboard
         [viewController.view endEditing:YES];
+        
         
 
     }
@@ -168,6 +171,7 @@
         [params setObject:@"1" forKey:@"count"]; // i don't even know what this does but it does something useful
         
         TWRequest *request = [[TWRequest alloc] initWithURL:url parameters:params requestMethod:TWRequestMethodGET];
+       
         //  Attach an account to the request
         [request setAccount:twitterAccount]; // this can be any Twitter account obtained from the Account store
         
@@ -178,15 +182,15 @@
                 // to do something useful with this data:
                 NSString *name = [twitterData objectForKey:@"name"];
            
-        
-                // A handy bonus tip: twitter display picture
+              
                 NSString *profileImageUrl = [twitterData objectForKey:@"profile_image_url"];
                 
+                NSLog(@"got twitter image: %@", profileImageUrl);
                 UserData *userData = [UserData sharedManager];
                 userData.userName = name;
                 userData.userPhoto = profileImageUrl;
  
-                
+                NSLog(@"setting singleton");
                 NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
                 
                 [defaults setObject:userData.userName forKey:@"name"];
@@ -194,10 +198,14 @@
                 
                 [defaults synchronize];
                 
+                NSLog(@"setting defaults");
+                  [SVProgressHUD dismiss];
+                NSLog(@"dismiss progreeHUd");
                  [self doneWithLogin];
 
                
             }else{
+                  [SVProgressHUD dismiss];
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Oops." message: @"Something bad happened when trying to login to Twitter. Try again?" delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 [alert show];
             }
@@ -251,6 +259,7 @@
            NSDictionary<FBGraphUser> *user,
            NSError *error) {
              if (!error) {
+               
                  
                  UserData *userData = [UserData sharedManager];
                  userData.userName = user.name;
@@ -266,6 +275,7 @@
                  [defaults setObject:userData.userPhoto forKey:@"photo"];
                  
                  [defaults synchronize];
+                 
                  
                  //should show animations and user info
                  [self doneWithLogin];
@@ -300,17 +310,18 @@
 }
 
 -(void)doneWithLogin{
+    
     UserData *userData = [UserData sharedManager];
-
-    //Method to push controller to updates
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+   
+       NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
 
     [defaults setObject:@"YES" forKey:@"loggedIn"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 
 
-    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        //make sure on main thread
     [UIView animateWithDuration: 1.0f
                           delay: 0.0f
                         options: UIViewAnimationOptionCurveEaseIn
@@ -319,6 +330,8 @@
                          facebookButton.alpha = 0.0;
                          twitterButton.alpha = 0.0;
                          guestButton.alpha = 0.0;
+                         
+                       
                      }
                      completion:^(BOOL finished){
                          statusLabel.numberOfLines = 2;
@@ -337,8 +350,9 @@
                                            }
                                     ];
                      }];
-    
+    });
 }
+
 
 -(void)dismissView:(id)sender {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

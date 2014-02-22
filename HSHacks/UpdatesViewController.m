@@ -62,10 +62,9 @@
 
 -(BOOL)isLoggedIn{
  
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSLog(@"trololol %@", [defaults objectForKey:@"loggedIn"]);
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];   
     if([[defaults objectForKey:@"loggedIn"] isEqualToString:@"YES"]){
-        NSLog(@"is logged in!!!!");
+
         return YES;
     }
     else{

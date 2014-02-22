@@ -122,6 +122,23 @@
     // This is the number of chat messages.
     return [self.chat count];
 }
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //Get a reference to your string to base the cell size on.
+    NSString *bodyString;
+    
+    bodyString = [self.chat objectAtIndex:indexPath.row][@"message"];
+    
+    //set the desired size of your textbox
+    CGSize constraint = CGSizeMake(252, MAXFLOAT);
+    
+    NSDictionary *attributes = [NSDictionary dictionaryWithObject:[UIFont systemFontOfSize:14.0] forKey:NSFontAttributeName];
+    CGRect textsize = [bodyString boundingRectWithSize:constraint options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
+    //calculate your size
+    float textHeight = textsize.size.height + 5;
+    
+    return textHeight + 25;
+}
 
 - (UITableViewCell*)tableView:(UITableView*)table cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -155,8 +172,15 @@
 
     
     UILabel *messageLabel = (UILabel*) [cell viewWithTag:102];
-    messageLabel.text = chatMessage[@"message"];
-
+    
+    NSString *message = chatMessage[@"message"];
+    
+    CGSize constraint = CGSizeMake(252, MAXFLOAT);
+    NSDictionary *attributes = [NSDictionary dictionaryWithObject:[UIFont systemFontOfSize:14.0] forKey:NSFontAttributeName];
+    CGRect newFrame = [message boundingRectWithSize:constraint options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
+    messageLabel.frame = CGRectMake(57,22,newFrame.size.width, newFrame.size.height);
+    messageLabel.text = message;
+    [messageLabel sizeToFit];
     
     return cell;
 }
