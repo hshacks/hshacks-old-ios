@@ -27,13 +27,7 @@
 {
     [super viewDidLoad];
     self.tableView.separatorInset = UIEdgeInsetsZero;
-    detailsArray = [[NSMutableArray alloc]init];
-    PFQuery *query = [PFQuery queryWithClassName:@"Awards"];
-    [query selectKeys:@[@"details"]];
-    NSArray *objects = [query findObjects];
-    for (int i = 0; i < objects.count;i++) {
-        [detailsArray addObject:[objects[i] objectForKey:@"details"]];
-    }    
+    
 	// Do any additional setup after loading the view.
 }
 - (void)viewWillAppear:(BOOL)animated
@@ -70,14 +64,6 @@
     
     [query orderByAscending:@"ID"];
     
-    
-    for (PFObject *object in self.objects) {
-        
-        NSString *details = [object objectForKey:@"details"];
-        if(![detailsArray containsObject:details]){
-            [detailsArray addObject:details];
-        }
-    }
 
     return query;
 }
@@ -87,7 +73,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //Get a reference to your string to base the cell size on.
-    NSString *detailsString = [detailsArray objectAtIndex:indexPath.row];
+       NSString *detailsString = [[self.objects objectAtIndex:indexPath.row]objectForKey:@"details"];
     //set the desired size of your textbox
     CGSize constraint = CGSizeMake(298, MAXFLOAT);
     //set your text attribute dictionary
