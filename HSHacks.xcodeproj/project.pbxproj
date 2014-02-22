@@ -65,6 +65,8 @@
 		6CE2CB1618B03BB7007AC3AA /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE2CB1518B03BB7007AC3AA /* libz.1.1.3.dylib */; };
 		6CE2CB1818B03BC2007AC3AA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE2CB1718B03BC2007AC3AA /* MobileCoreServices.framework */; };
 		6CE2CB1A18B03BCC007AC3AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE2CB1918B03BCC007AC3AA /* QuartzCore.framework */; };
+		6CE3039718B8735C00AA432A /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE3039618B8735C00AA432A /* UIImage+animatedGIF.m */; };
+		6CE3039918B8739200AA432A /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE3039818B8739200AA432A /* ImageIO.framework */; };
 		6CF15AB918B1E30800AE5A04 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E783EC1518891CB100033983 /* Security.framework */; };
 		6CF15AC318B1E4E200AE5A04 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF15AC018B1E4E200AE5A04 /* FacebookSDK.framework */; };
 		6CF15AC418B1E4E200AE5A04 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF15AC118B1E4E200AE5A04 /* Firebase.framework */; };
@@ -193,6 +195,9 @@
 		6CE2CB1518B03BB7007AC3AA /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		6CE2CB1718B03BC2007AC3AA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		6CE2CB1918B03BCC007AC3AA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6CE3039518B8735C00AA432A /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		6CE3039618B8735C00AA432A /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		6CE3039818B8739200AA432A /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		6CF15AC018B1E4E200AE5A04 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		6CF15AC118B1E4E200AE5A04 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		6CF15AC218B1E4E200AE5A04 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -234,6 +239,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CE3039918B8739200AA432A /* ImageIO.framework in Frameworks */,
 				0759E34518B393F500E67B23 /* Accounts.framework in Frameworks */,
 				0759E22918B2198A00E67B23 /* Twitter.framework in Frameworks */,
 				6CB6738F18B093C300719CEB /* Social.framework in Frameworks */,
@@ -408,6 +414,8 @@
 		6CF15AE118B1FE5A00AE5A04 /* Guide Views */ = {
 			isa = PBXGroup;
 			children = (
+				6CE3039518B8735C00AA432A /* UIImage+animatedGIF.h */,
+				6CE3039618B8735C00AA432A /* UIImage+animatedGIF.m */,
 				6CC2247D18A4771600262706 /* GuideViewController.h */,
 				6CC2247E18A4771600262706 /* GuideViewController.m */,
 				6CF15AE518B2309900AE5A04 /* CountdownViewController.h */,
@@ -442,6 +450,7 @@
 		E770465F18891A7700BE6FC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6CE3039818B8739200AA432A /* ImageIO.framework */,
 				0759E34418B393F500E67B23 /* Accounts.framework */,
 				0759E22818B2198A00E67B23 /* Twitter.framework */,
 				6CF15AC018B1E4E200AE5A04 /* FacebookSDK.framework */,
@@ -645,6 +654,7 @@
 				6CE2CB0A18B01F17007AC3AA /* UIImage+WebP.m in Sources */,
 				6CCB63D318A613A7004E80B4 /* LoginViewController.m in Sources */,
 				6CC2247318A476D000262706 /* UpdatesViewController.m in Sources */,
+				6CE3039718B8735C00AA432A /* UIImage+animatedGIF.m in Sources */,
 				E770467118891A7700BE6FC4 /* AppDelegate.m in Sources */,
 				6CC6F0A518B571470036ADD1 /* UIView+Utilities.m in Sources */,
 				6CC6F0CC18B740D80036ADD1 /* MLIMGURUploader.m in Sources */,

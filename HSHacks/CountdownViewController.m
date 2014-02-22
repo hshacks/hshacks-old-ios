@@ -8,13 +8,13 @@
 //
 
 #import "CountdownViewController.h"
-
+#import "UIImage+animatedGIF.h"
 @interface CountdownViewController ()
 
 @end
 
 @implementation CountdownViewController
-@synthesize countdown, interval;
+@synthesize countdown, interval, timerImage;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,6 +27,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    timerImage.image = [UIImage animatedImageWithAnimatedGIFURL:[NSURL URLWithString:@"http://i.imgur.com/iFih0lu.gif"]];
     
     [self checkDate];
     [self setStuff];

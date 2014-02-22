@@ -31,5 +31,6 @@
 
 @property (nonatomic, retain) IBOutlet UILabel *interval;
 @property (nonatomic, retain) IBOutlet UILabel *countdown;
+@property (weak, nonatomic) IBOutlet UIImageView *timerImage;
 
 @end

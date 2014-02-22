@@ -1198,6 +1198,7 @@
                     <connections>
                         <outlet property="countdown" destination="x1n-W3-YmI" id="0wr-Uh-T81"/>
                         <outlet property="interval" destination="XTC-zK-wd7" id="uuu-Jq-jpV"/>
+                        <outlet property="timerImage" destination="Ec2-h2-4i1" id="fm9-mG-MXM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pYg-Ey-MP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
