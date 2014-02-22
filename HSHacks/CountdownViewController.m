@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
     
-    timerImage.image = [UIImage animatedImageWithAnimatedGIFURL:[NSURL URLWithString:@"http://i.imgur.com/iFih0lu.gif"]];
+    timerImage.image = [UIImage animatedImageWithAnimatedGIFURL:[NSURL URLWithString:@"http://i.imgur.com/bA6o3mj.gif"]];
     
     [self checkDate];
     [self setStuff];
