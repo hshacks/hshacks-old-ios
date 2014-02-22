@@ -577,7 +577,7 @@
 				ORGANIZATIONNAME = hshacks.com;
 				TargetAttributes = {
 					E770465C18891A7700BE6FC4 = {
-						DevelopmentTeam = 6K2U3WGB8U;
+						DevelopmentTeam = 3779WUCD3T;
 					};
 					E770468018891A7700BE6FC4 = {
 						TestTargetID = E770465C18891A7700BE6FC4;
@@ -824,7 +824,7 @@
 				INFOPLIST_FILE = "HSHacks/HSHacks-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "B9BE3DB7-FCA5-443F-9A08-CAB243D92876";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -841,7 +841,7 @@
 				GCC_PREFIX_HEADER = "HSHacks/HSHacks-Prefix.pch";
 				INFOPLIST_FILE = "HSHacks/HSHacks-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "829F4D8C-E46C-4619-9AAB-B88203782053";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
