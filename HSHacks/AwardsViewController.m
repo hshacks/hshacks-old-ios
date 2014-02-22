@@ -68,12 +68,18 @@
     return query;
 }
 
-
+- (void)objectsDidLoad:(NSError *)error {
+    [super objectsDidLoad:error];
+    
+    
+    [self.tableView reloadData];
+}
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //Get a reference to your string to base the cell size on.
        NSString *detailsString = [[self.objects objectAtIndex:indexPath.row]objectForKey:@"details"];
+    NSLog(@"details: %@", detailsString);
     //set the desired size of your textbox
     CGSize constraint = CGSizeMake(298, MAXFLOAT);
     //set your text attribute dictionary
