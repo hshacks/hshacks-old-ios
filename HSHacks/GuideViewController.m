@@ -29,9 +29,6 @@
 {
     [super viewDidLoad];
     
-    //This is to set the Custom nav bar for search tab bar with segcontrol
-
-    
     UIScrollView *scroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 435)];
     scroll.contentSize = CGSizeMake(320, 44);
     scroll.showsHorizontalScrollIndicator = NO;
@@ -54,14 +51,7 @@
     
     
     [self.view addSubview:scroll];
-    //[[self navigationItem] setTitleView:segmentedControl];
-    
-    //TO TOGGLE BETWEEN VIEWS:
-    //show awards
-    //awardsContainer.hidden = NO;
-    //scheduleContainer.hidden = YES;
-    
-    //vice versa!!
+ 
     
 }
 
