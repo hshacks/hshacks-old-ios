@@ -13,7 +13,7 @@
 @end
 
 @implementation AwardsViewController
-@synthesize detailsArray;
+@synthesize detailsArray, trueContentSize;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -32,8 +32,14 @@
 }
 - (void)viewWillAppear:(BOOL)animated
 {
+        [super viewDidAppear:animated];
+
     [self loadObjects];
 }
+
+-(void)viewDidAppear:(BOOL)animated{
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -79,7 +85,7 @@
 {
     //Get a reference to your string to base the cell size on.
        NSString *detailsString = [[self.objects objectAtIndex:indexPath.row]objectForKey:@"details"];
-    NSLog(@"details: %@", detailsString);
+    
     //set the desired size of your textbox
     CGSize constraint = CGSizeMake(298, MAXFLOAT);
     //set your text attribute dictionary

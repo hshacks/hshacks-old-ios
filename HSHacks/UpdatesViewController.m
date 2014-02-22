@@ -160,7 +160,7 @@
     UILabel *timeLabel = (UILabel*) [cell viewWithTag:103];
     NSDate *time = object.createdAt;
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"MM/dd hh:mm a"];
+    [dateFormatter setDateFormat:@"M/dd hh:mm a"];
     timeLabel.text = [dateFormatter stringFromDate:time];
     
     

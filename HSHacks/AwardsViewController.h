@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface AwardsViewController : PFQueryTableViewController
+@interface AwardsViewController : PFQueryTableViewController{
+
+
+}
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-
+@property (nonatomic) CGSize trueContentSize;
 @property (nonatomic, retain) NSMutableArray *detailsArray;
 
 @end

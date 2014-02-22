@@ -47,6 +47,9 @@
     _awardsContainer.hidden = YES;
     _scheduleContainer.hidden = NO;
     _countdownContainer.hidden = NO;
+    [self.view bringSubviewToFront:_scheduleContainer];
+    [self.view bringSubviewToFront:_countdownContainer];
+
     [scroll addSubview:segmentedControl];
     
     
@@ -71,6 +74,8 @@
         _awardsContainer.hidden = YES;
         _scheduleContainer.hidden = NO;
         _countdownContainer.hidden = NO;
+        [self.view bringSubviewToFront:_scheduleContainer];
+          [self.view bringSubviewToFront:_countdownContainer];
         
     }
     if (selectedSegment == 1) {
@@ -78,6 +83,7 @@
         _awardsContainer.hidden = NO;
         _scheduleContainer.hidden = YES;
         _countdownContainer.hidden = YES;
+         [self.view bringSubviewToFront:_awardsContainer];
 
     }
 }

@@ -179,7 +179,7 @@
             <objects>
                 <viewController id="BLW-Sc-5yt" customClass="GuideViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WiH-z9-hdm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" id="PUH-ld-M5i">
@@ -190,7 +190,7 @@
                                 </items>
                             </navigationBar>
                             <containerView contentMode="scaleToFill" id="U9g-Ry-AF7">
-                                <rect key="frame" x="0.0" y="115" width="320" height="315"/>
+                                <rect key="frame" x="0.0" y="115" width="320" height="403"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
@@ -198,7 +198,7 @@
                                 </connections>
                             </containerView>
                             <containerView contentMode="scaleToFill" id="ClZ-vn-Bxx">
-                                <rect key="frame" x="0.0" y="65" width="320" height="365"/>
+                                <rect key="frame" x="0.0" y="65" width="320" height="453"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
@@ -219,7 +219,7 @@
                     <tabBarItem key="tabBarItem" title="Guide" image="calendar.png" id="SMR-RC-3bh">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
                     </tabBarItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="awardsContainer" destination="ClZ-vn-Bxx" id="vh3-lm-EfL"/>
                         <outlet property="countdownContainer" destination="IDU-jI-5Ks" id="5FZ-bg-fMz"/>
@@ -1049,8 +1049,8 @@
         <scene sceneID="kW2-bO-ujJ">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="EWr-b6-JiB" customClass="AwardsViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qge-Hh-8vO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="365"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qge-Hh-8vO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="453"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1126,7 +1126,7 @@
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="VSQ-7G-hOa" customClass="ScheduleViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="rss-nF-HlM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="315"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="403"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
