@@ -34,6 +34,7 @@
 }
 - (void)viewWillAppear:(BOOL)animated
 {
+    self.tableView.userInteractionEnabled = YES;
     [self loadObjects];
 }
 

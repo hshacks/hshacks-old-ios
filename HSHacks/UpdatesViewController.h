@@ -15,6 +15,5 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
-@property (nonatomic, retain) NSMutableArray *bodyArray;
 
 @end

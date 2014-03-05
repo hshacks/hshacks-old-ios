@@ -9,7 +9,8 @@
 #import "LoginViewController.h"
 #import "UpdatesViewController.h"
 #import "SVProgressHUD/SVProgressHUD.h"
-#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+#import <float.h>
+
 @interface LoginViewController ()
 
 
@@ -54,27 +55,27 @@
     CGRect fButtonF;
     CGRect gButtonF;
     
-    if(IS_IPHONE_5){
-        logoF2 = CGRectMake(logo.frame.origin.x+30,logo.frame.origin.y-90+30,logo.frame.size.width-60,logo.frame.size.height-60);
-         tbuttonF = CGRectMake(twitterButton.frame.origin.x,logo.frame.origin.y+160,twitterButton.frame.size.width,twitterButton.frame.size.height);
-        fButtonF = CGRectMake(facebookButton.frame.origin.x,logo.frame.origin.y+240,facebookButton.frame.size.width,facebookButton.frame.size.height);
-        gButtonF = CGRectMake(guestButton.frame.origin.x,logo.frame.origin.y+320,guestButton.frame.size.width,guestButton.frame.size.height);
+    
+    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    
+    if(UI_USER_INTERFACE_IDIOM() == UI_USER_INTERFACE_IDIOM()){
+        if(screenSize.height >480.0f){
+            logoF2 = CGRectMake(logo.frame.origin.x+30,logo.frame.origin.y-90+30,logo.frame.size.width-60,logo.frame.size.height-60);
+            tbuttonF = CGRectMake(twitterButton.frame.origin.x,logo.frame.origin.y+160,twitterButton.frame.size.width,twitterButton.frame.size.height);
+            fButtonF = CGRectMake(facebookButton.frame.origin.x,logo.frame.origin.y+240,facebookButton.frame.size.width,facebookButton.frame.size.height);
+            gButtonF = CGRectMake(guestButton.frame.origin.x,logo.frame.origin.y+320,guestButton.frame.size.width,guestButton.frame.size.height);
+        }
+        else{
+            logoF2 = CGRectMake(logo.frame.origin.x+30,logo.frame.origin.y-110+30,logo.frame.size.width-60,logo.frame.size.height-60);
+            tbuttonF = CGRectMake(twitterButton.frame.origin.x,logo.frame.origin.y+115,twitterButton.frame.size.width,twitterButton.frame.size.height);
+            fButtonF = CGRectMake(facebookButton.frame.origin.x,logo.frame.origin.y+195,facebookButton.frame.size.width,facebookButton.frame.size.height);
+            gButtonF = CGRectMake(guestButton.frame.origin.x,logo.frame.origin.y+275,guestButton.frame.size.width,guestButton.frame.size.height);
+        
+        }
+        
         
     }
-    else
-    {
-    
-        logoF2 = CGRectMake(logo.frame.origin.x+30,logo.frame.origin.y-110+30,logo.frame.size.width-60,logo.frame.size.height-60);
-        tbuttonF = CGRectMake(twitterButton.frame.origin.x,logo.frame.origin.y+115,twitterButton.frame.size.width,twitterButton.frame.size.height);
-        fButtonF = CGRectMake(facebookButton.frame.origin.x,logo.frame.origin.y+195,facebookButton.frame.size.width,facebookButton.frame.size.height);
-        gButtonF = CGRectMake(guestButton.frame.origin.x,logo.frame.origin.y+275,guestButton.frame.size.width,guestButton.frame.size.height);
-    
-    
-    
-    
-    
-    }
-    
+  
     
     logo.alpha = 0.0;
     statusLabel.alpha = 0.0;
@@ -236,6 +237,7 @@
                                   completionHandler:^(FBSession *session,
                                                       FBSessionState state,
                                                       NSError *error) {
+
                                       
                                       if(!error){
                                     
@@ -352,6 +354,8 @@
                      }];
     });
 }
+
+
 
 
 -(void)dismissView:(id)sender {

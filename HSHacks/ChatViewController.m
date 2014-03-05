@@ -77,9 +77,13 @@
         [self.chat addObject:snapshot.value];
         // Reload the table view so the new message will show up.
          [SVProgressHUD dismiss];
+        dispatch_async(dispatch_get_main_queue(), ^{
+    
         [self.chatTableView reloadData];
+           
         self.chatTextField.userInteractionEnabled = TRUE;
          [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.chat.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+              });
     }];
 
 }
@@ -103,8 +107,9 @@
     // This will also add the message to our local array self.chat because
     // the FEventTypeChildAdded event will be immediately fired.
     if(self.chat.count > 0){
+        if(self.name && self.photoURL){
     [[self.firebase childByAutoId] setValue:@{@"user" : self.name, @"message": aTextField.text, @"image" : self.photoURL}];
-    
+        }
     [aTextField setText:@""];
     }
     return NO;

@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		0759E22918B2198A00E67B23 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0759E22818B2198A00E67B23 /* Twitter.framework */; };
 		0759E34518B393F500E67B23 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0759E34418B393F500E67B23 /* Accounts.framework */; };
+		6C24A1AA18B95EDC00A91A69 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C24A1A918B95EDC00A91A69 /* Images-2.xcassets */; };
 		6C9B48A018B75594008E81B7 /* btnRetake@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9B489F18B75594008E81B7 /* btnRetake@2x.png */; };
 		6C9B48A318B7F091008E81B7 /* facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9B48A118B7F090008E81B7 /* facebook@2x.png */; };
 		6C9B48A418B7F091008E81B7 /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9B48A218B7F090008E81B7 /* twitter@2x.png */; };
 		6C9B48AA18B7FBBC008E81B7 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6C9B48A718B7FBBC008E81B7 /* SVProgressHUD.bundle */; };
 		6C9B48AB18B7FBBC008E81B7 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B48A918B7FBBC008E81B7 /* SVProgressHUD.m */; };
 		6C9B48AD18B80433008E81B7 /* twittercopy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9B48AC18B80433008E81B7 /* twittercopy@2x.png */; };
+		6CB10F2F18C6CD69009082EA /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB10F2E18C6CD68009082EA /* Firebase.framework */; };
 		6CB6738B18B08D5E00719CEB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB6738A18B08D5E00719CEB /* MessageUI.framework */; };
 		6CB6738D18B08F6A00719CEB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB6738C18B08F6A00719CEB /* CoreTelephony.framework */; };
 		6CB6738F18B093C300719CEB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB6738E18B093C300719CEB /* Social.framework */; };
@@ -67,9 +69,10 @@
 		6CE2CB1A18B03BCC007AC3AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE2CB1918B03BCC007AC3AA /* QuartzCore.framework */; };
 		6CE3039718B8735C00AA432A /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE3039618B8735C00AA432A /* UIImage+animatedGIF.m */; };
 		6CE3039918B8739200AA432A /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE3039818B8739200AA432A /* ImageIO.framework */; };
+		6CECDFEB18B96A4400421F80 /* HSHacksLaunch3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CECDFE918B96A4400421F80 /* HSHacksLaunch3.png */; };
+		6CECDFEC18B96A4400421F80 /* HSHacksLaunch4.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CECDFEA18B96A4400421F80 /* HSHacksLaunch4.png */; };
 		6CF15AB918B1E30800AE5A04 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E783EC1518891CB100033983 /* Security.framework */; };
 		6CF15AC318B1E4E200AE5A04 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF15AC018B1E4E200AE5A04 /* FacebookSDK.framework */; };
-		6CF15AC418B1E4E200AE5A04 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF15AC118B1E4E200AE5A04 /* Firebase.framework */; };
 		6CF15AC518B1E4E200AE5A04 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF15AC218B1E4E200AE5A04 /* Parse.framework */; };
 		6CF15AC918B1FA3800AE5A04 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF15AC718B1FA3800AE5A04 /* ScheduleViewController.m */; };
 		6CF15AD618B1FACC00AE5A04 /* AwardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF15AD518B1FACC00AE5A04 /* AwardsViewController.m */; };
@@ -108,6 +111,11 @@
 /* Begin PBXFileReference section */
 		0759E22818B2198A00E67B23 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		0759E34418B393F500E67B23 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		6C151EC418B954A700115516 /* Icon-120@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-120@2x.png"; path = "HSHacks/Images.xcassets/AppIcon.appiconset/Icon-120@2x.png"; sourceTree = "<group>"; };
+		6C151EC518B9550200115516 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		6C151EC618B9555F00115516 /* hshacks80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hshacks80.png; sourceTree = "<group>"; };
+		6C151EC718B955A500115516 /* hshacks58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hshacks58.png; sourceTree = "<group>"; };
+		6C24A1A918B95EDC00A91A69 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		6C9B489F18B75594008E81B7 /* btnRetake@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnRetake@2x.png"; sourceTree = "<group>"; };
 		6C9B48A118B7F090008E81B7 /* facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook@2x.png"; sourceTree = "<group>"; };
 		6C9B48A218B7F090008E81B7 /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter@2x.png"; sourceTree = "<group>"; };
@@ -116,6 +124,7 @@
 		6C9B48A818B7FBBC008E81B7 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		6C9B48A918B7FBBC008E81B7 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		6C9B48AC18B80433008E81B7 /* twittercopy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twittercopy@2x.png"; sourceTree = "<group>"; };
+		6CB10F2E18C6CD68009082EA /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		6CB6738A18B08D5E00719CEB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		6CB6738C18B08F6A00719CEB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		6CB6738E18B093C300719CEB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -198,8 +207,9 @@
 		6CE3039518B8735C00AA432A /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
 		6CE3039618B8735C00AA432A /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
 		6CE3039818B8739200AA432A /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		6CECDFE918B96A4400421F80 /* HSHacksLaunch3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HSHacksLaunch3.png; sourceTree = "<group>"; };
+		6CECDFEA18B96A4400421F80 /* HSHacksLaunch4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HSHacksLaunch4.png; sourceTree = "<group>"; };
 		6CF15AC018B1E4E200AE5A04 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
-		6CF15AC118B1E4E200AE5A04 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		6CF15AC218B1E4E200AE5A04 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		6CF15AC618B1FA3800AE5A04 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
 		6CF15AC718B1FA3800AE5A04 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
@@ -244,7 +254,6 @@
 				0759E22918B2198A00E67B23 /* Twitter.framework in Frameworks */,
 				6CB6738F18B093C300719CEB /* Social.framework in Frameworks */,
 				6CF15AC318B1E4E200AE5A04 /* FacebookSDK.framework in Frameworks */,
-				6CF15AC418B1E4E200AE5A04 /* Firebase.framework in Frameworks */,
 				6CF15AC518B1E4E200AE5A04 /* Parse.framework in Frameworks */,
 				6CF15AB918B1E30800AE5A04 /* Security.framework in Frameworks */,
 				6CB6738D18B08F6A00719CEB /* CoreTelephony.framework in Frameworks */,
@@ -255,6 +264,7 @@
 				6CE2CB1418B03BAB007AC3AA /* CoreLocation.framework in Frameworks */,
 				6CE2CB1218B03B97007AC3AA /* AudioToolbox.framework in Frameworks */,
 				E783EC1818891CBB00033983 /* SystemConfiguration.framework in Frameworks */,
+				6CB10F2F18C6CD69009082EA /* Firebase.framework in Frameworks */,
 				E783EC1418891CAA00033983 /* CFNetwork.framework in Frameworks */,
 				E783EC1218891CA500033983 /* libc++.dylib in Frameworks */,
 				E783EC1018891C9C00033983 /* libicucore.dylib in Frameworks */,
@@ -377,6 +387,8 @@
 		6CE2CB0E18B02053007AC3AA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6CECDFE918B96A4400421F80 /* HSHacksLaunch3.png */,
+				6CECDFEA18B96A4400421F80 /* HSHacksLaunch4.png */,
 				6CC6F0BD18B5FA7B0036ADD1 /* logout@2x.png */,
 				6CC6F0BE18B5FA7B0036ADD1 /* share@2x.png */,
 				E73B8D1B18B541F300CEB072 /* clock.gif */,
@@ -431,6 +443,10 @@
 		E770465418891A7700BE6FC4 = {
 			isa = PBXGroup;
 			children = (
+				6C151EC718B955A500115516 /* hshacks58.png */,
+				6C151EC618B9555F00115516 /* hshacks80.png */,
+				6C151EC518B9550200115516 /* Icon-76@2x.png */,
+				6C151EC418B954A700115516 /* Icon-120@2x.png */,
 				E770466618891A7700BE6FC4 /* HSHacks */,
 				E770468818891A7700BE6FC4 /* HSHacksTests */,
 				E770465F18891A7700BE6FC4 /* Frameworks */,
@@ -450,11 +466,11 @@
 		E770465F18891A7700BE6FC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6CB10F2E18C6CD68009082EA /* Firebase.framework */,
 				6CE3039818B8739200AA432A /* ImageIO.framework */,
 				0759E34418B393F500E67B23 /* Accounts.framework */,
 				0759E22818B2198A00E67B23 /* Twitter.framework */,
 				6CF15AC018B1E4E200AE5A04 /* FacebookSDK.framework */,
-				6CF15AC118B1E4E200AE5A04 /* Firebase.framework */,
 				6CF15AC218B1E4E200AE5A04 /* Parse.framework */,
 				6CB6738E18B093C300719CEB /* Social.framework */,
 				6CB6738C18B08F6A00719CEB /* CoreTelephony.framework */,
@@ -495,6 +511,7 @@
 				6CCB63CC18A60324004E80B4 /* UserData.h */,
 				6CCB63CD18A60324004E80B4 /* UserData.m */,
 				E770467B18891A7700BE6FC4 /* Images.xcassets */,
+				6C24A1A918B95EDC00A91A69 /* Images-2.xcassets */,
 				E770466718891A7700BE6FC4 /* Supporting Files */,
 			);
 			path = HSHacks;
@@ -577,7 +594,7 @@
 				ORGANIZATIONNAME = hshacks.com;
 				TargetAttributes = {
 					E770465C18891A7700BE6FC4 = {
-						DevelopmentTeam = 3779WUCD3T;
+						DevelopmentTeam = MRQT579S8E;
 					};
 					E770468018891A7700BE6FC4 = {
 						TestTargetID = E770465C18891A7700BE6FC4;
@@ -610,6 +627,8 @@
 			files = (
 				6CCB63D718A621BF004E80B4 /* hshacksLOGO.png in Resources */,
 				6CC6F0BF18B5FA7B0036ADD1 /* logout@2x.png in Resources */,
+				6CECDFEB18B96A4400421F80 /* HSHacksLaunch3.png in Resources */,
+				6C24A1AA18B95EDC00A91A69 /* Images-2.xcassets in Resources */,
 				E770467C18891A7700BE6FC4 /* Images.xcassets in Resources */,
 				6C9B48A018B75594008E81B7 /* btnRetake@2x.png in Resources */,
 				6CE2CB0D18B02047007AC3AA /* placeholderIcon.png in Resources */,
@@ -617,6 +636,7 @@
 				6CC6F0C018B5FA7B0036ADD1 /* share@2x.png in Resources */,
 				6C9B48AA18B7FBBC008E81B7 /* SVProgressHUD.bundle in Resources */,
 				6CC6F0CE18B74FB80036ADD1 /* btnCamera@2x.png in Resources */,
+				6CECDFEC18B96A4400421F80 /* HSHacksLaunch4.png in Resources */,
 				6C9B48AD18B80433008E81B7 /* twittercopy@2x.png in Resources */,
 				6CC6F0D018B7520A0036ADD1 /* btnRestartSignature@2x.png in Resources */,
 				E73B8D1C18B541F300CEB072 /* clock.gif in Resources */,
@@ -815,10 +835,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "./**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"./**",
+					"/Users/spenceryen/Dropbox/Spencer/hshacks-ios",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HSHacks/HSHacks-Prefix.pch";
 				INFOPLIST_FILE = "HSHacks/HSHacks-Info.plist";
@@ -833,14 +856,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "./**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"./**",
+					"/Users/spenceryen/Dropbox/Spencer/hshacks-ios",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HSHacks/HSHacks-Prefix.pch";
 				INFOPLIST_FILE = "HSHacks/HSHacks-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "829F4D8C-E46C-4619-9AAB-B88203782053";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

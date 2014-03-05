@@ -15,7 +15,6 @@
 @end
 
 @implementation UpdatesViewController
-@synthesize bodyArray;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -62,7 +61,14 @@
 
 -(BOOL)isLoggedIn{
  
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];   
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    UserData *userData = [UserData sharedManager];
+
+
+    if(userData.userPhoto == NULL || userData.userName == NULL){
+        return NO;
+    }
     if([[defaults objectForKey:@"loggedIn"] isEqualToString:@"YES"]){
 
         return YES;
