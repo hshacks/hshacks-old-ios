@@ -45,7 +45,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   
+    self.doneOutlet.userInteractionEnabled = YES;
     self.nameField.delegate = self;
     AVCamCaptureManager *manager = [[AVCamCaptureManager alloc] init];
     self.captureManager = manager;
@@ -176,10 +176,12 @@
                                                           delegate:nil
                                                  cancelButtonTitle:nil
                                                  otherButtonTitles:@"OK", nil] show];
+                                       self.doneOutlet.userInteractionEnabled = YES;
 
                            }
                            else{
                                 [self animateOut];
+                               
                            }
                          
                        } failureBlock:^(NSURLResponse *response, NSError *error, NSInteger status) {
@@ -189,6 +191,7 @@
                                                           delegate:nil
                                                  cancelButtonTitle:nil
                                                  otherButtonTitles:@"OK", nil] show];
+                                   self.doneOutlet.userInteractionEnabled = YES;
                        }];
         
     }
@@ -215,7 +218,9 @@
         
         }
         else{
+             self.doneOutlet.userInteractionEnabled = NO;
         [self uploadToImgur:imageData:userData.userName];
+           
         }
 
     }

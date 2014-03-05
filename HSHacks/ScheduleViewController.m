@@ -30,6 +30,8 @@
 {
     [super viewDidLoad];
     self.tableView.separatorInset = UIEdgeInsetsZero;
+        self.tableView.userInteractionEnabled = YES;
+    self.tableView.bounces = YES;
     
 }
 - (void)viewWillAppear:(BOOL)animated
@@ -48,6 +50,7 @@
 {
     self = [super initWithCoder:aCoder];
     if (self) {
+         
         //Parse class name
         self.parseClassName = @"Event";
         

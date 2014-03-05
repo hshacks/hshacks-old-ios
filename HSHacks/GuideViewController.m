@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     
-    UIScrollView *scroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 435)];
+    UIScrollView *scroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 64)];
     scroll.contentSize = CGSizeMake(320, 44);
     scroll.showsHorizontalScrollIndicator = NO;
     
@@ -41,16 +41,18 @@
                   forControlEvents:UIControlEventValueChanged];
 
     segmentedControl.selectedSegmentIndex = 0;
-    _awardsContainer.hidden = YES;
-    _scheduleContainer.hidden = NO;
-    _countdownContainer.hidden = NO;
-    [self.view bringSubviewToFront:_scheduleContainer];
-    [self.view bringSubviewToFront:_countdownContainer];
+
 
     [scroll addSubview:segmentedControl];
     
     
     [self.view addSubview:scroll];
+    
+    _awardsContainer.hidden = YES;
+    _scheduleContainer.hidden = NO;
+    _countdownContainer.hidden = NO;
+    [self.view bringSubviewToFront:_scheduleContainer];
+    [self.view bringSubviewToFront:_countdownContainer];
  
     
 }

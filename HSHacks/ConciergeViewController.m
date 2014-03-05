@@ -276,7 +276,7 @@
         {
             SLComposeViewController *tweetSheet = [SLComposeViewController
                                                    composeViewControllerForServiceType:SLServiceTypeTwitter];
-            NSString *message = [NSString stringWithFormat:@"Hey %@ ", [selectedObject objectForKey:@"contactInfo"]];
+            NSString *message = [NSString stringWithFormat:@"Hey @%@, ", [selectedObject objectForKey:@"contactInfo"]];
             [tweetSheet setInitialText:message];
             [self presentViewController:tweetSheet animated:YES completion:nil];
         }
