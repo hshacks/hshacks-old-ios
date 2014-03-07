@@ -47,6 +47,8 @@
     [super viewDidLoad];
     
     self.doneOutlet.userInteractionEnabled = YES;
+     self.doneOutlet.hidden = YES;
+    self.doneOutlet.alpha = 0;
     self.nameField.delegate = self;
     AVCamCaptureManager *manager = [[AVCamCaptureManager alloc] init];
     self.captureManager = manager;
@@ -159,9 +161,24 @@
             captureImage.hidden = NO;
             captureImage.image = image;
             [self.view bringSubviewToFront:captureImage];
-            NSLog(@"image: %@", image);
-           imageData = UIImageJPEGRepresentation(image, 1.0f);
-        
+            UIImage *croppedImage = [self imageCrop:image];
+           imageData = UIImageJPEGRepresentation(croppedImage, 1.0f);
+            NSLog(@"namefiled: %@", nameField.text);
+            if(![[nameField.text stringByReplacingOccurrencesOfString:@" " withString:@""] isEqualToString:@""]){
+                doneOutlet.hidden = NO;
+                [UIView animateWithDuration: 0.4f
+                                      delay: 0.0f
+                                    options: UIViewAnimationOptionCurveEaseIn
+                                 animations:^{
+                                     
+                                     doneOutlet.alpha = 1;
+                                 }
+                                 completion:^(BOOL finished){
+                                     
+                                     
+                                 }
+                 ];
+            }
         
             } else {
                 NSLog(@"error taking pic");
@@ -235,6 +252,50 @@
 
 
 }
+
+-(UIImage*)imageCrop:(UIImage*)original
+{
+    UIImage *ret = nil;
+    
+    // This calculates the crop area.
+    
+    float originalWidth  = original.size.width;
+    float originalHeight = original.size.height;
+    
+    float edge = fminf(originalWidth, originalHeight);
+    
+    float posX = (originalWidth   - edge) / 2.0f;
+    float posY = (originalHeight  - edge) / 2.0f;
+    
+    
+    CGRect cropSquare;
+    // If orientation indicates a change to portrait.
+    if(original.imageOrientation == UIImageOrientationLeft ||
+       original.imageOrientation == UIImageOrientationRight)
+    {
+        cropSquare = CGRectMake(posY, posX,
+                                edge, edge);
+        
+    }
+    else
+    {
+        cropSquare = CGRectMake(posX, posY,
+                                edge, edge);
+    }
+    
+    // This performs the image cropping.
+    
+    CGImageRef imageRef = CGImageCreateWithImageInRect([original CGImage], cropSquare);
+    
+    ret = [UIImage imageWithCGImage:imageRef
+                              scale:original.scale
+                        orientation:original.imageOrientation];
+    
+    CGImageRelease(imageRef);
+    
+    return ret;
+}
+
 
 - (IBAction)doneTapped:(id)sender {
     UserData *userData = [UserData sharedManager];
@@ -326,6 +387,23 @@
     
     [textField resignFirstResponder];
     
+    
+    if(self.imageData){
+            doneOutlet.hidden = NO;
+        [UIView animateWithDuration: 0.4f
+                              delay: 0.0f
+                            options: UIViewAnimationOptionCurveEaseIn
+                         animations:^{
+                             
+                             doneOutlet.alpha = 1;
+                         }
+                         completion:^(BOOL finished){
+                             
+                             
+                         }
+         ];
+    }
+         
     return YES;
 }
 

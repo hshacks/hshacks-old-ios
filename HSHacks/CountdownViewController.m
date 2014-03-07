@@ -29,7 +29,7 @@
     [super viewDidLoad];
     
     timerImage.image = [UIImage animatedImageWithAnimatedGIFURL:[NSURL URLWithString:@"http://i.imgur.com/bA6o3mj.gif"]];
-    
+    interval.text = [NSString stringWithFormat:@""];
    
     [self setStuff];
     formatter = [[NSDateFormatter alloc] init];
