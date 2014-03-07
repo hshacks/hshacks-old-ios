@@ -123,7 +123,7 @@
     
     if ([TWTweetComposeViewController canSendTweet])
     {
-        //[SVProgressHUD showWithStatus:@"Logging into Twitter..." maskType:SVProgressHUDMaskTypeGradient];
+        [SVProgressHUD showWithStatus:@"Logging into Twitter..." maskType:SVProgressHUDMaskTypeGradient];
         [self getTInfo];
     }
     else{
@@ -225,7 +225,7 @@
 
 -(void)loginFacebook{
     //Login to Facebook to get name, photo
-    
+     [SVProgressHUD showWithStatus:@"Logging into Facebook..." maskType:SVProgressHUDMaskTypeGradient];
     NSArray *permissions = [[NSArray alloc] initWithObjects:
                             @"user_photos",
                             @"user_status",
@@ -244,6 +244,7 @@
                                           [self getFacebookData];
                                       }
                                       if(error){
+                                           [SVProgressHUD dismiss];
                                         
                                           UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Oops." message: @"Something went wrong with Facebook." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                                           [alert show];
@@ -277,13 +278,14 @@
                  [defaults setObject:userData.userPhoto forKey:@"photo"];
                  
                  [defaults synchronize];
-                 
+                  [SVProgressHUD dismiss];
                  
                  //should show animations and user info
                  [self doneWithLogin];
                  
              }
              if(error){
+                  [SVProgressHUD dismiss];
                                  UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Oops." message: @"Something went wrong with Facebook." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                  [alert show];
                  

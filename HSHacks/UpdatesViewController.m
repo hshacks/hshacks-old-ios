@@ -65,7 +65,8 @@
     
     UserData *userData = [UserData sharedManager];
 
-
+    userData.userName = [defaults objectForKey:@"name"];
+    userData.userPhoto = [defaults objectForKey:@"photo"];
     if(userData.userPhoto == NULL || userData.userName == NULL){
         return NO;
     }

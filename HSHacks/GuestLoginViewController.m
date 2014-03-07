@@ -45,6 +45,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     self.doneOutlet.userInteractionEnabled = YES;
     self.nameField.delegate = self;
     AVCamCaptureManager *manager = [[AVCamCaptureManager alloc] init];
@@ -62,7 +63,7 @@
         
         
         newCaptureVideoPreviewLayer.cornerRadius = newCaptureVideoPreviewLayer.frame.size.width / 2;
-       [self.view.layer addSublayer:newCaptureVideoPreviewLayer];
+        [self.view.layer addSublayer:newCaptureVideoPreviewLayer];
         
         [self setCaptureVideoPreviewLayer:newCaptureVideoPreviewLayer];
         
@@ -72,9 +73,42 @@
             
         });
     }
-
    
 	// Do any additional setup after loading the view.
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+
+//    self.doneOutlet.userInteractionEnabled = YES;
+//    self.nameField.delegate = self;
+//    AVCamCaptureManager *manager = [[AVCamCaptureManager alloc] init];
+//    self.captureManager = manager;
+//    manager.delegate = self;
+//    
+//    if ([self.captureManager setupSession]) {
+//        
+//        // Create video preview layer and add it to the UI
+//        AVCaptureVideoPreviewLayer *newCaptureVideoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:[[self captureManager] session]];
+//        
+//        [newCaptureVideoPreviewLayer setFrame:imagePreview.frame];
+//        
+//        [newCaptureVideoPreviewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
+//        
+//        
+//        newCaptureVideoPreviewLayer.cornerRadius = newCaptureVideoPreviewLayer.frame.size.width / 2;
+//        [self.view.layer addSublayer:newCaptureVideoPreviewLayer];
+//        
+//        [self setCaptureVideoPreviewLayer:newCaptureVideoPreviewLayer];
+//        
+//        // Start the session. This is done asychronously since -startRunning doesn't return until the session is running.
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            [[[self captureManager] session] startRunning];
+//            
+//        });
+//    }
+    [super viewDidAppear:animated];
+    
 }
 
 
@@ -207,7 +241,7 @@
     
 
     if(userData.userName.length == 0){
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Oops." message: @"I don't think your name is (null). Put your name on the top!" delegate: nil cancelButtonTitle:@"Fine." otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Oops." message: @"Put your name at the top!" delegate: nil cancelButtonTitle:@"Fine." otherButtonTitles:nil];
         [alert show];
         
     }

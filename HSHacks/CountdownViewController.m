@@ -30,13 +30,13 @@
     
     timerImage.image = [UIImage animatedImageWithAnimatedGIFURL:[NSURL URLWithString:@"http://i.imgur.com/bA6o3mj.gif"]];
     
-    [self checkDate];
+   
     [self setStuff];
     formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat: @"MM/dd/yyyy HH:mm:ss"];
     
     today = [NSDate date];
-    HShacksBegin = [formatter dateFromString:@"03/08/2014 12:30:00"];
+    HShacksBegin = [formatter dateFromString:@"03/08/2014 1:00:00"];
     HShacksEnd = [formatter dateFromString:@"03/09/2014 13:00:00"];
 
    gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
@@ -172,7 +172,7 @@
         
     }
     else if (hasEnded){
-        countdown.text = @"We hope you enjoyed HSHacks!";
+        countdown.text = @"We hope you enjoyed HSHacks! Come back next year!";
     }
 
 

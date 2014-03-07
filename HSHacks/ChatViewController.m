@@ -110,8 +110,39 @@
         if(self.name && self.photoURL){
     [[self.firebase childByAutoId] setValue:@{@"user" : self.name, @"message": aTextField.text, @"image" : self.photoURL}];
         }
+        if([aTextField.text isEqualToString:@"hellyeah"]){
+            NSLog(@"hellllyeahhhh");
+            
+            UILabel *hellYeahLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 240, 300, 50)];
+            hellYeahLabel.center = self.view.center;
+            hellYeahLabel.text = @"#HELLYEAHHH";
+            hellYeahLabel.font = [UIFont boldSystemFontOfSize:40.0];
+            
+            hellYeahLabel.textColor = [UIColor blueColor];
+            hellYeahLabel.textAlignment = UITextAlignmentCenter;
+            hellYeahLabel.alpha = 0;
+            [self.view addSubview:hellYeahLabel];
+            
+                 hellYeahLabel.transform = CGAffineTransformMakeScale(0.01, 0.01);
+            hellYeahLabel.alpha = 1;
+                                     [UIView animateWithDuration:0.7 delay:0.1 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                
+                                             hellYeahLabel.transform = CGAffineTransformIdentity;
+                                         } completion:^(BOOL finished){
+                                             [UIView animateWithDuration:0.5 delay:0.5 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                                                 
+                                                 hellYeahLabel.transform = CGAffineTransformMakeScale(0.0, 0.0);
+                                             } completion:^(BOOL finished){
+                                                 hellYeahLabel.alpha = 0;
+                                                 
+                                             }];
+                                         
+                                         }];
+                                 }
+        
     [aTextField setText:@""];
     }
+    
     return NO;
 }
 
